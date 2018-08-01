@@ -1,0 +1,10 @@
+<Modules>
+  <Module PersistentId="50239255-FCC3-403F-84E6-16B0F40CE35C" ModuleId="Web365" />
+  <Module PersistentId="3F77DCF1-E9E7-443B-B17A-A4D4511ECDBA" ModuleId="Web365Business" />
+  <Module PersistentId="70E8B2C6-F5D5-4018-B9F2-BC1CDAFC7BFD" ModuleId="Web365Cached" />
+  <Module PersistentId="FB4B7C6D-045E-40BE-9FAA-0015E3F53C37" ModuleId="Web365Base" />
+  <Module PersistentId="C1C417C8-8C37-44DC-89A3-1552CF167F15" ModuleId="Web365Utility" />
+  <Module PersistentId="C24BE151-FC63-4A94-B796-FD222BD8399E" ModuleId="Web365Domain" />
+  <Module PersistentId="396DBC4B-90A2-4DC5-AFF8-9BD9E10386C6" ModuleId="Web365Models" />
+  <Module PersistentId="497E5BF9-0230-4612-AFB2-65AE16BC4D20" ModuleId="GennarateSiteMap" />
+</Modules>

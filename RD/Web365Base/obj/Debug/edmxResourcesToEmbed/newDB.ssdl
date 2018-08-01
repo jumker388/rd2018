@@ -1,0 +1,1304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="newDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="AppStoreCharge">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="osMoney" Type="float" Nullable="false" />
+    <Property Name="gameMoney" Type="float" Nullable="false" />
+    <Property Name="clientType" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="itemName" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="AppStoreChargeHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="productId" Type="int" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="orderId" Type="varchar" MaxLength="255" />
+    <Property Name="orderState" Type="varchar" MaxLength="255" />
+    <Property Name="clientType" Type="varchar" MaxLength="255" />
+    <Property Name="orderTime" Type="datetime" />
+    <Property Name="logTime" Type="datetime" />
+    <Property Name="packageName" Type="varchar" MaxLength="255" />
+    <Property Name="payload" Type="varchar" MaxLength="500" />
+    <Property Name="tokenPurchase" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'newDB.dbo.AppStoreConfigOnOff' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="AppStoreConfigOnOff">
+          <Property Name="id" Type="int" />
+          <Property Name="clientType" Type="int" />
+          <Property Name="enableCharge" Type="int" />
+        </EntityType>-->
+  <EntityType Name="avatar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="path" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="cash" Type="int" Nullable="false" />
+    <Property Name="buy_number" Type="int" Nullable="false" />
+    <Property Name="datetime" Type="datetime" Nullable="false" />
+    <Property Name="fromDevice" Type="int" Nullable="false" />
+    <Property Name="width" Type="int" Nullable="false" />
+    <Property Name="height" Type="int" Nullable="false" />
+    <Property Name="status" Type="int" />
+    <Property Name="is_shop" Type="int" />
+  </EntityType>
+  <EntityType Name="avatar_category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="avatar_user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="avatar_id" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="buy_time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="banner_minigame">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="game_id" Type="int" />
+    <Property Name="linkBanner" Type="varchar" MaxLength="255" />
+    <Property Name="clientType" Type="int" />
+  </EntityType>
+  <EntityType Name="bets">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cash" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="bk_history">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" />
+    <Property Name="cash" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'newDB.dbo.bk_transaction' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="bk_transaction">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cash" Type="int" />
+    <Property Name="des" Type="varchar" MaxLength="50" />
+    <Property Name="dateCreated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CaoThapLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MatchID" Type="int" />
+    <Property Name="Card" Type="varchar" MaxLength="500" />
+    <Property Name="CurrentCash" Type="int" />
+    <Property Name="CashTren" Type="int" />
+    <Property Name="CashDuoi" Type="int" />
+    <Property Name="DateCreated" Type="int" />
+    <Property Name="step" Type="int" />
+    <Property Name="level" Type="int" />
+    <Property Name="userid" Type="int" />
+    <Property Name="Nhan" Type="int" />
+    <Property Name="MucCuoc" Type="int" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="255" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="URL" Type="varchar" MaxLength="255" />
+    <Property Name="Description" Type="varchar" MaxLength="255" />
+    <Property Name="status" Type="int" />
+    <Property Name="createDate" Type="datetime" />
+    <Property Name="modifyDate" Type="datetime" />
+    <Property Name="by" Type="varchar" MaxLength="255" />
+    <Property Name="menu" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'newDB.dbo.chan_table' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="chan_table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="40" />
+    <Property Name="description" Type="varchar" MaxLength="200" />
+    <Property Name="point" Type="int" />
+    <Property Name="dich" Type="int" />
+  </EntityType>
+  <EntityType Name="charge_cards">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cardId" Type="int" Nullable="false" />
+    <Property Name="cardName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="subMenu" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="len1" Type="int" Nullable="false" />
+    <Property Name="len2" Type="int" Nullable="false" />
+    <Property Name="cardMsg" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="client_version">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="config">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="value" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="4000" Nullable="false" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="configAwardVersion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="clientType" Type="int" />
+    <Property Name="versionName" Type="varchar" MaxLength="11" />
+    <Property Name="enableAward" Type="int" />
+    <Property Name="dateLog" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'newDB.dbo.configBotTaixiu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="configBotTaixiu">
+    <Key>
+      <PropertyRef Name="a1" />
+    </Key>
+    <Property Name="a1" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="a2" Type="int" />
+    <Property Name="a3" Type="int" />
+    <Property Name="a4" Type="int" />
+    <Property Name="a5" Type="int" />
+    <Property Name="a6" Type="int" />
+    <Property Name="a7" Type="int" />
+    <Property Name="a8" Type="int" />
+    <Property Name="a9" Type="int" />
+    <Property Name="a10" Type="int" />
+    <Property Name="a11" Type="int" />
+    <Property Name="a12" Type="int" />
+    <Property Name="a13" Type="int" />
+    <Property Name="a14" Type="int" />
+    <Property Name="a15" Type="int" />
+    <Property Name="a16" Type="int" />
+    <Property Name="a17" Type="int" />
+    <Property Name="a18" Type="int" />
+    <Property Name="a19" Type="int" />
+  </EntityType>
+  <EntityType Name="configMiniPoker">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="a" Type="int" />
+    <Property Name="a1" Type="int" />
+    <Property Name="a2" Type="int" />
+    <Property Name="a3" Type="int" />
+    <Property Name="a4" Type="int" />
+    <Property Name="a5" Type="int" />
+    <Property Name="a6" Type="int" />
+    <Property Name="a7" Type="int" />
+    <Property Name="a8" Type="int" />
+    <Property Name="a9" Type="int" />
+    <Property Name="a10" Type="int" />
+  </EntityType>
+  <EntityType Name="configQuayXeng">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="a" Type="int" />
+    <Property Name="a1" Type="int" />
+    <Property Name="a2" Type="int" />
+    <Property Name="a3" Type="int" />
+    <Property Name="a4" Type="int" />
+    <Property Name="a5" Type="int" />
+    <Property Name="a6" Type="int" />
+  </EntityType>
+  <EntityType Name="count_download">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="40" />
+    <Property Name="device" Type="varchar" MaxLength="20" />
+    <Property Name="date" Type="date" />
+    <Property Name="cp" Type="varchar" MaxLength="10" />
+    <Property Name="type" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="cp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cpID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="cpName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="currency" Type="varchar" MaxLength="5" />
+    <Property Name="smsContent" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="smsNumber2" Type="int" />
+    <Property Name="smsNumber" Type="int" Nullable="false" />
+    <Property Name="active" Type="int" Nullable="false" />
+    <Property Name="smsMessage" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="smsActive" Type="varchar" MaxLength="10" />
+    <Property Name="smsvalue2" Type="int" />
+    <Property Name="smsvalue" Type="int" />
+    <Property Name="linkiOS" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="smsMessage2" Type="varchar" MaxLength="200" />
+    <Property Name="smsvalueactive" Type="int" Nullable="false" />
+    <Property Name="max_gift" Type="int" Nullable="false" />
+    <Property Name="cash_gift" Type="int" Nullable="false" />
+    <Property Name="reset_gift_time" Type="datetime" Nullable="false" />
+    <Property Name="allowSmsCharge" Type="int" Nullable="false" />
+    <Property Name="allowCardCharge" Type="int" Nullable="false" />
+    <Property Name="allowIPhoneCharge" Type="int" Nullable="false" />
+    <Property Name="chargeUrl" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="helpContent" Type="varchar(max)" Nullable="false" />
+    <Property Name="noticeText" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="activeContent" Type="text" Nullable="false" />
+    <Property Name="autoOnSms" Type="int" Nullable="false" />
+    <Property Name="timeAutoOnSms" Type="int" Nullable="false" />
+    <Property Name="maxRoom" Type="int" />
+    <Property Name="allowSendMail" Type="int" Nullable="false" />
+    <Property Name="mailContent" Type="varchar" MaxLength="1" />
+    <Property Name="downUrl" Type="varchar" MaxLength="255" />
+    <Property Name="isConnect" Type="int" />
+    <Property Name="urlConnect" Type="varchar" MaxLength="255" />
+    <Property Name="smsPassword" Type="int" />
+    <Property Name="smsPasswordContent" Type="varchar" MaxLength="10" />
+    <Property Name="linkAndroid" Type="varchar" MaxLength="100" />
+    <Property Name="parent" Type="int" />
+    <Property Name="private_key" Type="text" />
+    <Property Name="version" Type="varchar" MaxLength="10" />
+    <Property Name="hotLine" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="cpkey">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cpID" Type="varchar" MaxLength="11" />
+    <Property Name="keyConnect" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="data_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="insertTime" Type="datetime" />
+    <Property Name="userId" Type="int" />
+    <Property Name="matchId" Type="int" />
+    <Property Name="type" Type="int" />
+    <Property Name="data" Type="text" />
+    <Property Name="clientType" Type="int" />
+    <Property Name="dateCreated" Type="datetime" Nullable="false" />
+    <Property Name="matchNum" Type="int" />
+    <Property Name="timerun" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="epay_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="time" Type="datetime" />
+    <Property Name="status" Type="varchar" MaxLength="5000" />
+    <Property Name="code" Type="varchar" MaxLength="100" />
+    <Property Name="success" Type="int" />
+    <Property Name="type" Type="int" />
+  </EntityType>
+  <EntityType Name="event">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="content" Type="varchar" MaxLength="5000" />
+    <Property Name="start" Type="datetime" />
+    <Property Name="end" Type="datetime" />
+    <Property Name="created" Type="datetime" />
+    <Property Name="by" Type="varchar" MaxLength="255" />
+    <Property Name="status" Type="int" />
+    <Property Name="weekly" Type="int" />
+    <Property Name="daily" Type="int" />
+    <Property Name="monthly" Type="int" />
+    <Property Name="photo" Type="varchar" MaxLength="255" />
+    <Property Name="cp" Type="varchar" MaxLength="70" />
+    <Property Name="reg_start" Type="datetime" />
+    <Property Name="reg_end" Type="datetime" />
+    <Property Name="fake_data" Type="int" />
+  </EntityType>
+  <EntityType Name="event_data_fake">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="fullname" Type="varchar" MaxLength="255" />
+    <Property Name="point" Type="int" />
+    <Property Name="suWin" Type="int" />
+    <Property Name="isVCash" Type="int" />
+  </EntityType>
+  <EntityType Name="event_register">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="255" />
+    <Property Name="fullname" Type="varchar" MaxLength="255" />
+    <Property Name="email" Type="varchar" MaxLength="255" />
+    <Property Name="phone" Type="varchar" MaxLength="255" />
+    <Property Name="registered" Type="datetime" Nullable="false" />
+    <Property Name="status" Type="int" />
+    <Property Name="eventid" Type="int" />
+    <Property Name="ym" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="rank" Type="int" />
+    <Property Name="comment" Type="varchar" MaxLength="500" />
+    <Property Name="identity" Type="varchar" MaxLength="25" />
+    <Property Name="start_cash" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="exp_value">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="expIncrease" Type="int" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'newDB.dbo.g_client' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="g_client">
+    <Key>
+      <PropertyRef Name="clientId" />
+    </Key>
+    <Property Name="clientId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="clientName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'newDB.dbo.g_provider' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="g_provider">
+    <Key>
+      <PropertyRef Name="providerId" />
+      <PropertyRef Name="md5Key" />
+      <PropertyRef Name="CP" />
+    </Key>
+    <Property Name="providerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="providerName" Type="varchar" MaxLength="50" />
+    <Property Name="md5Key" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CP" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'newDB.dbo.g_user' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="g_user">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="avatar_id" />
+      <PropertyRef Name="level_id" />
+      <PropertyRef Name="last_login" />
+      <PropertyRef Name="isOnline" />
+      <PropertyRef Name="isMobile" />
+      <PropertyRef Name="ip" />
+      <PropertyRef Name="device" />
+      <PropertyRef Name="screen" />
+      <PropertyRef Name="currentGame" />
+      <PropertyRef Name="username" />
+      <PropertyRef Name="start_playing_time" />
+      <PropertyRef Name="gift_times" />
+    </Key>
+    <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="avatar_id" Type="int" Nullable="false" />
+    <Property Name="level_id" Type="int" Nullable="false" />
+    <Property Name="last_login" Type="datetime" Nullable="false" />
+    <Property Name="isOnline" Type="int" Nullable="false" />
+    <Property Name="isMobile" Type="int" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="device" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="screen" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="currentGame" Type="int" Nullable="false" />
+    <Property Name="exp" Type="int" />
+    <Property Name="avatar" Type="varchar" MaxLength="100" />
+    <Property Name="gameCash" Type="float" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="totalGame" Type="int" />
+    <Property Name="totalWin" Type="int" />
+    <Property Name="playing_game" Type="int" />
+    <Property Name="is_block" Type="int" />
+    <Property Name="start_playing_time" Type="datetime" Nullable="false" />
+    <Property Name="cp" Type="varchar" MaxLength="255" />
+    <Property Name="gift_times" Type="int" Nullable="false" />
+    <Property Name="vCash" Type="float" />
+    <Property Name="referrer" Type="varchar" MaxLength="255" />
+    <Property Name="agencyId" Type="int" />
+    <Property Name="region" Type="varchar" MaxLength="255" />
+    <Property Name="facebook" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="g_version">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="clientType" Type="int" Nullable="false" />
+    <Property Name="versionCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="versionMsg" Type="varchar" MaxLength="100" />
+    <Property Name="forceUpdate" Type="int" Nullable="false" />
+    <Property Name="lastUpdated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="game">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="minCashMul" Type="int" />
+    <Property Name="displayStatus" Type="int" />
+    <Property Name="gameOrder" Type="int" />
+  </EntityType>
+  <EntityType Name="game_history">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="cash" Type="float" Nullable="false" />
+    <Property Name="current_cash" Type="float" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="6000" Nullable="false" />
+    <Property Name="game_id" Type="int" Nullable="false" />
+    <Property Name="trans_type" Type="int" Nullable="false" />
+    <Property Name="time" Type="datetime" />
+    <Property Name="money" Type="int" />
+    <Property Name="cp" Type="varchar" MaxLength="1000" />
+    <Property Name="title" Type="varchar" MaxLength="1000" />
+    <Property Name="tax" Type="int" />
+    <Property Name="taxPercent" Type="int" />
+    <Property Name="before_cash" Type="int" />
+    <Property Name="matchId" Type="int" />
+    <Property Name="matchNum" Type="int" />
+    <Property Name="betTaiXiu" Type="int" />
+    <Property Name="valueCard" Type="int" />
+    <Property Name="telcoId" Type="int" />
+  </EntityType>
+  <EntityType Name="game_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="game_id" Type="int" />
+    <Property Name="host_id" Type="int" />
+    <Property Name="winner_id" Type="int" />
+    <Property Name="room_id" Type="int" />
+    <Property Name="cash" Type="int" />
+    <Property Name="uniqueId" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="time" Type="datetime" />
+    <Property Name="room_name" Type="varchar" MaxLength="255" />
+    <Property Name="numPlayers" Type="int" />
+    <Property Name="taixiuResult" Type="varchar" MaxLength="255" />
+    <Property Name="taixiuType" Type="int" />
+    <Property Name="miniPokerWinCash" Type="int" />
+    <Property Name="miniPokerCards" Type="varchar" MaxLength="255" />
+    <Property Name="miniPokerResult" Type="varchar" MaxLength="255" />
+    <Property Name="miniPokerResultType" Type="int" />
+    <Property Name="slotMachineTotalLine" Type="int" />
+    <Property Name="slotMachineWinLine" Type="varchar" MaxLength="255" />
+    <Property Name="slotMachineWinCash" Type="int" />
+    <Property Name="slotMachineNoHu" Type="int" />
+    <Property Name="slotMachineNumber" Type="varchar" MaxLength="255" />
+    <Property Name="miniPokerString" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="game_trans">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="gameflash">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="300" />
+    <Property Name="category" Type="varchar" MaxLength="750" />
+    <Property Name="code" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="state" Type="int" />
+    <Property Name="flash" Type="varchar" MaxLength="3000" />
+    <Property Name="screen" Type="varchar" MaxLength="1000" />
+    <Property Name="visit" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="gameGuide">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="game_id" Type="int" />
+    <Property Name="description" Type="varchar" MaxLength="5000" />
+  </EntityType>
+  <EntityType Name="gift">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="255" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="created" Type="datetime" Nullable="false" />
+    <Property Name="expired" Type="datetime" />
+    <Property Name="type_id" Type="int" />
+    <Property Name="status" Type="int" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="description" Type="varchar" MaxLength="255" />
+    <Property Name="value" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="volume" Type="int" />
+    <Property Name="IP" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="gift_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="255" />
+    <Property Name="value" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="description" Type="varchar" MaxLength="255" />
+    <Property Name="status" Type="int" />
+    <Property Name="created" Type="datetime" />
+    <Property Name="expired" Type="datetime" />
+    <Property Name="volume" Type="int" />
+    <Property Name="code" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="giftcode">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="15" />
+    <Property Name="value" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="dateCreated" Type="datetime" />
+    <Property Name="dateExpired" Type="datetime" />
+    <Property Name="dateUsed" Type="datetime" />
+    <Property Name="used" Type="int" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="name" Type="varchar" MaxLength="500" />
+    <Property Name="isVcash" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'newDB.dbo.item_event' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="item_event">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="level">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cash" Type="float" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="level" Type="int" Nullable="false" />
+    <Property Name="exp" Type="int" />
+    <Property Name="cashGift" Type="int" />
+  </EntityType>
+  <EntityType Name="link">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="link" Type="varchar" MaxLength="255" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="description" Type="varchar" MaxLength="255" />
+    <Property Name="clicked" Type="int" />
+    <Property Name="created" Type="datetime" />
+    <Property Name="updated" Type="datetime" />
+    <Property Name="user_intro" Type="int" />
+    <Property Name="status" Type="int" />
+  </EntityType>
+  <EntityType Name="log_download">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="phone_name" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="brand_name" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="datetime" Type="datetime" Nullable="false" />
+    <Property Name="width" Type="int" />
+    <Property Name="height" Type="int" />
+    <Property Name="isqwerty" Type="int" />
+    <Property Name="setup" Type="int" Nullable="false" />
+    <Property Name="registry" Type="int" Nullable="false" />
+    <Property Name="login" Type="int" Nullable="false" />
+    <Property Name="version" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="setup_time" Type="datetime" Nullable="false" />
+    <Property Name="source" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="match_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="matchId" Type="int" Nullable="false" />
+    <Property Name="matchNum" Type="int" />
+    <Property Name="category" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="text" Nullable="false" />
+    <Property Name="dateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="news">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="description" Type="text" />
+    <Property Name="contents" Type="text" />
+    <Property Name="photo" Type="varchar" MaxLength="255" />
+    <Property Name="create_date" Type="datetime" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="category_id" Type="int" />
+    <Property Name="author" Type="varchar" MaxLength="255" />
+    <Property Name="views" Type="int" />
+    <Property Name="spotlight" Type="int" />
+    <Property Name="modifydate" Type="datetime" />
+    <Property Name="order" Type="int" />
+    <Property Name="slider" Type="int" />
+    <Property Name="website" Type="varchar" MaxLength="255" />
+    <Property Name="popup" Type="int" />
+  </EntityType>
+  <EntityType Name="noel_bonus_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="uid" Type="int" />
+    <Property Name="cash_bonus" Type="int" />
+    <Property Name="matchId" Type="int" />
+    <Property Name="gameId" Type="int" />
+  </EntityType>
+  <EntityType Name="notification">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="push_message" Type="varchar" MaxLength="500" />
+    <Property Name="push_time" Type="varchar" MaxLength="100" />
+    <Property Name="push_date" Type="varchar" MaxLength="100" />
+    <Property Name="cp" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="offlinemessage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="userIDSend" Type="float" Nullable="false" />
+    <Property Name="userIDReceive" Type="float" Nullable="false" />
+    <Property Name="mes" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="datetimeSend" Type="datetime" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="online_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="peak" Type="int" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+    <Property Name="dateUp" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="phone_brands">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="brand" Type="varchar" MaxLength="255" />
+    <Property Name="active" Type="int" />
+  </EntityType>
+  <EntityType Name="phones">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="model" Type="varchar" MaxLength="255" />
+    <Property Name="marketing_name" Type="varchar" MaxLength="255" />
+    <Property Name="brand_id" Type="int" />
+    <Property Name="width" Type="int" />
+    <Property Name="height" Type="int" />
+    <Property Name="qwerty_keyboard" Type="int" />
+  </EntityType>
+  <EntityType Name="play_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="matchId" Type="int" Nullable="false" />
+    <Property Name="matchNum" Type="int" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="game_id" Type="int" />
+    <Property Name="is_play" Type="int" />
+    <Property Name="time_log" Type="datetime" Nullable="false" />
+    <Property Name="bet_cash" Type="int" />
+  </EntityType>
+  <EntityType Name="regId">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="gcm_id" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="os" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+    <Property Name="cp" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="report_CCU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="CCU" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="room">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="min_cash" Type="int" Nullable="false" />
+    <Property Name="min_level" Type="int" Nullable="false" />
+    <Property Name="game_id" Type="int" Nullable="false" />
+    <Property Name="room_number" Type="int" Nullable="false" />
+    <Property Name="state" Type="int" Nullable="false" />
+    <Property Name="min_bet" Type="int" Nullable="false" />
+    <Property Name="tax" Type="int" />
+    <Property Name="end_time" Type="int" />
+    <Property Name="start_time" Type="int" />
+    <Property Name="money_type" Type="int" />
+    <Property Name="max_bet" Type="int" />
+  </EntityType>
+  <EntityType Name="slider">
+    <Key>
+      <PropertyRef Name="slide_id" />
+    </Key>
+    <Property Name="slide_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="slide_title" Type="varchar" MaxLength="100" />
+    <Property Name="slide_url" Type="varchar" MaxLength="255" />
+    <Property Name="slide_start" Type="datetime" />
+    <Property Name="slide_end" Type="datetime" />
+    <Property Name="slide_status" Type="int" />
+    <Property Name="slide_file" Type="varchar" MaxLength="155" />
+    <Property Name="slide_cp" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="slotMachineDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="matchId" Type="int" Nullable="false" />
+    <Property Name="stringLine" Type="varchar" MaxLength="255" />
+    <Property Name="stringWinCash" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'newDB.dbo.suggestion' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="suggestion">
+          <Property Name="UserID" Type="float" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="Note" Type="varchar" MaxLength="255" />
+        </EntityType>-->
+  <EntityType Name="taixiu_history_user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="matchId" Type="int" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="game_id" Type="int" />
+    <Property Name="bet_type" Type="int" />
+    <Property Name="bet_cash" Type="int" />
+    <Property Name="return_cash" Type="int" />
+    <Property Name="win_cash" Type="int" />
+  </EntityType>
+  <EntityType Name="taixiu_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="matchId" Type="int" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="user_name" Type="varchar" MaxLength="255" />
+    <Property Name="bet_cash" Type="int" />
+    <Property Name="return_cash" Type="int" />
+    <Property Name="bet_type" Type="int" />
+    <Property Name="bet_time" Type="int" />
+    <Property Name="game_id" Type="int" />
+    <Property Name="time_log" Type="datetime" />
+    <Property Name="win_cash" Type="int" />
+  </EntityType>
+  <EntityType Name="taixiu_log_result">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="matchId" Type="int" />
+    <Property Name="cashWin" Type="int" />
+    <Property Name="resultTaiXiu" Type="int" />
+    <Property Name="lastest" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'newDB.dbo.trans_type' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="trans_type">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="type" />
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="update_pass">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="username" Type="varchar" MaxLength="100" />
+    <Property Name="log" Type="varchar" MaxLength="100" />
+    <Property Name="time" Type="datetime" />
+    <Property Name="mysql_user" Type="varchar" MaxLength="100" />
+    <Property Name="oldpass" Type="varchar" MaxLength="100" />
+    <Property Name="newpass" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'newDB.dbo.user_info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="user_info">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="avatar_id" />
+      <PropertyRef Name="level_id" />
+      <PropertyRef Name="last_login" />
+      <PropertyRef Name="isOnline" />
+      <PropertyRef Name="isMobile" />
+      <PropertyRef Name="ip" />
+      <PropertyRef Name="device" />
+      <PropertyRef Name="screen" />
+      <PropertyRef Name="currentGame" />
+      <PropertyRef Name="username" />
+      <PropertyRef Name="start_playing_time" />
+      <PropertyRef Name="gift_times" />
+    </Key>
+    <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="avatar_id" Type="int" Nullable="false" />
+    <Property Name="level_id" Type="int" Nullable="false" />
+    <Property Name="last_login" Type="datetime" Nullable="false" />
+    <Property Name="isOnline" Type="int" Nullable="false" />
+    <Property Name="isMobile" Type="int" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="device" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="screen" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="currentGame" Type="int" Nullable="false" />
+    <Property Name="exp" Type="int" />
+    <Property Name="avatar" Type="varchar" MaxLength="100" />
+    <Property Name="gameCash" Type="float" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="totalGame" Type="int" />
+    <Property Name="totalWin" Type="int" />
+    <Property Name="playing_game" Type="int" />
+    <Property Name="is_block" Type="int" />
+    <Property Name="start_playing_time" Type="datetime" Nullable="false" />
+    <Property Name="cp" Type="varchar" MaxLength="255" />
+    <Property Name="gift_times" Type="int" Nullable="false" />
+    <Property Name="gameGold" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'newDB.dbo.VinhDanhCaoThap' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VinhDanhCaoThap">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="TaiKhoan" Type="varchar" MaxLength="255" />
+    <Property Name="MucCuoc" Type="int" />
+    <Property Name="Thang" Type="int" />
+    <Property Name="BoBai" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="wap">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="255" />
+    <Property Name="content" Type="text" />
+    <Property Name="status" Type="int" />
+    <Property Name="date" Type="varchar" MaxLength="100" />
+    <Property Name="cp" Type="varchar" MaxLength="25" />
+    <Property Name="is_spam" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'newDB.dbo.view_clan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="view_clan">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="level" />
+      <PropertyRef Name="avatarId" />
+      <PropertyRef Name="createTime" />
+      <PropertyRef Name="tag" />
+      <PropertyRef Name="ownerId" />
+      <PropertyRef Name="clanMoney" />
+      <PropertyRef Name="totalMember" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="level" Type="int" Nullable="false" />
+    <Property Name="avatarId" Type="int" Nullable="false" />
+    <Property Name="createTime" Type="datetime" Nullable="false" />
+    <Property Name="tag" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="ownerId" Type="int" Nullable="false" />
+    <Property Name="bio" Type="varchar" MaxLength="1000" />
+    <Property Name="clanMoney" Type="int" Nullable="false" />
+    <Property Name="shortDesc" Type="varchar" MaxLength="11" />
+    <Property Name="totalMember" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'newDB.dbo.view_openid' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="view_openid">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="userId" />
+      <PropertyRef Name="openId" />
+      <PropertyRef Name="chanel" />
+      <PropertyRef Name="dateCreated" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="openId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="chanel" Type="int" Nullable="false" />
+    <Property Name="dateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'newDB.dbo.view_user_info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="view_user_info">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="fullname" />
+      <PropertyRef Name="username" />
+      <PropertyRef Name="password" />
+      <PropertyRef Name="age" />
+      <PropertyRef Name="sex" />
+      <PropertyRef Name="cash" />
+      <PropertyRef Name="is_active" />
+      <PropertyRef Name="avatar_id" />
+      <PropertyRef Name="level_id" />
+      <PropertyRef Name="last_login" />
+      <PropertyRef Name="isMobile" />
+      <PropertyRef Name="register_date" />
+      <PropertyRef Name="ip" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="age" Type="int" Nullable="false" />
+    <Property Name="sex" Type="int" Nullable="false" />
+    <Property Name="cash" Type="float" Nullable="false" />
+    <Property Name="mobile" Type="varchar" MaxLength="20" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="birth" Type="varchar" MaxLength="50" />
+    <Property Name="clanId" Type="int" />
+    <Property Name="is_active" Type="int" Nullable="false" />
+    <Property Name="avatar_id" Type="int" Nullable="false" />
+    <Property Name="level_id" Type="int" Nullable="false" />
+    <Property Name="exp" Type="int" />
+    <Property Name="gameCash" Type="float" />
+    <Property Name="vCash" Type="float" />
+    <Property Name="totalGame" Type="int" />
+    <Property Name="totalWin" Type="int" />
+    <Property Name="is_block" Type="int" />
+    <Property Name="last_login" Type="datetime" Nullable="false" />
+    <Property Name="is_bot" Type="int" />
+    <Property Name="cmnd" Type="varchar" MaxLength="200" />
+    <Property Name="isMobile" Type="int" Nullable="false" />
+    <Property Name="register_date" Type="datetime" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="referrer" Type="varchar" MaxLength="255" />
+    <Property Name="agencyId" Type="int" />
+    <Property Name="region" Type="varchar" MaxLength="255" />
+    <Property Name="facebook" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="newDBModelStoreContainer">
+    <EntitySet Name="AppStoreCharge" EntityType="Self.AppStoreCharge" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppStoreChargeHistory" EntityType="Self.AppStoreChargeHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="avatar" EntityType="Self.avatar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="avatar_category" EntityType="Self.avatar_category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="avatar_user" EntityType="Self.avatar_user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="banner_minigame" EntityType="Self.banner_minigame" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bets" EntityType="Self.bets" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bk_history" EntityType="Self.bk_history" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CaoThapLog" EntityType="Self.CaoThapLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="category" EntityType="Self.category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="charge_cards" EntityType="Self.charge_cards" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_version" EntityType="Self.client_version" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="config" EntityType="Self.config" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="configAwardVersion" EntityType="Self.configAwardVersion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="configMiniPoker" EntityType="Self.configMiniPoker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="configQuayXeng" EntityType="Self.configQuayXeng" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="count_download" EntityType="Self.count_download" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cp" EntityType="Self.cp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cpkey" EntityType="Self.cpkey" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="data_log" EntityType="Self.data_log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="epay_log" EntityType="Self.epay_log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="event" EntityType="Self.event" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="event_data_fake" EntityType="Self.event_data_fake" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="event_register" EntityType="Self.event_register" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="exp_value" EntityType="Self.exp_value" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="g_version" EntityType="Self.g_version" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="game" EntityType="Self.game" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="game_history" EntityType="Self.game_history" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="game_log" EntityType="Self.game_log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="game_trans" EntityType="Self.game_trans" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gameflash" EntityType="Self.gameflash" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gameGuide" EntityType="Self.gameGuide" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gift" EntityType="Self.gift" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gift_type" EntityType="Self.gift_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="giftcode" EntityType="Self.giftcode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="level" EntityType="Self.level" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="link" EntityType="Self.link" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="log_download" EntityType="Self.log_download" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="match_log" EntityType="Self.match_log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="news" EntityType="Self.news" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="noel_bonus_log" EntityType="Self.noel_bonus_log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="notification" EntityType="Self.notification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="offlinemessage" EntityType="Self.offlinemessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="online_log" EntityType="Self.online_log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="phone_brands" EntityType="Self.phone_brands" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="phones" EntityType="Self.phones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="play_log" EntityType="Self.play_log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="regId" EntityType="Self.regId" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="report_CCU" EntityType="Self.report_CCU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="room" EntityType="Self.room" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="slider" EntityType="Self.slider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="slotMachineDetail" EntityType="Self.slotMachineDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="taixiu_history_user" EntityType="Self.taixiu_history_user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="taixiu_log" EntityType="Self.taixiu_log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="taixiu_log_result" EntityType="Self.taixiu_log_result" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="update_pass" EntityType="Self.update_pass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="wap" EntityType="Self.wap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bk_transaction" EntityType="Self.bk_transaction" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[bk_transaction].[userid] AS [userid], 
+[bk_transaction].[cash] AS [cash], 
+[bk_transaction].[des] AS [des], 
+[bk_transaction].[dateCreated] AS [dateCreated]
+FROM [dbo].[bk_transaction] AS [bk_transaction]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="chan_table" EntityType="Self.chan_table" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[chan_table].[id] AS [id], 
+[chan_table].[name] AS [name], 
+[chan_table].[description] AS [description], 
+[chan_table].[point] AS [point], 
+[chan_table].[dich] AS [dich]
+FROM [dbo].[chan_table] AS [chan_table]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="configBotTaixiu" EntityType="Self.configBotTaixiu" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[configBotTaixiu].[a1] AS [a1], 
+[configBotTaixiu].[a2] AS [a2], 
+[configBotTaixiu].[a3] AS [a3], 
+[configBotTaixiu].[a4] AS [a4], 
+[configBotTaixiu].[a5] AS [a5], 
+[configBotTaixiu].[a6] AS [a6], 
+[configBotTaixiu].[a7] AS [a7], 
+[configBotTaixiu].[a8] AS [a8], 
+[configBotTaixiu].[a9] AS [a9], 
+[configBotTaixiu].[a10] AS [a10], 
+[configBotTaixiu].[a11] AS [a11], 
+[configBotTaixiu].[a12] AS [a12], 
+[configBotTaixiu].[a13] AS [a13], 
+[configBotTaixiu].[a14] AS [a14], 
+[configBotTaixiu].[a15] AS [a15], 
+[configBotTaixiu].[a16] AS [a16], 
+[configBotTaixiu].[a17] AS [a17], 
+[configBotTaixiu].[a18] AS [a18], 
+[configBotTaixiu].[a19] AS [a19]
+FROM [dbo].[configBotTaixiu] AS [configBotTaixiu]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="g_client" EntityType="Self.g_client" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[g_client].[clientId] AS [clientId], 
+[g_client].[clientName] AS [clientName]
+FROM [dbo].[g_client] AS [g_client]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="g_provider" EntityType="Self.g_provider" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[g_provider].[providerId] AS [providerId], 
+[g_provider].[providerName] AS [providerName], 
+[g_provider].[md5Key] AS [md5Key], 
+[g_provider].[CP] AS [CP]
+FROM [dbo].[g_provider] AS [g_provider]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="g_user" EntityType="Self.g_user" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[g_user].[user_id] AS [user_id], 
+[g_user].[avatar_id] AS [avatar_id], 
+[g_user].[level_id] AS [level_id], 
+[g_user].[last_login] AS [last_login], 
+[g_user].[isOnline] AS [isOnline], 
+[g_user].[isMobile] AS [isMobile], 
+[g_user].[ip] AS [ip], 
+[g_user].[device] AS [device], 
+[g_user].[screen] AS [screen], 
+[g_user].[currentGame] AS [currentGame], 
+[g_user].[exp] AS [exp], 
+[g_user].[avatar] AS [avatar], 
+[g_user].[gameCash] AS [gameCash], 
+[g_user].[username] AS [username], 
+[g_user].[totalGame] AS [totalGame], 
+[g_user].[totalWin] AS [totalWin], 
+[g_user].[playing_game] AS [playing_game], 
+[g_user].[is_block] AS [is_block], 
+[g_user].[start_playing_time] AS [start_playing_time], 
+[g_user].[cp] AS [cp], 
+[g_user].[gift_times] AS [gift_times], 
+[g_user].[vCash] AS [vCash], 
+[g_user].[referrer] AS [referrer], 
+[g_user].[agencyId] AS [agencyId], 
+[g_user].[region] AS [region], 
+[g_user].[facebook] AS [facebook]
+FROM [dbo].[g_user] AS [g_user]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="item_event" EntityType="Self.item_event" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[item_event].[ID] AS [ID], 
+[item_event].[Title] AS [Title]
+FROM [dbo].[item_event] AS [item_event]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="trans_type" EntityType="Self.trans_type" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[trans_type].[id] AS [id], 
+[trans_type].[type] AS [type], 
+[trans_type].[code] AS [code]
+FROM [dbo].[trans_type] AS [trans_type]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="user_info" EntityType="Self.user_info" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[user_info].[user_id] AS [user_id], 
+[user_info].[avatar_id] AS [avatar_id], 
+[user_info].[level_id] AS [level_id], 
+[user_info].[last_login] AS [last_login], 
+[user_info].[isOnline] AS [isOnline], 
+[user_info].[isMobile] AS [isMobile], 
+[user_info].[ip] AS [ip], 
+[user_info].[device] AS [device], 
+[user_info].[screen] AS [screen], 
+[user_info].[currentGame] AS [currentGame], 
+[user_info].[exp] AS [exp], 
+[user_info].[avatar] AS [avatar], 
+[user_info].[gameCash] AS [gameCash], 
+[user_info].[username] AS [username], 
+[user_info].[totalGame] AS [totalGame], 
+[user_info].[totalWin] AS [totalWin], 
+[user_info].[playing_game] AS [playing_game], 
+[user_info].[is_block] AS [is_block], 
+[user_info].[start_playing_time] AS [start_playing_time], 
+[user_info].[cp] AS [cp], 
+[user_info].[gift_times] AS [gift_times], 
+[user_info].[gameGold] AS [gameGold]
+FROM [dbo].[user_info] AS [user_info]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VinhDanhCaoThap" EntityType="Self.VinhDanhCaoThap" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[VinhDanhCaoThap].[ID] AS [ID], 
+[VinhDanhCaoThap].[DateCreated] AS [DateCreated], 
+[VinhDanhCaoThap].[TaiKhoan] AS [TaiKhoan], 
+[VinhDanhCaoThap].[MucCuoc] AS [MucCuoc], 
+[VinhDanhCaoThap].[Thang] AS [Thang], 
+[VinhDanhCaoThap].[BoBai] AS [BoBai]
+FROM [dbo].[VinhDanhCaoThap] AS [VinhDanhCaoThap]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="view_clan" EntityType="Self.view_clan" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[view_clan].[id] AS [id], 
+[view_clan].[name] AS [name], 
+[view_clan].[level] AS [level], 
+[view_clan].[avatarId] AS [avatarId], 
+[view_clan].[createTime] AS [createTime], 
+[view_clan].[tag] AS [tag], 
+[view_clan].[ownerId] AS [ownerId], 
+[view_clan].[bio] AS [bio], 
+[view_clan].[clanMoney] AS [clanMoney], 
+[view_clan].[shortDesc] AS [shortDesc], 
+[view_clan].[totalMember] AS [totalMember]
+FROM [dbo].[view_clan] AS [view_clan]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="view_openid" EntityType="Self.view_openid" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[view_openid].[id] AS [id], 
+[view_openid].[userId] AS [userId], 
+[view_openid].[openId] AS [openId], 
+[view_openid].[chanel] AS [chanel], 
+[view_openid].[dateCreated] AS [dateCreated]
+FROM [dbo].[view_openid] AS [view_openid]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="view_user_info" EntityType="Self.view_user_info" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[view_user_info].[id] AS [id], 
+[view_user_info].[fullname] AS [fullname], 
+[view_user_info].[username] AS [username], 
+[view_user_info].[password] AS [password], 
+[view_user_info].[age] AS [age], 
+[view_user_info].[sex] AS [sex], 
+[view_user_info].[cash] AS [cash], 
+[view_user_info].[mobile] AS [mobile], 
+[view_user_info].[email] AS [email], 
+[view_user_info].[birth] AS [birth], 
+[view_user_info].[clanId] AS [clanId], 
+[view_user_info].[is_active] AS [is_active], 
+[view_user_info].[avatar_id] AS [avatar_id], 
+[view_user_info].[level_id] AS [level_id], 
+[view_user_info].[exp] AS [exp], 
+[view_user_info].[gameCash] AS [gameCash], 
+[view_user_info].[vCash] AS [vCash], 
+[view_user_info].[totalGame] AS [totalGame], 
+[view_user_info].[totalWin] AS [totalWin], 
+[view_user_info].[is_block] AS [is_block], 
+[view_user_info].[last_login] AS [last_login], 
+[view_user_info].[is_bot] AS [is_bot], 
+[view_user_info].[cmnd] AS [cmnd], 
+[view_user_info].[isMobile] AS [isMobile], 
+[view_user_info].[register_date] AS [register_date], 
+[view_user_info].[ip] AS [ip], 
+[view_user_info].[referrer] AS [referrer], 
+[view_user_info].[agencyId] AS [agencyId], 
+[view_user_info].[region] AS [region], 
+[view_user_info].[facebook] AS [facebook]
+FROM [dbo].[view_user_info] AS [view_user_info]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

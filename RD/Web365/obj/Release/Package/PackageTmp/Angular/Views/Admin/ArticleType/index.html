@@ -1,0 +1,75 @@
+﻿<div class="row-fluid">
+    <p>
+        <button class="btn btn-app btn-primary btn-small" role="button" ng-click="add()">
+            <i class="icon-edit bigger-200"></i>
+            Thêm mới
+        </button>
+        <button class="btn btn-app btn-success btn-small groupChecked" ng-class="{disabled: listId.length == 0}" ng-click="showAll()">
+            <i class="icon-eye-open bigger-200"></i>
+            Hiển thị
+        </button>
+        <button class="btn btn-app btn-inverse btn-small groupChecked" ng-class="{disabled: listId.length == 0}" ng-click="hideAll()">
+            <i class="icon-eye-close bigger-200"></i>
+            Ẩn
+        </button>
+        <button class="btn btn-app btn-danger btn-small groupChecked" ng-class="{disabled: listId.length == 0}" ng-click="deleteAll()">
+            <i class="icon-trash bigger-200"></i>
+            Xóa
+        </button>
+    </p>
+    <h3 class="header smaller lighter blue">Quản lý loại bài viết</h3>
+    <div class="widget-box collapsed">
+        <div class="widget-header widget-hea1der-small header-color-dark">
+            <h6>
+                <i class="icon-filter"></i>
+                Lọc loại bài viết
+            </h6>
+
+            <div class="widget-toolbar">
+                <a href="#" data-action="collapse">
+                    <i class="icon-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+        <div class="widget-body">
+            <div class="widget-main">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <form class="form-horizontal">
+                            <div class="control-group">
+                                <label class="control-label" for="form-field-1">Tên loại bài viết</label>
+                                <div class="controls">
+                                    <input type="text" placeholder="Từ khóa" ng-model="dataFilter.name" />
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button class="btn btn-info" type="button" ng-click="filterList()">
+                                    <i class="icon-ok bigger-110"></i>
+                                    Tìm kiếm
+                                </button>
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    Mặc định
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <div class="space"></div>
+    <tabset>
+        <tab heading="Danh sách">
+            <div class="table-header">
+                <i class="icon-list"></i> Danh sách loại bài viết
+            </div>
+            <div class="grid-data" ng-include="'/Angular/Views/Admin/ArticleType/list.html'">
+
+            </div>
+        </tab>
+        <tab heading="Cây thư mục">
+            <tree title="Danh sách thư mục loại bài viết" list="listTreeData" show-action="true" detail="view(id)"></tree>
+        </tab>
+    </tabset>
+</div>

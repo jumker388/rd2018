@@ -1,0 +1,405 @@
+﻿@{
+    ViewBag.Title = "CCU theo ngày";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    #choices {
+        display: none;
+    }
+</style>
+
+@section script
+{
+    <script>
+
+        $(function () {
+
+            $(document).on('click', '.ulPaging a', function () {
+                mApp.block("body", { overlayColor: "#000000", type: "loader", state: "success", message: "Please wait..." });
+                var page = parseInt($(this).attr('data-page'));
+                $('.ulPaging a.m-datatable__pager-link--active').removeClass('m-datatable__pager-link--active');
+                $(this).addClass('m-datatable__pager-link--active');
+                $('#placeholder').html('');
+                $('#choices').html('');
+                var datasets = {
+                    "aaa": {
+                        label: "Ngày đã chọn",
+                        data: []
+                    },
+                    "bbb": {
+                        label: "1 ngày trước",
+                        data: []
+                    },
+                    "ccc": {
+                        label: "7 ngày trước",
+                        data: []
+                    }
+                };
+
+                $.get("/admin/Report/GetCcuMinute", { gameId: parseInt($('#gameId').val()), date: $('#m_datetimepicker_6').val(), page: page }, function (data) {
+
+                    var result = data.ngaydachon.data.reduce(function (map, obj) {
+                        map[obj.Time] = obj.Ccu;
+                        datasets.aaa.data.push([obj.Time, obj.Ccu]);
+                        return map;
+                    }, []);
+
+                    var result1 = data.truocdo1ngay.data.reduce(function (map, obj) {
+                        map[obj.Time] = obj.Ccu;
+                        datasets.bbb.data.push([obj.Time, obj.Ccu]);
+                        return map;
+                    }, []);
+
+                    var result7 = data.truocdo7ngay.data.reduce(function (map, obj) {
+                        map[obj.Time] = obj.Ccu;
+                        datasets.ccc.data.push([obj.Time, obj.Ccu]);
+                        return map;
+                    }, []);
+
+
+                    console.log(datasets);
+                    var i = 0;
+                    $.each(datasets, function (key, val) {
+                        val.color = i;
+                        ++i;
+                    });
+
+                    // insert checkboxes
+                    var choiceContainer = $("#choices");
+                    $.each(datasets, function (key, val) {
+                        choiceContainer.append("<br/><input type='checkbox' name='" + key + "' checked='checked' id='id" + key + "'></input>" + "<label for='id" + key + "'>" + val.label + "</label>");
+                    });
+
+                    choiceContainer.find("input").click(plotAccordingToChoices);
+
+
+                    function plotAccordingToChoices() {
+
+                        var dataRender = [];
+
+                        choiceContainer.find("input:checked").each(function () {
+                            var key = $(this).attr("name");
+                            if (key && datasets[key]) {
+                                dataRender.push(datasets[key]);
+                            }
+                        });
+
+                        if (dataRender.length > 0) {
+                            $.plot("#placeholder", dataRender, {
+                                yaxis: {
+                                    min: 0
+                                },
+                                xaxis: {
+                                    mode: "categories",
+                                    tickLength: 0
+                                }
+                            });
+                        }
+                    }
+
+                    plotAccordingToChoices();
+                    mApp.unblock("body");
+                });
+
+                $.get("/admin/Home/PagingNoPageSize", { page: page, total: 288 }, function (data) {
+                    $('.pghtml').html(data);
+                });
+
+            });
+
+            $(".btn.btn-brand").click(function () {
+                $.get("/admin/Home/PagingNoPageSize", { page: 1, total: 288 }, function (data) {
+                    $('.pghtml').html(data);
+                });
+
+                mApp.block("body", { overlayColor: "#000000", type: "loader", state: "success", message: "Please wait..." });
+                $('#placeholder').html('');
+                $('#choices').html('');
+                var datasets = {
+                    "aaa": {
+                        label: "Ngày đã chọn",
+                        data: []
+                    },
+                    "bbb": {
+                        label: "1 ngày trước",
+                        data: []
+                    },
+                    "ccc": {
+                        label: "7 ngày trước",
+                        data: []
+                    }
+                };
+
+                $.get("/admin/Report/GetCcuMinute", { gameId: parseInt($('#gameId').val()), date: $('#m_datetimepicker_6').val() }, function (data) {
+
+                    var result = data.ngaydachon.data.reduce(function (map, obj) {
+                        map[obj.Time] = obj.Ccu;
+                        datasets.aaa.data.push([obj.Time, obj.Ccu]);
+                        return map;
+                    }, []);
+
+                    var result1 = data.truocdo1ngay.data.reduce(function (map, obj) {
+                        map[obj.Time] = obj.Ccu;
+                        datasets.bbb.data.push([obj.Time, obj.Ccu]);
+                        return map;
+                    }, []);
+
+                    var result7 = data.truocdo7ngay.data.reduce(function (map, obj) {
+                        map[obj.Time] = obj.Ccu;
+                        datasets.ccc.data.push([obj.Time, obj.Ccu]);
+                        return map;
+                    }, []);
+
+
+                    console.log(datasets);
+                    var i = 0;
+                    $.each(datasets, function (key, val) {
+                        val.color = i;
+                        ++i;
+                    });
+
+                    // insert checkboxes
+                    var choiceContainer = $("#choices");
+                    $.each(datasets, function (key, val) {
+                        choiceContainer.append("<br/><input type='checkbox' name='" + key + "' checked='checked' id='id" + key + "'></input>" + "<label for='id" + key + "'>" + val.label + "</label>");
+                    });
+
+                    choiceContainer.find("input").click(plotAccordingToChoices);
+
+
+                    function plotAccordingToChoices() {
+
+                        var dataRender = [];
+
+                        choiceContainer.find("input:checked").each(function () {
+                            var key = $(this).attr("name");
+                            if (key && datasets[key]) {
+                                dataRender.push(datasets[key]);
+                            }
+                        });
+
+                        if (dataRender.length > 0) {
+                            $.plot("#placeholder", dataRender, {
+                                yaxis: {
+                                    min: 0
+                                },
+                                xaxis: {
+                                    mode: "categories",
+                                    tickLength: 0
+                                }
+                            });
+                        }
+                    }
+
+                    plotAccordingToChoices();
+                    mApp.unblock("body");
+                });
+            });
+
+
+            //var datasets = {
+            //    "aaa": {
+            //        label: "Ngày đã chọn",
+            //        data: []
+            //    },
+            //    "bbb": {
+            //        label: "1 ngày trước",
+            //        data: []
+            //    },
+            //    "ccc": {
+            //        label: "7 ngày trước",
+            //        data: []
+            //    }
+            //};
+
+            //function setData() {
+            //    return datasets;
+            //}
+
+            //$.get("/admin/Report/GetCcuMinute", function (data) {
+            //    mApp.block("body", { overlayColor: "#000000", type: "loader", state: "success", message: "Please wait..." });
+            //    var result = data.ngaydachon.data.reduce(function (map, obj) {
+            //        map[obj.Time] = obj.Ccu;
+            //        datasets.aaa.data.push([obj.Time, obj.Ccu]);
+            //        return map;
+            //    }, []);
+
+            //    var result1 = data.truocdo1ngay.data.reduce(function (map, obj) {
+            //        map[obj.Time] = obj.Ccu;
+            //        datasets.bbb.data.push([obj.Time, obj.Ccu]);
+            //        return map;
+            //    }, []);
+
+            //    var result7 = data.truocdo7ngay.data.reduce(function (map, obj) {
+            //        map[obj.Time] = obj.Ccu;
+            //        datasets.ccc.data.push([obj.Time, obj.Ccu]);
+            //        return map;
+            //    }, []);
+
+
+            //    console.log(datasets);
+            //    var i = 0;
+            //    $.each(datasets, function (key, val) {
+            //        val.color = i;
+            //        ++i;
+            //    });
+
+            //    // insert checkboxes
+            //    var choiceContainer = $("#choices");
+            //    $.each(datasets, function (key, val) {
+            //        choiceContainer.append("<br/><input type='checkbox' name='" + key + "' checked='checked' id='id" + key + "'></input>" + "<label for='id" + key + "'>" + val.label + "</label>");
+            //    });
+
+            //    choiceContainer.find("input").click(plotAccordingToChoices);
+
+
+            //    function plotAccordingToChoices() {
+
+            //        var dataRender = [];
+
+            //        choiceContainer.find("input:checked").each(function () {
+            //            var key = $(this).attr("name");
+            //            if (key && datasets[key]) {
+            //                var ss = datasets[key];
+            //                ss.data = ss.data.slice(0, 5);
+            //                dataRender.push(ss);
+            //            }
+            //        });
+
+            //        if (dataRender.length > 0) {
+            //            $.plot("#placeholder", dataRender, {
+            //                yaxis: {
+            //                    min: 0
+            //                },
+            //                xaxis: {
+            //                    mode: "categories",
+            //                    tickLength: 0
+            //                }
+            //            });
+            //        }
+            //    }
+
+            //    plotAccordingToChoices();
+            //    mApp.unblock("body");
+            //});
+
+            // hard-code color indices to prevent them from shifting as
+            // countries are turned on/off
+
+
+        });
+    </script>
+}
+
+<div class="m-portlet">
+    <div class="m-portlet__head">
+        <div class="m-portlet__head-caption">
+            <div class="m-portlet__head-title">
+                <span class="m-portlet__head-icon m--hide">
+                    <i class="la la-gear"></i>
+                </span>
+                <h3 class="m-portlet__head-text">
+                    Lọc
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <!--begin::Form-->
+    <form class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed">
+        <div class="m-portlet__body">
+            <div class="form-group m-form__group row">
+                <label class="col-lg-1 col-form-label">Chọn game:</label>
+                <div class="col-lg-2">
+                    @Html.Action("GetList", "GameManager")
+                </div>
+                <label class="col-lg-1 col-form-label">Nền tảng:</label>
+                <div class="col-lg-2">
+                    <select class="form-control m-input m-input--air" id="exampleSelect1">
+                        <option value="0">Tất cả</option>
+                        <option>Web</option>
+                        <option>Android</option>
+                        <option>iOS</option>
+                    </select>
+                </div>
+                <label class="col-lg-1 col-form-label">Từ ngày:</label>
+                <div class="col-lg-2">
+                    <div class="input-group date">
+                        <input type="text" class="form-control m-input" placeholder="Chọn ngày" id="m_datetimepicker_6">
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="la la-calendar glyphicon-th"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <label class="col-lg-1 col-form-label">Đến ngày:</label>
+                <div class="col-lg-2">
+                    <div class="input-group date">
+                        <input type="text" class="form-control m-input" placeholder="Chọn ngày" id="m_datetimepicker_6">
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="la la-calendar glyphicon-th"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+            <div class="m-form__actions m-form__actions--solid">
+                <div class="row">
+                    <div class="col-lg-5"></div>
+                    <div class="col-lg-7">
+                        <button type="button" class="btn btn-brand">Tra cứu</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!--end::Form-->
+</div>
+
+
+<div class="row">
+    <div class="col-xl-12">
+        <div id="placeholder" class="demo-placeholder" style="float:left; width:100%; height: 600px;"></div>
+        <p id="choices"></p>
+    </div>
+</div>
+
+
+<div class="m_datatable m-datatable m-datatable--default m-datatable--loaded">
+    <table class="m-datatable__table" id="html_table" width="100%" style="display: block; min-height: 300px; overflow-x: auto;">
+        <thead class="m-datatable__head">
+            <tr class="m-datatable__row" style="left: 0px;">
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">ID</span></th>
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">Username</span></th>
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">NickName</span></th>
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">Số dư</span></th>
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">Két sắt</span></th>
+                @*<th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">Luồng tiền</span></th>
+                    <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">Tổng Giao dịch</span></th>*@
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">Last Login</span></th>
+            </tr>
+        </thead>
+        <tbody class="m-datatable__body" style="">
+       
+        </tbody>
+    </table>
+
+    @Html.Action("Paging", "Home", new { page = string.IsNullOrEmpty(Request.QueryString["page"]) ? 1 : Convert.ToInt32(Request.QueryString["page"]), total = 40 })
+
+</div>
+
+<div class="row">
+    <div class="col-xl-12 ">
+        <div class="m_datatable m-datatable m-datatable--default m-datatable--loaded pghtml">
+            @Html.Action("PagingNoPageSize", "Home", new { page = 1, total = 288 })
+        </div>
+    </div>
+</div>

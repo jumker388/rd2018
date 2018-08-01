@@ -1,0 +1,25 @@
+﻿@model Web365Domain.ModelCcu
+
+<div class="m_datatable m-datatable m-datatable--default m-datatable--loaded">
+    <table class="m-datatable__table tblData" id="html_table" width="100%" style="display: block; min-height: 300px; overflow-x: auto;">
+        <thead class="m-datatable__head">
+            <tr class="m-datatable__row" style="left: 0px;">
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">Thời gian</span></th>
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">Ngày đã chọn</span></th>
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">1 ngày trước</span></th>
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">7 ngày trước</span></th>
+            </tr>
+        </thead>
+        <tbody class="m-datatable__body" style="">
+            @for (int i = 0; i < 5; i++)
+            {
+                <tr data-row="0" class="m-datatable__row" style="left: 0px;">
+                    <td class="m-datatable__cell"><span style="width: 133px;">@Model.Day0[i].Time</span></td>
+                    <td class="m-datatable__cell"><span style="width: 133px;">@Model.Day0[i].Ccu</span></td>
+                    <td class="m-datatable__cell"><span style="width: 133px;">@Model.Day1[i].Ccu</span></td>
+                    <td class="m-datatable__cell"><span style="width: 133px;">@Model.Day7[i].Ccu</span></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

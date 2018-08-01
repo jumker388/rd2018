@@ -1,0 +1,40 @@
+﻿<div class="row-fluid">
+    <ul class="ace-thumbnails">
+        <li ng-repeat="item in listData">
+            <a href="/UploadFile/Images/{{item.FileName}}" data-rel="colorbox" colorbox>
+                <img alt="{{item.Alt}}" src="/UploadFile/ImageThumbs/{{item.FileName}}" width="150" height="150" />
+                <div class="text">
+                    <div class="inner">{{item.Name}}</div>
+                </div>
+            </a>
+
+            <div class="tools tools-bottom">
+                <a href="javascript:;" ng-click="hide('hình ảnh', item.Name, item.ID)" ng-if="item.IsShow == true">
+                    <i class="icon-eye-open"></i>
+                </a>
+
+                <a href="javascript:;" ng-click="show('hình ảnh', item.Name, item.ID)" ng-if="item.IsShow == false">
+                    <i class="icon-eye-close"></i>
+                </a>
+
+                <a href="javascript:;" ng-click="checkedPicture($event, item.ID)">
+                    <i class="icon-check-empty"></i>
+                </a>
+
+                <a href="javascript:;" ng-click="edit(item.ID)">
+                    <i class="icon-pencil"></i>
+                </a>
+
+                <a href="javascript:;" ng-click="delete('hình ảnh', item.Name, item.ID)">
+                    <i class="icon-remove red"></i>
+                </a>
+            </div>
+        </li>
+    </ul>
+    <div class="row-fluid" ng-if="total > listData.length">
+        <div class="space"></div>
+        <p>
+            <button class="btn btn-primary btn-block" ng-click="loadMore()">Thêm hình ảnh</button>
+        </p>
+    </div>
+</div>

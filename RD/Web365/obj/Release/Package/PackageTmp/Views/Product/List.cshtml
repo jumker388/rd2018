@@ -1,0 +1,91 @@
+﻿@model Web365Models.ListPoductModel
+
+@{
+    ViewBag.Title = "";
+    ViewBag.Description = "";
+    ViewBag.Keywords = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+    <div class="main-title">
+        <a href="/@Resources.Resource.LangugeCode">Trang chủ</a>&#187;        
+        <a href="/@Resources.Resource.LangugeCode/@Model.TypeParent.ParentNameAscii/@Model.TypeParent.NameAscii">@Model.TypeParent.Name</a>&#187;
+        <a href="/@Resources.Resource.LangugeCode/@Model.TypeParent.ParentNameAscii/@Model.TypeParent.NameAscii/@Model.Type.NameAscii">@Model.Type.Name</a>
+    </div>
+    <div class="main-des">
+        @Html.Raw(Model.Type.Detail)
+    </div>
+    <div class="main-content">
+
+        @if (Model.ListProduct.ListProduct.Any())
+        {
+            <div class="list-product">
+                @foreach (var item in Model.ListProduct.ListProduct)
+                {
+                    <div class="item-product">
+                        <div class="left-item-product">
+                            <a class="name-item-product" href="/@Resources.Resource.LangugeCode/@Model.TypeParent.ParentNameAscii/@Model.TypeParent.NameAscii/@Model.Type.NameAscii/@item.NameAscii">
+                                @item.Name
+                            </a>
+                            <a class="img-item-product" href="/@Resources.Resource.LangugeCode/@Model.TypeParent.ParentNameAscii/@Model.TypeParent.NameAscii/@Model.Type.NameAscii/@item.NameAscii">
+                                <img src="@Web365Utility.Web365Utility.GetPathPicture(item.Picture.FileName)" />
+                            </a>
+                            <div class="summary-item-product">
+                                @Html.Raw(item.Summary)
+                            </div>
+                            <a class="more-item-product" href="/@Resources.Resource.LangugeCode/@Model.TypeParent.ParentNameAscii/@Model.TypeParent.NameAscii/@Model.Type.NameAscii/@item.NameAscii">
+                                Chi tiết sản phẩm
+                            </a>
+                        </div>
+                        <div class="right-item-product">
+                            <ul>
+                                @foreach (var item1 in item.ListProductVariant)
+                                {
+                                    <li>
+                                        <input name="@("product" + item.ID)" type="radio" data-productid="@item.ID" data-productname="@item.Name" data-picture="@item.Picture.FileName" data-variantid="@item1.ID" data-variantname="@item1.Name" data-price="@item1.Price" />@item1.Name - @Web365Utility.Web365Utility.ConvertNumber(item1.Price) VND
+                                        @if (item1.IsOutOfStock)
+                                        {
+                                            <span class="not-order">hết hàng</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="can-order">Còn hàng</span>
+                                        }
+                                    </li>
+                                }
+                            </ul>
+                            <button class="add-order" type="button" data-name="@("product" + item.ID)">
+                                Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        }
+        else
+        {
+            <p class="message-empty">Sản phẩm đang được cập nhật</p>
+        }    
+
+    </div>
+</div>
+
+@section left{
+    <div class="left-content">
+        <div class="left-header">
+            @Model.TypeParent.Name
+        </div>
+        <div class="left-main menu-left">
+            <ul>
+                @foreach (var item in Model.ListProductType)
+                {
+                    <li><a href="/@Resources.Resource.LangugeCode/@Model.TypeParent.ParentNameAscii/@item.ParentNameAscii/@item.NameAscii">@item.Name</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+}
+
+@section scripts{}

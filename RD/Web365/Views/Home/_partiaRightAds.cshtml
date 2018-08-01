@@ -1,0 +1,24 @@
+﻿@model Web365Domain.AdvertiesItem
+<div class="tq-srnight">
+    <div class="tq-srifo">
+        @foreach (var item in Model.ListPicture)
+        {
+            <a class="tq-srimg" href='@item.Link' title='@item.Summary'>
+                <img src="@Web365Utility.Web365Utility.GetPathPicture(item.FileName)" alt="@item.Summary" />
+            </a>
+
+        }
+        <ul class="tq-srapp">
+            <li>
+                <a href="" title="" target="_blank">
+                    <img src="~/Content/tq9v2/images/App-Store.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="" title="" target="_blank">
+                    <img src="~/Content/tq9v2/images/Google-Play.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+﻿@using Web365Utility
+@model IEnumerable<Web365Domain.ArticleItem>
+
+<div class="tq-mtop">
+    <div class="container">
+        <div class="tq-mtleft">
+            @foreach (var item in Model)
+            {
+                <a href="@item.LinkReference" class="tq-mtltit" style="cursor: pointer;">@item.Title</a>
+            }
+        </div>
+        <div class="tq-mtright">
+            <a href="" title="" target="_blank" class="tq-mtrcall"><img src="~/Content/tq99/images/home/fb.png" alt=""></a>
+        </div>
+    </div>
+</div>

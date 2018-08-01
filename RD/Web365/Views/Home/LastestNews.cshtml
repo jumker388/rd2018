@@ -1,0 +1,24 @@
+﻿@using Web365Utility
+@model IEnumerable<Web365Domain.ArticleItem>
+
+<ul class="tq-srnul">
+
+    @foreach (var item in Model)
+    {
+
+        <li>
+            <p class="tq-srnew-img">
+                <a href="/@item.ArticleType.NameAscii/@item.TitleAscii-@item.ID" title="@item.Title">
+                    <img onerror="this.onerror = null; this.src = '/Images/noimage.png';" src="@Web365Utility.GetPathPicture(item.Picture.FileName)" alt="@item.Title">
+                </a>
+            </p>
+            <div class="tq-srnew-info">
+                <p class="tq-srnew-itit"><a href="/@item.ArticleType/@item.TitleAscii-@item.ID" title="@item.Title">@item.Title</a></p>
+                <p class="tq-srnew-itxt">
+                    @Html.Raw(Web365Utility.RemoveHtmlTag(item.Summary))
+                </p>
+            </div>
+        </li>
+    }
+
+</ul>

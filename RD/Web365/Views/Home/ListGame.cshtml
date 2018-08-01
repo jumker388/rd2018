@@ -1,0 +1,52 @@
+﻿@using Web365Utility
+@model IEnumerable<Web365Domain.ArticleItem>
+
+<div class="tq-sgame">
+    <div class="container">
+        <div class="tq-gslide">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    @foreach (var item in Model)
+                    {
+                        <div class="swiper-slide">
+                            <div class="tq-gsitem">
+
+                                <a href="@item.SEOTitle" title="" target="_blank" class="tq-sgul-img">
+                                    <img onerror="this.onerror = null; this.src = '/Images/noimage.png';" src="@Web365Utility.GetPathPicture(item.Picture.FileName)" alt="@item.Title">
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <!-- Add Pagination -->
+            </div>
+            <div class="tq-slnext"></div>
+            <div class="tq-slprev"></div>
+        </div>
+    </div>
+</div>
+<!--END GAME-->
+<style>
+</style>
+<div class="tq-cmt">
+    <div class="container">
+        <div class="tq-sleft">
+          <div class="fb-page" data-href="https://www.facebook.com/TuQuy9com/" data-tabs="timeline" data-width="500" data-height="186" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+		  <blockquote cite="https://www.facebook.com/TuQuy9com/" class="fb-xfbml-parse-ignore">
+		  <a href="https://www.facebook.com/TuQuy9com/">Tứ Quý 9</a></blockquote></div>
+
+        </div>
+        <div class="tq-sright">
+            <ul class="tq-chtul">
+                <li>
+                    <p class="tq-cht-left tq-cht-lhot">Hotline Hỗ Trợ </p>
+                    <p class="tq-cht-right tq-cht-rnumber">0868.37.5225</p>
+                </li>
+                <li>
+                    <p class="tq-cht-left tq-cht-lmail">Mail Hỗ Trợ</p>
+                    <p class="tq-cht-right tq-cht-rmail"> hotro.tuquy9@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

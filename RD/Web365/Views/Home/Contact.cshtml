@@ -1,0 +1,38 @@
+﻿@using Web365Utility
+@model Web365Domain.ArticleItem
+@{
+    //ViewBag.Title = Model.Title + "DR PEPPER";
+    //ViewBag.Description = Model.Summary + "DR PEPPER";
+    ViewBag.Keywords = "Thiết kế nội thất DR PEPPER";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="sb-mtop-tt">
+    <div class="container">
+        <div class="sb-mtleft">
+            <div class="sb-breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="/">Trang chủ</a></li>
+                    <li class="active">@Model.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="sb-mtright sb-mtright-tt">
+            <p class="sb-mtrcall">Hotline: <strong>088.823.6131</strong></p>
+        </div>
+    </div>
+</div>
+<!--END SB-TOP-->
+
+<div class="sb-news clearfix">
+    <div class="container">
+        <div class="sb-nleft">
+            <div class="sb-nitem">
+                @Html.Raw(Model.Detail)
+            </div>
+
+        </div>
+        <div class="sb-nright">
+            @Html.Action("RightBanner", "Home")
+        </div>
+    </div>
+</div>

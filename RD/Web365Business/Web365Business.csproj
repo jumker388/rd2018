@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F77DCF1-E9E7-443B-B17A-A4D4511ECDBA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web365Business</RootNamespace>
+    <AssemblyName>Web365Business</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>%24/Web365/Web365Business</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>http://bvn-pc:8080/tfs/web365%2520project</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Back-End\BaseBE.cs" />
+    <Compile Include="Back-End\IRepository\IDaiLyRepository.cs" />
+    <Compile Include="Back-End\IRepository\IAutoArticleRepository.cs" />
+    <Compile Include="Back-End\IRepository\IGamePlayerRepository.cs" />
+    <Compile Include="Back-End\IRepository\ITypeArticleAutoRepository.cs" />
+    <Compile Include="Back-End\IRepository\ICommentRepository.cs" />
+    <Compile Include="Back-End\IRepository\IAdvertiesRepository.cs" />
+    <Compile Include="Back-End\IRepository\IAdvertiesPictureMapRepository.cs" />
+    <Compile Include="Back-End\IRepository\IMenuRepository.cs" />
+    <Compile Include="Back-End\IRepository\IProductVariantRepository.cs" />
+    <Compile Include="Back-End\IRepository\IProductTypeGroupMapRepository.cs" />
+    <Compile Include="Back-End\IRepository\IArticleGroupTypeMapRepository.cs" />
+    <Compile Include="Back-End\IRepository\IProductTypeGroupRepository.cs" />
+    <Compile Include="Back-End\IRepository\IArticleGroupTypeRepository.cs" />
+    <Compile Include="Back-End\IRepository\ICustomerRepository.cs" />
+    <Compile Include="Back-End\IRepository\IFileRepository.cs" />
+    <Compile Include="Back-End\IRepository\IFileTypeRepository.cs" />
+    <Compile Include="Back-End\IRepository\IBaseRepository.cs" />
+    <Compile Include="Back-End\IRepository\IContactRepository.cs" />
+    <Compile Include="Back-End\IRepository\IReceiveInfoRepository.cs" />
+    <Compile Include="Back-End\IRepository\IReceiveInfoGroupRepository.cs" />
+    <Compile Include="Back-End\IRepository\IOrderRepository.cs" />
+    <Compile Include="Back-End\IRepository\IProductLabelRepository.cs" />
+    <Compile Include="Back-End\IRepository\IProductAttributeRepository.cs" />
+    <Compile Include="Back-End\IRepository\IProductGroupAttributeRepository.cs" />
+    <Compile Include="Back-End\IRepository\IProductFilterRepository.cs" />
+    <Compile Include="Back-End\IRepository\ILayoutContentRepository.cs" />
+    <Compile Include="Back-End\IRepository\ISupportRepository.cs" />
+    <Compile Include="Back-End\IRepository\ISupportTypeRepository.cs" />
+    <Compile Include="Back-End\IRepository\IUserPageRepository.cs" />
+    <Compile Include="Back-End\IRepository\IUserRepository.cs" />
+    <Compile Include="Back-End\IRepository\IUserRoleRepository.cs" />
+    <Compile Include="Back-End\IRepository\IProductStatusMapRepository.cs" />
+    <Compile Include="Back-End\IRepository\IArticleGroupRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Back-End\IRepository\IArticleGroupMapRepository.cs" />
+    <Compile Include="Back-End\IRepository\IArticleRepository.cs" />
+    <Compile Include="Back-End\IRepository\IProductStatusRepository.cs" />
+    <Compile Include="Back-End\IRepository\IDistributorRepository.cs" />
+    <Compile Include="Back-End\IRepository\IManufacturerRepository.cs" />
+    <Compile Include="Back-End\IRepository\IPictureTypeRepository.cs" />
+    <Compile Include="Back-End\IRepository\IPictureRepository.cs" />
+    <Compile Include="Back-End\IRepository\IProductTypeRepository.cs" />
+    <Compile Include="Back-End\IRepository\IArticleTypeRepository.cs" />
+    <Compile Include="Back-End\Repository\GameDaiLyRepository.cs" />
+    <Compile Include="Back-End\Repository\CommentRepository.cs" />
+    <Compile Include="Back-End\Repository\AutoArticleRepository.cs" />
+    <Compile Include="Back-End\Repository\GamePlayerRepository.cs" />
+    <Compile Include="Back-End\Repository\TypeArticleAutoRepository.cs" />
+    <Compile Include="Back-End\Repository\MenuRepository.cs" />
+    <Compile Include="Back-End\Repository\ProductVariantRepository.cs" />
+    <Compile Include="Back-End\Repository\ProductTypeGroupMapRepository.cs" />
+    <Compile Include="Back-End\Repository\ArticleGroupTypeMapRepository.cs" />
+    <Compile Include="Back-End\Repository\ProductTypeGroupRepository.cs" />
+    <Compile Include="Back-End\Repository\ArticleGroupTypeRepository.cs" />
+    <Compile Include="Back-End\Repository\CustomerRepository.cs" />
+    <Compile Include="Back-End\Repository\FileRepository.cs" />
+    <Compile Include="Back-End\Repository\FileTypeRepository.cs" />
+    <Compile Include="Back-End\Repository\ContactRepository.cs" />
+    <Compile Include="Back-End\Repository\ReceiveInfoRepository.cs" />
+    <Compile Include="Back-End\Repository\ReceiveInfoGroupRepository.cs" />
+    <Compile Include="Back-End\Repository\OrderRepository.cs" />
+    <Compile Include="Back-End\Repository\LayoutContentRepository.cs" />
+    <Compile Include="Back-End\Repository\ProductAttributeRepository.cs" />
+    <Compile Include="Back-End\Repository\ProductGroupAttributeRepository.cs" />
+    <Compile Include="Back-End\Repository\ProductFilterRepository.cs" />
+    <Compile Include="Back-End\Repository\ProductLabelRepository.cs" />
+    <Compile Include="Back-End\Repository\SupportRepository.cs" />
+    <Compile Include="Back-End\Repository\SupportTypeRepository.cs" />
+    <Compile Include="Back-End\Repository\AdvertiesRepository.cs" />
+    <Compile Include="Back-End\Repository\AdvertiesPictureMapRepository.cs" />
+    <Compile Include="Back-End\Repository\UserPageRepository.cs" />
+    <Compile Include="Back-End\Repository\UserRepository.cs" />
+    <Compile Include="Back-End\Repository\UserRoleRepository.cs" />
+    <Compile Include="Back-End\Repository\ProductRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Back-End\Repository\ProductStatusMapRepository.cs" />
+    <Compile Include="Back-End\Repository\ArticleGroupMapRepository.cs" />
+    <Compile Include="Back-End\Repository\ArticleRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Back-End\Repository\ArticleTypeRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Back-End\Repository\DistributorRepository.cs" />
+    <Compile Include="Back-End\Repository\PictureRepository.cs" />
+    <Compile Include="Back-End\Repository\PictureTypeRepository.cs" />
+    <Compile Include="Back-End\Repository\ArticleGroupRepository.cs" />
+    <Compile Include="Back-End\Repository\ManufacturerRepository.cs" />
+    <Compile Include="Back-End\Repository\ProductStatusRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Back-End\Repository\ProductTypeRepository.cs" />
+    <Compile Include="Back-End\IRepository\IProductRepository.cs" />
+    <Compile Include="Front-End\BaseFE.cs" />
+    <Compile Include="Front-End\IRepository\IFileRepositoryFE.cs" />
+    <Compile Include="Front-End\IRepository\IPictureRepositoryFE.cs" />
+    <Compile Include="Front-End\IRepository\IAdvertiesRepositoryFE.cs" />
+    <Compile Include="Front-End\IRepository\IMenuRepositoryFE.cs" />
+    <Compile Include="Front-End\IRepository\ILayoutContentRepositoryFE.cs" />
+    <Compile Include="Front-End\IRepository\IArticleRepositoryFE.cs" />
+    <Compile Include="Front-End\IRepository\IOrderRepositoryFE.cs" />
+    <Compile Include="Front-End\IRepository\ICustomerRepositoryFE.cs" />
+    <Compile Include="Front-End\IRepository\IProductFilterRepositoryFE.cs" />
+    <Compile Include="Front-End\IRepository\IProductStatusRepositoryFE.cs" />
+    <Compile Include="Front-End\IRepository\IProductTypeRepositoryFE.cs" />
+    <Compile Include="Front-End\IRepository\IOtherRepositoryFE.cs" />
+    <Compile Include="Front-End\IRepository\IProductRepositoryFE.cs" />
+    <Compile Include="Front-End\Repository\AdvertiesRepositoryFE.cs" />
+    <Compile Include="Front-End\Repository\FileRepositoryFE.cs" />
+    <Compile Include="Front-End\Repository\PictureRepositoryFE.cs" />
+    <Compile Include="Front-End\Repository\MenuRepositoryFE.cs" />
+    <Compile Include="Front-End\Repository\ArticleTypeRepositoryFE.cs" />
+    <Compile Include="Front-End\Repository\ArticleRepositoryFE.cs" />
+    <Compile Include="Front-End\IRepository\IArticleTypeRepositoryFE.cs" />
+    <Compile Include="Front-End\Repository\LayoutContentRepositoryFE.cs" />
+    <Compile Include="Front-End\Repository\OrderRepositoryFE.cs" />
+    <Compile Include="Front-End\Repository\CustomerRepositoryFE.cs" />
+    <Compile Include="Front-End\Repository\ProductFilterRepositoryFE.cs" />
+    <Compile Include="Front-End\Repository\ProductStatusRepositoryFE.cs" />
+    <Compile Include="Front-End\Repository\ProductTypeRepositoryFE.cs" />
+    <Compile Include="Front-End\Repository\OtherRepositoryFE.cs" />
+    <Compile Include="Front-End\Repository\ProductRepositoryFE.cs" />
+    <Compile Include="Game\AnnouncementBusiness.cs" />
+    <Compile Include="Game\ChangeAward.cs" />
+    <Compile Include="Game\ChargeBusiness.cs" />
+    <Compile Include="Game\Constants.cs" />
+    <Compile Include="Game\PocGameBusiness.cs" />
+    <Compile Include="Game\GameBusiness.cs" />
+    <Compile Include="Game\CardCodeBusiness.cs" />
+    <Compile Include="Game\GiftCodeBusiness.cs" />
+    <Compile Include="Game\NoticeTextBusiness.cs" />
+    <Compile Include="Game\RoomBusiness.cs" />
+    <Compile Include="Game\UserInfoBusiness.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Web365BaseReader\Web365BaseReader.csproj">
+      <Project>{b8ffff2f-353b-4957-962e-97da68f85ca7}</Project>
+      <Name>Web365BaseReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web365Cached\Web365Cached.csproj">
+      <Project>{70e8b2c6-f5d5-4018-b9f2-bc1cdafc7bfd}</Project>
+      <Name>Web365Cached</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web365Base\Web365Base.csproj">
+      <Project>{fb4b7c6d-045e-40be-9faa-0015e3f53c37}</Project>
+      <Name>Web365Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web365Domain\Web365Domain.csproj">
+      <Project>{c24be151-fc63-4a94-b796-fd222bd8399e}</Project>
+      <Name>Web365Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web365Models\Web365Models.csproj">
+      <Project>{396dbc4b-90a2-4dc5-aff8-9bd9e10386c6}</Project>
+      <Name>Web365Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web365Utility\Web365Utility.csproj">
+      <Project>{c1c417c8-8c37-44dc-89a3-1552cf167f15}</Project>
+      <Name>Web365Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Web365.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Web365_NL_NGANLUONG_API" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.nganluong.vn/micro_checkout_api.php</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

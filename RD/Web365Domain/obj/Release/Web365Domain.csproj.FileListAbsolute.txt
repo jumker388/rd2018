@@ -1,0 +1,14 @@
+D:\Project\DongNhatDuong\code\Web365Domain\bin\Release\Web365Domain.dll
+D:\Project\DongNhatDuong\code\Web365Domain\bin\Release\Web365Domain.pdb
+D:\Project\DongNhatDuong\code\Web365Domain\obj\Release\Web365Domain.dll
+D:\Project\DongNhatDuong\code\Web365Domain\obj\Release\Web365Domain.pdb
+D:\Project\Oxford\code\Web365Domain\bin\Release\Web365Domain.dll
+D:\Project\Oxford\code\Web365Domain\bin\Release\Web365Domain.pdb
+D:\Project\Oxford\code\Web365Domain\obj\Release\Web365Domain.csprojResolveAssemblyReference.cache
+D:\Project\Oxford\code\Web365Domain\obj\Release\Web365Domain.dll
+D:\Project\Oxford\code\Web365Domain\obj\Release\Web365Domain.pdb
+D:\Project\Myina\code\Web365Domain\bin\Release\Web365Domain.dll
+D:\Project\Myina\code\Web365Domain\bin\Release\Web365Domain.pdb
+D:\Project\Myina\code\Web365Domain\obj\Release\Web365Domain.csprojResolveAssemblyReference.cache
+D:\Project\Myina\code\Web365Domain\obj\Release\Web365Domain.dll
+D:\Project\Myina\code\Web365Domain\obj\Release\Web365Domain.pdb

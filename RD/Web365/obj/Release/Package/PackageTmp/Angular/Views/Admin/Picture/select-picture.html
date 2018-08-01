@@ -1,0 +1,91 @@
+﻿<form class="form-horizontal" id="select-picture-form">
+    <div class="content-modal">
+        <div class="modal-header">
+            <a href="javascript:;" class="close" ng-click="closeSelectPictureModal()">×</a>
+            <h3 class="modal-title">Lựa chọn hình ảnh</h3>
+        </div>
+        <div class="modal-body">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="widget-box collapsed">
+                        <div class="widget-header widget-hea1der-small header-color-dark">
+                            <h6>
+                                <i class="icon-filter"></i>
+                                Lọc hình ảnh
+                            </h6>
+                            <div class="widget-toolbar">
+                                <a href="#" data-action="collapse">
+                                    <i class="icon-chevron-down"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <div class="form-horizontal">
+                                            <div class="control-group">
+                                                <label class="control-label" for="form-field-1">Tên hình ảnh</label>
+                                                <div class="controls">
+                                                    <input type="text" placeholder="Từ khóa" ng-model="pictureFilter.name" />
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label" for="form-field-1">Tên file hình ảnh</label>
+                                                <div class="controls">
+                                                    <input type="text" placeholder="Từ khóa" ng-model="pictureFilter.fileName" />
+                                                </div>
+                                            </div>
+                                            <div class="form-actions">
+                                                <button class="btn btn-info" type="button" ng-click="searchPicture()">
+                                                    <i class="icon-ok bigger-110"></i>
+                                                    Tìm kiếm
+                                                </button>
+                                                <button class="btn" type="reset">
+                                                    <i class="icon-undo bigger-110"></i>
+                                                    Mặc định
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space"></div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <tree list="treeTypePicture" title="Nhóm loại hình ảnh" name="typePictureId" multiselect="true" selected="treeSelected()"></tree>
+                </div>
+                <div class="span9">
+                    <div class="row-fluid">
+                        <ul class="ace-thumbnails">
+                            <li ng-repeat="item in listPicture">
+                                <a href="/UploadFile/Images/{{item.FileName}}" data-rel="colorbox" colorbox>
+                                    <img alt="{{item.Alt}}" src="/UploadFile/ImageThumbs/{{item.FileName}}" width="150" height="150" />
+                                </a>
+                                <div class="tools tools-bottom">
+                                    <a href="javascript:;" ng-click="choicePicture($event, item)">
+                                        <i class="icon-check-empty white"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>                        
+                    </div>
+                    <div class="row-fluid" ng-if="totalPicture > listPicture.length">
+                        <div class="space"></div>
+                        <p>
+                            <button class="btn btn-primary btn-block" ng-click="loadMorePicture()">Thêm hình ảnh</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:;" class="btn btn-primary" ng-click="addNewPicture()">Thêm mới hình ảnh</a>
+            <a href="javascript:;" class="btn btn-warning" ng-click="closeSelectPictureModal()">Thoát</a>
+        </div>
+    </div>
+</form>

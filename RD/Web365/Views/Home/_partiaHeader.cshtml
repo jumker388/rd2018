@@ -1,0 +1,30 @@
+﻿<div class="tq-header">
+    <div class="container">
+        <div class="tq-hmain clearfix">
+            <a href="/" class="tq-hlogo">
+                <img src="~/Content/tq9v2/images/logo.png" />
+            </a>
+            <span class="tq-iconmntop"><i class="glyphicon glyphicon-menu-hamburger"></i></span>
+            <div class="tq-hright">
+                <ul class="tq-menutop clearfix">
+                    <li><a href="/" class="@(!Request.Url.AbsoluteUri.Contains("tin-tuc") && !Request.Url.AbsoluteUri.Contains("su-kien") ? "active" : "")">Trang chủ</a></li>
+                    <li><a href="/tin-tuc" class="@(Request.Url.AbsoluteUri.Contains("tin-tuc") ? "active" : "")">Tin tức</a></li>
+                    <li><a href="/su-kien" class="@(Request.Url.AbsoluteUri.Contains("su-kien") ? "active" : "")">Sự kiện</a></li>
+
+                </ul>
+                <ul class="tq-happul clearfix">
+                    <li>
+                        <a target="_blank" href="javascript:;">
+                            <img src="~/Content/tq9v2/images/App-Store.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.portal.tq9">
+                            <img src="~/Content/tq9v2/images/Google-Play.png" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

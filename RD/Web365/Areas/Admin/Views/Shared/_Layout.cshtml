@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="web365app">
+<head>
+    <meta charset="utf-8" />
+
+    <title>Metronic | Dashboard</title>
+    <meta name="description" content="Latest updates and statistic charts">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+
+    <!--begin::Web font -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: { "families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"] },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+    <!--end::Web font -->
+    <!--begin::Base Styles -->
+    <!--begin::Page Vendors -->
+    <link href="~/assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" /><!--RTL version:<link href="~/assets/vendors/custom/fullcalendar/fullcalendar.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+    <!--end::Page Vendors -->
+
+
+    <link href="~/assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" /><!--RTL version:<link href="~/assets/vendors/base/vendors.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+
+    <link href="~/assets/demo/demo11/base/style.bundle.css" rel="stylesheet" type="text/css" /><!--RTL version:<link href="~/assets/demo/demo11/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+    <!--end::Base Styles -->
+
+    <link rel="shortcut icon" href="~/assets/demo/demo11/media/img/logo/favicon.ico" />
+    <link href="~/Content/metrocusto.css" rel="stylesheet" />
+    @RenderSection("style", required: false)
+</head>
+
+<body class="m-content--skin- m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-light m-aside--offcanvas-default">
+
+    <!-- begin:: Page -->
+    <div class="m-grid m-grid--hor m-grid--root m-page">
+        @{ Html.RenderPartial("~/Areas/Admin/Views/_partial/_partialHeader.cshtml"); }
+        <!-- BEGIN: Header -->
+        <!-- END: Header -->
+        <!-- begin::Body -->
+        <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+
+            <!-- BEGIN: Left Aside -->
+            <button class="m-aside-left-close  m-aside-left-close--skin-light " id="m_aside_left_close_btn"><i class="la la-close"></i></button>
+
+            <div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-light ">
+                <!-- BEGIN: Aside Menu -->
+                <div id="m_ver_menu"
+                     class="m-aside-menu  m-aside-menu--skin-light m-aside-menu--submenu-skin-light "
+                     m-menu-vertical="1"
+                     m-menu-scrollable="0" m-menu-dropdown-timeout="500">
+                    <ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
+                        <li class="m-menu__section m-menu__section--first">
+                            <h4 class="m-menu__section-text">Menu</h4>
+                            <i class="m-menu__section-icon flaticon-more-v3"></i>
+                        </li>
+
+                        <li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover" m-menu-link-redirect="1">
+                            <a href="javascript:;" class="m-menu__link m-menu__toggle">
+                                <i class="m-menu__link-icon flaticon-graphic-1"></i>
+                                <span class="m-menu__link-title">
+                                    <span class="m-menu__link-wrap">
+                                        <span class="m-menu__link-text">BILLING REPORT</span>
+                                        <span class="m-menu__link-badge"><span class="m-badge m-badge--accent">2</span></span>
+                                    </span>
+                                </span><i class="m-menu__ver-arrow la la-angle-right"></i>
+                            </a>
+                            <div class="m-menu__submenu " m-hidden-height="160" style="display: none; overflow: hidden;">
+                                <span class="m-menu__arrow"></span>
+                                <ul class="m-menu__subnav">
+                                    <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                                        <a href="/Admin/Report/CcuMinute" class="m-menu__link "><span class="m-menu__link-text">CCU theo phút</span></a>
+                                    </li>
+                                    <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                                        <a href="/Admin/Report/CcuDay" class="m-menu__link "><span class="m-menu__link-text">CCU theo ngày</span></a>
+                                    </li>
+                                    @*<li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                                        <a href="inner.html" class="m-menu__link "><span class="m-menu__link-text">NPU theo phút</span></a>
+                                    </li>
+                                    <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                                        <a href="inner.html" class="m-menu__link "><span class="m-menu__link-text">NPU theo ngày</span></a>
+                                    </li>
+                                    <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                                        <a href="inner.html" class="m-menu__link "><span class="m-menu__link-text">DPU</span></a>
+                                    </li>
+                                    <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                                        <a href="inner.html" class="m-menu__link "><span class="m-menu__link-text">Luồng tiền theo phút</span></a>
+                                    </li>
+                                    <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                                        <a href="inner.html" class="m-menu__link "><span class="m-menu__link-text">Doanh thu</span></a>
+                                    </li>
+                                    <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                                        <a href="inner.html" class="m-menu__link "><span class="m-menu__link-text">Tổng quan hệ thống theo ngày</span></a>
+                                    </li>*@
+                                </ul>
+                            </div>
+                        </li>
+
+                        @*<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover" m-menu-link-redirect="1">
+                            <a href="javascript:;" class="m-menu__link m-menu__toggle">
+                                <i class="m-menu__link-icon flaticon-suitcase"></i>
+                                <span class="m-menu__link-title">
+                                    <span class="m-menu__link-wrap">
+                                        <span class="m-menu__link-text">TRACKING</span>
+                                        <span class="m-menu__link-badge"><span class="m-badge m-badge--accent">4</span></span>
+                                    </span>
+                                </span><i class="m-menu__ver-arrow la la-angle-right"></i>
+                            </a>
+                            <div class="m-menu__submenu " m-hidden-height="160" style="display: none; overflow: hidden;">
+                                <span class="m-menu__arrow"></span>
+                                <ul class="m-menu__subnav">
+                                    <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                                        <a href="inner.html" class="m-menu__link "><span class="m-menu__link-text">Tài khoản chơi nhiều</span></a>
+                                    </li>
+                                    <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                                        <a href="inner.html" class="m-menu__link "><span class="m-menu__link-text">Tài khoản thắng nhiều</span></a>
+                                    </li>
+                                    <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                                        <a href="inner.html" class="m-menu__link "><span class="m-menu__link-text">Tài khoản thua nhiều</span></a>
+                                    </li>
+                                    <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                                        <a href="inner.html" class="m-menu__link "><span class="m-menu__link-text">TOP số dư</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover" m-menu-link-redirect="1">
+                            <a href="javascript:;" class="m-menu__link m-menu__toggle">
+                                <i class="m-menu__link-icon flaticon-light"></i>
+                                <span class="m-menu__link-title">
+                                    <span class="m-menu__link-wrap">
+                                        <span class="m-menu__link-text">TRA CỨU</span>
+                                        <span class="m-menu__link-badge"><span class="m-badge m-badge--accent">2</span></span>
+                                    </span>
+                                </span><i class="m-menu__ver-arrow la la-angle-right"></i>
+                            </a>
+                            <div class="m-menu__submenu " m-hidden-height="160" style="display: none; overflow: hidden;">
+                                <span class="m-menu__arrow"></span>
+                                <ul class="m-menu__subnav">
+                                    <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                                        <a href="inner.html" class="m-menu__link "><span class="m-menu__link-text">Lịch sử giao dịch tài khoản</span></a>
+                                    </li>
+                                    <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                                        <a href="inner.html" class="m-menu__link "><span class="m-menu__link-text">Thống kê hoạt động tài khoản</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>*@
+
+                        <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                            <a href="/Admin/GamePlayer" class="m-menu__link ">
+                                <i class="m-menu__link-icon flaticon-suitcase"></i><span class="m-menu__link-text">Tra cứu tài khoản</span>
+                            </a>
+                        </li>
+
+                        @*<li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                            <a href="inner.html" class="m-menu__link "><i class="m-menu__link-icon flaticon-light"></i><span class="m-menu__link-text">Tra cứu giao dịch</span></a>
+                        </li>
+                        <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                            <a href="inner.html" class="m-menu__link "><i class="m-menu__link-icon flaticon-share"></i><span class="m-menu__link-text">Thống kê giao dịch</span></a>
+                        </li>
+                        <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+                            <a href="inner.html" class="m-menu__link "><i class="m-menu__link-icon flaticon-share"></i><span class="m-menu__link-text">Thống kê hạn mức âm</span></a>
+                        </li>*@
+                    </ul>
+                </div>
+                <!-- END: Aside Menu -->
+            </div>
+            <!-- END: Left Aside -->
+
+
+
+            <div class="m-grid__item m-grid__item--fluid m-wrapper">
+                <div class="m-portlet m-portlet--tab">
+                    <div class="m-portlet__head">
+                        <div class="m-portlet__head-caption">
+                            <div class="m-portlet__head-title">
+                                <span class="m-portlet__head-icon m--hide">
+                                    <i class="la la-gear"></i>
+                                </span>
+                                <h3 class="m-portlet__head-text">
+                                    @ViewBag.Title
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-portlet__body">
+                        <!--Begin::Section-->
+                        <div class="row">
+                            <div class="col-xl-12">
+                                @RenderBody()
+                            </div>
+                        </div>
+                        <!--End::Section-->
+                        <footer class="m-grid__item		m-footer ">
+                            <div class="m-container m-container--fluid m-container--full-height m-page__container">
+                                <div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
+                                    <div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
+                                        <span class="m-footer__copyright">
+                                            2017 © Metronic theme by
+                                            <a href="https://pocvip.com" class="m-link">POCVIP</a>
+                                        </span>
+                                    </div>
+                                    <div class="m-stack__item m-stack__item--right m-stack__item--middle m-stack__item--first">
+                                        <ul class="m-footer__nav m-nav m-nav--inline m--pull-right">
+                                            <li class="m-nav__item">
+                                                <a href="#" class="m-nav__link">
+                                                    <span class="m-nav__link-text">About</span>
+                                                </a>
+                                            </li>
+                                            <li class="m-nav__item">
+                                                <a href="#" class="m-nav__link">
+                                                    <span class="m-nav__link-text">Privacy</span>
+                                                </a>
+                                            </li>
+                                            <li class="m-nav__item">
+                                                <a href="#" class="m-nav__link">
+                                                    <span class="m-nav__link-text">T&amp;C</span>
+                                                </a>
+                                            </li>
+                                            <li class="m-nav__item">
+                                                <a href="#" class="m-nav__link">
+                                                    <span class="m-nav__link-text">Purchase</span>
+                                                </a>
+                                            </li>
+                                            <li class="m-nav__item m-nav__item">
+                                                <a href="#" class="m-nav__link" data-toggle="m-tooltip" title="" data-placement="left" data-original-title="Support Center">
+                                                    <i class="m-nav__link-icon flaticon-info m--icon-font-size-lg3"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <!-- end:: Page -->
+    <!-- begin::Scroll Top -->
+    <div id="m_scroll_top" class="m-scroll-top">
+        <i class="la la-arrow-up"></i>
+    </div>
+    <script src="~/Scripts/libs/jquery-3.3.1.min.js"></script>
+    <!-- begin::Quick Nav -->
+    <!--begin::Base Scripts -->
+    <script src="~/assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+    <script src="~/assets/demo/demo11/base/scripts.bundle.js" type="text/javascript"></script>
+    <!--end::Base Scripts -->
+    <!--begin::Page Vendors -->
+    <script src="~/assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+    <!--end::Page Vendors -->
+    <!--begin::Page Snippets -->
+    <script src="~/assets/app/js/dashboard.js" type="text/javascript"></script>
+
+    <!--end::Page Snippets -->
+    <script src="~/assets/demo/demo11/custom/components/base/blockui.js"></script>
+
+    <script src="~/assets/vendors/custom/flot/flot.bundle.js"></script>
+    <script src="~/assets/demo/demo11/custom/crud/forms/widgets/bootstrap-datetimepicker.js"></script>
+    
+
+    @RenderSection("script", required: false)
+
+</body>
+</html>

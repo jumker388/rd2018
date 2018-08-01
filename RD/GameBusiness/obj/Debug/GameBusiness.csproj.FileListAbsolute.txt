@@ -1,0 +1,17 @@
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\obj\Debug\GameBusiness.csprojResolveAssemblyReference.cache
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\bin\Debug\GameBusiness.dll.config
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\bin\Debug\GameBusiness.dll
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\bin\Debug\GameBusiness.pdb
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\bin\Debug\MySql.Data.dll
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\bin\Debug\Web365Domain.dll
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\bin\Debug\Web365Utility.dll
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\bin\Debug\Web365Models.dll
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\bin\Debug\Newtonsoft.Json.dll
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\bin\Debug\EPPlus.dll
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\bin\Debug\Web365Domain.pdb
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\bin\Debug\Web365Utility.pdb
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\bin\Debug\Web365Models.pdb
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\bin\Debug\Newtonsoft.Json.xml
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\bin\Debug\EPPlus.xml
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\obj\Debug\GameBusiness.dll
+E:\HCM-Pepper\BabauOnline\ThietkeEKE\GameBusiness\obj\Debug\GameBusiness.pdb

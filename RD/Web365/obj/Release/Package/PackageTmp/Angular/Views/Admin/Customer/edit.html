@@ -1,0 +1,92 @@
+﻿<form class="form-horizontal" id="modified-form" ng-submit="submit($event)" ng-controller="customerModified">
+    <div class="content-modal">
+        <div class="modal-header">
+            <a href="javascript:;" class="close" ng-click="cancel()">×</a>
+            <h3 class="modal-title" ng-if="data.ID == 0">Thêm mới khách hàng</h3>
+            <h3 class="modal-title" ng-if="data.ID != 0">Chỉnh sửa khách hàng: {{data.UserName}}</h3>
+        </div>
+        <div class="modal-body">
+            <div class="row-fluid">
+                <input type="hidden" name="ID" ng-value="data.ID" ng-model="data.ID" />
+                <div class="control-group">
+                    <label class="control-label" for="UserName">Tên tài khoản:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="UserName" ng-model="data.UserName" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="FirstName">Tên họ:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="FirstName" ng-model="data.FirstName" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="LastName">Tên:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="LastName" ng-model="data.LastName" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Email">Email:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="Email" ng-model="data.Email" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Phone">Số ĐT:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="Phone" ng-model="data.Phone" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Price">Số hiệu:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6 spinner-number" name="Number" ng-model="data.Number" spinner />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="IsActive">Đang sử dụng:</label>
+                    <div class="controls">
+                        <div class="span3">
+                            <label>                                                               
+                                <input type="checkbox" class="ace-switch ace-switch-1" name="IsActive" ng-value="data.IsActive" ng-model="data.IsActive" />                                
+                                <span class="lbl"></span>
+                                <input type="hidden" name="IsActive" ng-value="data.IsActive" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Image">Ảnh khách hàng:</label>
+                    <div class="controls">
+                        <box-picture arrid="data.PictureID" only="true" property="PictureID"></box-picture>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Price">Chi tiết khách hàng:</label>
+                    <div class="controls">
+                        <input type="hidden" name="Detail" ng-value="data.Detail" />
+                        <div class="wysiwyg-editor editor" ng-bind-html="renderHtml(data.Detail)" wysiwyg>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Lưu</button>
+            <a href="javascript:;" class="btn btn-warning" ng-click="cancel()">Thoát</a>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,47 @@
+﻿@model Web365Models.ListArticleModel
+
+@{
+    ViewBag.Title = Model.Type.SEOTitle;
+    ViewBag.Description = Model.Type.SEODescription;
+    ViewBag.Keywords = Model.Type.SEOKeyword;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+    <div class="main-title">
+        <a href="/@Resources.Resource.LangugeCode">Trang chủ</a>&#187;
+        <a href="/@Resources.Resource.LangugeCode/bai-viet/@Model.Type.NameAscii">@Model.Type.Name</a>
+    </div>
+    <div class="main-des">
+        @Html.Raw(Model.Type.Detail)
+    </div>
+    <div class="main-content">
+        <div class="list_n" data-type="@Model.Type.ID">
+            @foreach (var item in Model.List)
+            {
+                <div class="news_item">
+                    <span class="news_item_img">
+                        <a href="/@Resources.Resource.LangugeCode/bai-viet/@item.ArticleType.NameAscii/@item.TitleAscii" title="@item.Title">
+                            <img src="@Web365Utility.Web365Utility.GetPathPicture(item.Picture.FileName)" alt="@item.Title" onerror="this.src='/Images/noimage.png'" />
+                        </a>
+                    </span>
+                    <h2>
+                        <a href="/@Resources.Resource.LangugeCode/bai-viet/@item.ArticleType.NameAscii/@item.TitleAscii" title="@item.Title">
+                            @item.Title
+                        </a>
+                    </h2>
+                    <span class="news_item_summary">
+                        @Html.Raw(item.Summary)
+                    </span>
+                    <span class="txtDetail">
+                        <a href="/@Resources.Resource.LangugeCode/bai-viet/@item.ArticleType.NameAscii/@item.TitleAscii" title="@item.Title">Chi tiết ...</a>
+                    </span>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section left{}
+
+@section scripts{}

@@ -1,0 +1,105 @@
+﻿<form class="form-horizontal" id="modified-form" ng-submit="submit($event)" ng-controller="userModified">
+    <div class="content-modal">
+        <div class="modal-header">
+            <a href="javascript:;" class="close" ng-click="cancel()">×</a>
+            <h3 class="modal-title" ng-if="data.UserId == 0">Thêm mới quản trị viên</h3>
+            <h3 class="modal-title" ng-if="data.UserId != 0">Chỉnh sửa quản trị viên: {{data.UserName}}</h3>
+        </div>
+        <div class="modal-body">
+            <div class="row-fluid">
+                <input type="hidden" name="UserId" ng-value="data.UserId" ng-model="data.UserId" />
+                <div class="control-group">
+                    <label class="control-label" for="Name">Tên đăng nhập:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="UserName" ng-model="data.UserName" ng-if="data.UserId == 0" />
+                            <input type="text" readonly="readonly" class="span6" name="UserName" ng-model="data.UserName" ng-if="data.UserId != 0" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group" ng-if="data.UserId == 0">
+                    <label class="control-label" for="password">Mật khẩu:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="password" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="FirstName">Tên họ quản trị viên:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="FirstName" ng-model="data.FirstName" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="LastName">Tên quản trị viên:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="LastName" ng-model="data.LastName" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Gender">Giới tính:</label>
+                    <div class="controls">
+                        <div class="span3">
+                            <label>
+                                <input type="checkbox" class="ace-switch ace-switch-1" name="Gender" ng-value="data.Gender" ng-model="data.Gender" />
+                                <span class="lbl gender"></span>
+                                <input type="hidden" name="Gender" ng-value="data.Gender" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Email">Email quản trị viên:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="Email" ng-model="data.Email" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Phone">Số ĐT quản trị viên:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="Phone" ng-model="data.Phone" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Address">Địa chỉ quản trị viên:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="Address" ng-model="data.Address" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="IsShow">Hiển thị:</label>
+                    <div class="controls">
+                        <div class="span3">
+                            <label>                                                               
+                                <input type="checkbox" class="ace-switch ace-switch-1" name="IsActive" ng-value="data.IsActive" ng-model="data.IsActive" />                                
+                                <span class="lbl"></span>
+                                <input type="hidden" name="IsActive" ng-value="data.IsActive" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Price">Chi tiết quản trị viên:</label>
+                    <div class="controls">
+                        <textarea name="Note" ng-model="data.Note" ck-editor></textarea>                   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Lưu</button>
+            <a href="javascript:;" class="btn btn-warning" ng-click="cancel()">Thoát</a>
+        </div>
+    </div>
+</form>

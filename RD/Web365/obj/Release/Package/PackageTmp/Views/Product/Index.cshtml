@@ -1,0 +1,61 @@
+﻿@model Web365Models.ListTypeModel
+
+@{
+    ViewBag.Title = "";
+    ViewBag.Description = "";
+    ViewBag.Keywords = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+    <div class="main-des">
+        @Html.Raw(Model.Type.Detail)
+    </div>
+    <div class="main-content">
+
+        @if (Model.Type.ListPicture.Any())
+        {
+            <ul class="bxslider">
+                @foreach (var item in Model.Type.ListPicture)
+                {
+                    <li>
+                        <a href="@item.Link">
+                            <img src="@Web365Utility.Web365Utility.GetPathPicture(item.FileName)" />
+                        </a>
+                    </li>
+                }
+            </ul>
+        }        
+
+        @Html.Action("Sologan", "Layout")
+
+    </div>
+</div>
+
+@section left{
+    <div class="left-content">
+        <div class="left-header">
+            @Model.Type.Name
+        </div>
+        <div class="left-main menu-left">
+            <ul>
+                @foreach (var item in Model.ListProductType)
+                {
+                    <li><a href="/@Resources.Resource.LangugeCode/@Model.Type.ParentNameAscii/@item.ParentNameAscii/@item.NameAscii">@item.Name</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            if ($('.bxslider').length > 0) {
+                $('.bxslider').bxSlider();
+            }
+            
+        });
+    </script>
+}

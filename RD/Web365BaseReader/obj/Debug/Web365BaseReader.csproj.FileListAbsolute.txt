@@ -1,0 +1,16 @@
+D:\Proj\9999\Web365BaseReader\bin\Debug\Web365BaseReader.dll.config
+D:\Proj\9999\Web365BaseReader\bin\Debug\Web365BaseReader.dll
+D:\Proj\9999\Web365BaseReader\bin\Debug\Web365BaseReader.pdb
+D:\Proj\9999\Web365BaseReader\bin\Debug\EntityFramework.dll
+D:\Proj\9999\Web365BaseReader\bin\Debug\EntityFramework.xml
+D:\Proj\9999\Web365BaseReader\obj\Debug\Web365BaseReader.csprojResolveAssemblyReference.cache
+D:\Proj\9999\Web365BaseReader\obj\Debug\Web365BaseReader.dll
+D:\Proj\9999\Web365BaseReader\obj\Debug\Web365BaseReader.pdb
+D:\Proj\RD\Web365BaseReader\bin\Debug\Web365BaseReader.dll.config
+D:\Proj\RD\Web365BaseReader\bin\Debug\Web365BaseReader.dll
+D:\Proj\RD\Web365BaseReader\bin\Debug\Web365BaseReader.pdb
+D:\Proj\RD\Web365BaseReader\bin\Debug\EntityFramework.dll
+D:\Proj\RD\Web365BaseReader\bin\Debug\EntityFramework.xml
+D:\Proj\RD\Web365BaseReader\obj\Debug\Web365BaseReader.csprojResolveAssemblyReference.cache
+D:\Proj\RD\Web365BaseReader\obj\Debug\Web365BaseReader.dll
+D:\Proj\RD\Web365BaseReader\obj\Debug\Web365BaseReader.pdb

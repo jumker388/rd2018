@@ -1,0 +1,53 @@
+﻿@model Web365Models.HomeModel
+
+@{
+    ViewBag.Title = "";
+    ViewBag.Description = "";
+    ViewBag.Keywords = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+    <div class="main-des">
+        @Html.Raw(Model.Content.Detail)
+    </div>
+    <div class="main-content">
+        <ul class="bxslider">
+            @foreach (var item in Model.Content.ListPicture)
+            {
+                <li>
+                    <a href="@item.Link">
+                        <img src="@Web365Utility.Web365Utility.GetPathPicture(item.FileName)" />
+                    </a>                    
+                </li>
+            }            
+        </ul>
+
+        @Html.Action("Sologan", "Layout")
+
+    </div>
+</div>
+
+@section left{
+    <div class="left-content">
+        <div class="left-header">
+            Danh mục sản phẩm
+        </div>
+        <div class="left-main menu-left">
+            <ul>
+                @foreach (var item in Model.ListProductType)
+                {
+                    <li><a href="/@Resources.Resource.LangugeCode/@item.ParentNameAscii/@item.NameAscii">@item.Name</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.bxslider').bxSlider();
+        });
+    </script>
+}

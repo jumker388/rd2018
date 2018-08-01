@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Web365Domain.GameItem>
+<select class="form-control m-input m-input--air" id="gameId">
+    <option value="0">Tất cả</option>
+    @foreach (var item in Model)
+    {
+        <option value="@item.zoneID">@item.name</option>
+    }
+</select>

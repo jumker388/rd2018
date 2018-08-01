@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="portalModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="a_bankcharge">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="buyer_uid" Type="Int32" />
+    <Property Name="buyer_fullname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="buyer_mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="total_amount" Type="Int32" />
+    <Property Name="order_code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="payment_method" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="bank_code" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="payment_type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="transaction_status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="transaction_id" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="time_request" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="time_receive" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="token" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="a_paycard">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="cardNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cardSerial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="userName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cardProvider" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="channel" Type="Int32" />
+    <Property Name="refNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cardPrice" Type="Int32" Nullable="false" />
+    <Property Name="gamePrice" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="resMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="tranNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="source" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="a_smsplus">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="amount" Type="Int32" Nullable="false" />
+    <Property Name="command_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telco" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="msisdn" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="mo_message" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="targetUser" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="receivedTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="mtBody" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="responeTime" Type="DateTime" Precision="3" />
+    <Property Name="request_id" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="signature" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="active_email">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="activeCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="expiredDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="cp" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="roleid" Type="Int32" />
+    <Property Name="is_active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="admin_permission">
+    <Key>
+      <PropertyRef Name="per_id" />
+    </Key>
+    <Property Name="per_id" Type="Int32" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="per_class" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="per_action" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="admin_role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="full" Type="Int32" />
+    <Property Name="level" Type="Int32" />
+  </EntityType>
+  <EntityType Name="announcement">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="cp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="subject" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="content" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="begin_time" Type="DateTime" Precision="3" />
+    <Property Name="end_time" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="announcement_readed">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Double" />
+    <Property Name="readedId" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Menu_Text" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ParentID" Type="Int32" />
+    <Property Name="URL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="createDate" Type="DateTime" Precision="3" />
+    <Property Name="modifyDate" Type="DateTime" Precision="3" />
+    <Property Name="by" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="chuchaychay">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="Link" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DataStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateEnd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsDelete" Type="Int32" />
+    <Property Name="Orders" Type="Int32" />
+  </EntityType>
+  <EntityType Name="clan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="level" Type="Int32" Nullable="false" />
+    <Property Name="avatarId" Type="Int32" Nullable="false" />
+    <Property Name="createTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="tag" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ownerId" Type="Int32" Nullable="false" />
+    <Property Name="bio" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="clanMoney" Type="Int32" Nullable="false" />
+    <Property Name="shortDesc" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="totalMember" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clanMember">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="joinDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="role" Type="Int32" Nullable="false" />
+    <Property Name="applyStatus" Type="Int32" Nullable="false" />
+    <Property Name="clanPoint" Type="Int32" Nullable="false" />
+    <Property Name="clanDonate" Type="Int32" Nullable="false" />
+    <Property Name="clanId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clanRole">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="approve" Type="Int32" />
+    <Property Name="kick" Type="Int32" />
+    <Property Name="changeBio" Type="Int32" />
+    <Property Name="sendAll" Type="Int32" />
+  </EntityType>
+  <EntityType Name="clanUpgrade">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="level" Type="Int32" Nullable="false" />
+    <Property Name="money" Type="Int32" Nullable="false" />
+    <Property Name="totalSlot" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clanWall">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="clanId" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="message" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="postDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="config_card">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="system" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="cp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="system_card" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="emoticon">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="emoticon1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="exchangeCardInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="serial" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="cardNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="dateExpired" Type="DateTime" Precision="3" />
+    <Property Name="dateInput" Type="DateTime" Precision="3" />
+    <Property Name="dateUse" Type="DateTime" Precision="3" />
+    <Property Name="used" Type="Int32" />
+    <Property Name="partner" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="value" Type="Int32" />
+    <Property Name="telcoId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="exchangeHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="cardId" Type="Int32" />
+    <Property Name="userId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="exchangeOption">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="value" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="rate" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="isShow" Type="Int32" />
+  </EntityType>
+  <EntityType Name="exchangeTelco">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="isShow" Type="Int32" />
+  </EntityType>
+  <EntityType Name="friend">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="user1_id" Type="Int32" Nullable="false" />
+    <Property Name="user2_id" Type="Int32" Nullable="false" />
+    <Property Name="datetime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="gameflash">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="category" Type="String" MaxLength="750" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="Int32" />
+    <Property Name="flash" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="screen" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="visit" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="history">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="cash" Type="Int32" Nullable="false" />
+    <Property Name="current_cash" Type="Double" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="6000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="game_id" Type="Int32" Nullable="false" />
+    <Property Name="trans_type" Type="Int32" Nullable="false" />
+    <Property Name="time" Type="DateTime" Precision="3" />
+    <Property Name="money" Type="Int32" />
+    <Property Name="cp" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="title" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="isXu" Type="Int32" />
+    <Property Name="cardType" Type="Int32" />
+    <Property Name="short_code" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="telco" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="history_filter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="textview" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="C_sql" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="role" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="C_order" Type="Int32" />
+  </EntityType>
+  <EntityType Name="log_sms">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="sender" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="recipient" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="moBody" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mtBody" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="cpId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="sendnumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="message">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="parent_id" Type="Int32" Nullable="false" />
+    <Property Name="from_user_id" Type="Int32" Nullable="false" />
+    <Property Name="isNewComment" Type="Int32" Nullable="false" />
+    <Property Name="type_id" Type="Int32" Nullable="false" />
+    <Property Name="comment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datetime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cp" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="openid">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="openId1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="chanel" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="option">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="value" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="viettel" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vina" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="mobi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="receiver" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="promotion_rule">
+    <Key>
+      <PropertyRef Name="rule_id" />
+    </Key>
+    <Property Name="rule_id" Type="Int32" Nullable="false" />
+    <Property Name="rule_start" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="rule_end" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="rule_card" Type="Int32" Nullable="false" />
+    <Property Name="rule_sms" Type="Int32" />
+    <Property Name="rule_active" Type="Int32" />
+    <Property Name="rule_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="rule_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="rule_card_special" Type="Int32" />
+    <Property Name="rule_price_tier" Type="Int32" />
+    <Property Name="cp" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="rule_high_card_special" Type="Int32" />
+    <Property Name="rule_high_price_tier" Type="Int32" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fullname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="identity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cmnd" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="birth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sex" Type="Int32" Nullable="false" />
+    <Property Name="register_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="age" Type="Int32" Nullable="false" />
+    <Property Name="cash" Type="Double" Nullable="false" />
+    <Property Name="is_active" Type="Int32" Nullable="false" />
+    <Property Name="totalGame" Type="Int32" Nullable="false" />
+    <Property Name="clanId" Type="Int32" />
+    <Property Name="roleid" Type="Int32" />
+    <Property Name="avatar" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="refid" Type="Int32" Nullable="false" />
+    <Property Name="hits" Type="Int32" />
+    <Property Name="activeCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="is_partner" Type="Int32" />
+    <Property Name="is_bot" Type="Int32" />
+    <Property Name="register_ip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="user_temp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fullname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="identity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="birth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sex" Type="Int32" Nullable="false" />
+    <Property Name="register_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="age" Type="Int32" Nullable="false" />
+    <Property Name="cash" Type="Double" Nullable="false" />
+    <Property Name="is_active" Type="Int32" Nullable="false" />
+    <Property Name="totalGame" Type="Int32" Nullable="false" />
+    <Property Name="clanId" Type="Int32" />
+    <Property Name="roleid" Type="Int32" />
+    <Property Name="avatar" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="refid" Type="Int32" Nullable="false" />
+    <Property Name="hits" Type="Int32" />
+    <Property Name="activeCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="is_partner" Type="Int32" />
+  </EntityType>
+  <EntityType Name="a_game">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="gameName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="a_partner">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="dateCreated" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="partnerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="smsNumber" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="accessKey1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="accessKey2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="clan_log">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="deleteDate" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="level" Type="Int32" />
+    <Property Name="money" Type="Int32" />
+    <Property Name="ownerId" Type="Int32" />
+    <Property Name="totalMember" Type="Int32" />
+    <Property Name="deleteDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="trans_type">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="type" />
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="code" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="portalEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="a_bankcharge" EntityType="Self.a_bankcharge" />
+    <EntitySet Name="a_paycard" EntityType="Self.a_paycard" />
+    <EntitySet Name="a_smsplus" EntityType="Self.a_smsplus" />
+    <EntitySet Name="active_email" EntityType="Self.active_email" />
+    <EntitySet Name="admins" EntityType="Self.admin" />
+    <EntitySet Name="admin_permission" EntityType="Self.admin_permission" />
+    <EntitySet Name="admin_role" EntityType="Self.admin_role" />
+    <EntitySet Name="announcements" EntityType="Self.announcement" />
+    <EntitySet Name="announcement_readed" EntityType="Self.announcement_readed" />
+    <EntitySet Name="categories" EntityType="Self.category" />
+    <EntitySet Name="chuchaychays" EntityType="Self.chuchaychay" />
+    <EntitySet Name="clans" EntityType="Self.clan" />
+    <EntitySet Name="clanMembers" EntityType="Self.clanMember" />
+    <EntitySet Name="clanRoles" EntityType="Self.clanRole" />
+    <EntitySet Name="clanUpgrades" EntityType="Self.clanUpgrade" />
+    <EntitySet Name="clanWalls" EntityType="Self.clanWall" />
+    <EntitySet Name="config_card" EntityType="Self.config_card" />
+    <EntitySet Name="emoticons" EntityType="Self.emoticon" />
+    <EntitySet Name="exchangeCardInfoes" EntityType="Self.exchangeCardInfo" />
+    <EntitySet Name="exchangeHistories" EntityType="Self.exchangeHistory" />
+    <EntitySet Name="exchangeOptions" EntityType="Self.exchangeOption" />
+    <EntitySet Name="exchangeTelcoes" EntityType="Self.exchangeTelco" />
+    <EntitySet Name="friends" EntityType="Self.friend" />
+    <EntitySet Name="gameflashes" EntityType="Self.gameflash" />
+    <EntitySet Name="histories" EntityType="Self.history" />
+    <EntitySet Name="history_filter" EntityType="Self.history_filter" />
+    <EntitySet Name="log_sms" EntityType="Self.log_sms" />
+    <EntitySet Name="messages" EntityType="Self.message" />
+    <EntitySet Name="openids" EntityType="Self.openid" />
+    <EntitySet Name="options" EntityType="Self.option" />
+    <EntitySet Name="promotion_rule" EntityType="Self.promotion_rule" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <EntitySet Name="user_temp" EntityType="Self.user_temp" />
+    <EntitySet Name="a_game" EntityType="Self.a_game" />
+    <EntitySet Name="a_partner" EntityType="Self.a_partner" />
+    <EntitySet Name="clan_log" EntityType="Self.clan_log" />
+    <EntitySet Name="trans_type" EntityType="Self.trans_type" />
+  </EntityContainer>
+</Schema>

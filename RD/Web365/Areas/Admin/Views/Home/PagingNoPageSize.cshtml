@@ -1,0 +1,49 @@
+﻿@using System.Configuration
+@using Web365Utility
+@model string[]
+@{
+    var page = Convert.ToInt32(Model[0]);
+    var total = Convert.ToInt32(Model[1]);
+    var pagesize = 40;
+    var pagingCount = Convert.ToInt32(Math.Ceiling((total / (float)pagesize)));
+}
+@if (total > 0)
+{
+    <div class="m-datatable__pager m-datatable--paging-loaded clearfix">
+        <ul class="m-datatable__pager-nav ulPaging">
+
+            @if (page != 1)
+            {
+
+                <li>
+                    <a title="First" class="m-datatable__pager-link m-datatable__pager-link--first" data-page="1" data-total="@total">
+                        <i class="la la-angle-double-left"></i>
+                    </a>
+                </li>
+            }
+
+            @for (var j = page - 2; j <= page + 2; j++)
+            {
+                if (j <= 0 || j > pagingCount)
+                {
+                    continue;
+                }
+                if (j == page)
+                {
+                    <li><a class="m-datatable__pager-link m-datatable__pager-link-number m-datatable__pager-link--active" data-page="@j" data-total="@total" title="@j">@j</a></li>
+                }
+                else
+                {
+                    <li><a class="m-datatable__pager-link m-datatable__pager-link-number" data-page="@j" data-total="@total" title="@j">@j</a></li>
+                }
+            }
+
+            @if (page != pagingCount)
+            {
+                <li><a title="Last" class="m-datatable__pager-link m-datatable__pager-link--last" data-page="@pagingCount" data-total="@total"><i class="la la-angle-double-right"></i></a></li>
+            }
+        </ul>
+
+    </div>
+
+}

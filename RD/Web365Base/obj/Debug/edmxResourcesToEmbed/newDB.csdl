@@ -1,0 +1,1086 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="newDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="AppStoreCharge">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="osMoney" Type="Double" Nullable="false" />
+    <Property Name="gameMoney" Type="Double" Nullable="false" />
+    <Property Name="clientType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="itemName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AppStoreChargeHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="productId" Type="Int32" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="orderId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="orderState" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="clientType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="orderTime" Type="DateTime" Precision="3" />
+    <Property Name="logTime" Type="DateTime" Precision="3" />
+    <Property Name="packageName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="payload" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="tokenPurchase" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="avatar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category_id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="path" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cash" Type="Int32" Nullable="false" />
+    <Property Name="buy_number" Type="Int32" Nullable="false" />
+    <Property Name="datetime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fromDevice" Type="Int32" Nullable="false" />
+    <Property Name="width" Type="Int32" Nullable="false" />
+    <Property Name="height" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="is_shop" Type="Int32" />
+  </EntityType>
+  <EntityType Name="avatar_category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="avatar_user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="avatar_id" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="buy_time" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="banner_minigame">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="game_id" Type="Int32" />
+    <Property Name="linkBanner" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="clientType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="bet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cash" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="bk_history">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cash" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CaoThapLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MatchID" Type="Int32" />
+    <Property Name="Card" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentCash" Type="Int32" />
+    <Property Name="CashTren" Type="Int32" />
+    <Property Name="CashDuoi" Type="Int32" />
+    <Property Name="DateCreated" Type="Int32" />
+    <Property Name="step" Type="Int32" />
+    <Property Name="level" Type="Int32" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="Nhan" Type="Int32" />
+    <Property Name="MucCuoc" Type="Int32" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ParentID" Type="Int32" />
+    <Property Name="URL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="createDate" Type="DateTime" Precision="3" />
+    <Property Name="modifyDate" Type="DateTime" Precision="3" />
+    <Property Name="by" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="menu" Type="Int32" />
+  </EntityType>
+  <EntityType Name="charge_cards">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cardId" Type="Int32" Nullable="false" />
+    <Property Name="cardName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="subMenu" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="len1" Type="Int32" Nullable="false" />
+    <Property Name="len2" Type="Int32" Nullable="false" />
+    <Property Name="cardMsg" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="client_version">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="config">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="value" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="time" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="configAwardVersion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clientType" Type="Int32" />
+    <Property Name="versionName" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="enableAward" Type="Int32" />
+    <Property Name="dateLog" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="configMiniPoker">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="a" Type="Int32" />
+    <Property Name="a1" Type="Int32" />
+    <Property Name="a2" Type="Int32" />
+    <Property Name="a3" Type="Int32" />
+    <Property Name="a4" Type="Int32" />
+    <Property Name="a5" Type="Int32" />
+    <Property Name="a6" Type="Int32" />
+    <Property Name="a7" Type="Int32" />
+    <Property Name="a8" Type="Int32" />
+    <Property Name="a9" Type="Int32" />
+    <Property Name="a10" Type="Int32" />
+  </EntityType>
+  <EntityType Name="configQuayXeng">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="a" Type="Int32" />
+    <Property Name="a1" Type="Int32" />
+    <Property Name="a2" Type="Int32" />
+    <Property Name="a3" Type="Int32" />
+    <Property Name="a4" Type="Int32" />
+    <Property Name="a5" Type="Int32" />
+    <Property Name="a6" Type="Int32" />
+  </EntityType>
+  <EntityType Name="count_download">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ip" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="device" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="cp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="cp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cpID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cpName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="currency" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="smsContent" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="smsNumber2" Type="Int32" />
+    <Property Name="smsNumber" Type="Int32" Nullable="false" />
+    <Property Name="active" Type="Int32" Nullable="false" />
+    <Property Name="smsMessage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="smsActive" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="smsvalue2" Type="Int32" />
+    <Property Name="smsvalue" Type="Int32" />
+    <Property Name="linkiOS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="smsMessage2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="smsvalueactive" Type="Int32" Nullable="false" />
+    <Property Name="max_gift" Type="Int32" Nullable="false" />
+    <Property Name="cash_gift" Type="Int32" Nullable="false" />
+    <Property Name="reset_gift_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="allowSmsCharge" Type="Int32" Nullable="false" />
+    <Property Name="allowCardCharge" Type="Int32" Nullable="false" />
+    <Property Name="allowIPhoneCharge" Type="Int32" Nullable="false" />
+    <Property Name="chargeUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="helpContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="noticeText" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="activeContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="autoOnSms" Type="Int32" Nullable="false" />
+    <Property Name="timeAutoOnSms" Type="Int32" Nullable="false" />
+    <Property Name="maxRoom" Type="Int32" />
+    <Property Name="allowSendMail" Type="Int32" Nullable="false" />
+    <Property Name="mailContent" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="downUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="isConnect" Type="Int32" />
+    <Property Name="urlConnect" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="smsPassword" Type="Int32" />
+    <Property Name="smsPasswordContent" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="linkAndroid" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="parent" Type="Int32" />
+    <Property Name="private_key" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="version" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="hotLine" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="cpkey">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cpID" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="keyConnect" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="data_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="insertTime" Type="DateTime" Precision="3" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="matchId" Type="Int32" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="data" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="clientType" Type="Int32" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="matchNum" Type="Int32" />
+    <Property Name="timerun" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="epay_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="time" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="success" Type="Int32" />
+    <Property Name="type" Type="Int32" />
+  </EntityType>
+  <EntityType Name="event">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="content" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="start" Type="DateTime" Precision="3" />
+    <Property Name="end" Type="DateTime" Precision="3" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="by" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="weekly" Type="Int32" />
+    <Property Name="daily" Type="Int32" />
+    <Property Name="monthly" Type="Int32" />
+    <Property Name="photo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="cp" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="reg_start" Type="DateTime" Precision="3" />
+    <Property Name="reg_end" Type="DateTime" Precision="3" />
+    <Property Name="fake_data" Type="Int32" />
+  </EntityType>
+  <EntityType Name="event_data_fake">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="fullname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="point" Type="Int32" />
+    <Property Name="suWin" Type="Int32" />
+    <Property Name="isVCash" Type="Int32" />
+  </EntityType>
+  <EntityType Name="event_register">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="fullname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registered" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="eventid" Type="Int32" />
+    <Property Name="ym" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="rank" Type="Int32" />
+    <Property Name="comment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="identity" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="start_cash" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="exp_value">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="expIncrease" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="g_version">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clientType" Type="Int32" Nullable="false" />
+    <Property Name="versionCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="versionMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="forceUpdate" Type="Int32" Nullable="false" />
+    <Property Name="lastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="game">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="minCashMul" Type="Int32" />
+    <Property Name="displayStatus" Type="Int32" />
+    <Property Name="gameOrder" Type="Int32" />
+  </EntityType>
+  <EntityType Name="game_history">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="cash" Type="Double" Nullable="false" />
+    <Property Name="current_cash" Type="Double" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="6000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="game_id" Type="Int32" Nullable="false" />
+    <Property Name="trans_type" Type="Int32" Nullable="false" />
+    <Property Name="time" Type="DateTime" Precision="3" />
+    <Property Name="money" Type="Int32" />
+    <Property Name="cp" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="title" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="tax" Type="Int32" />
+    <Property Name="taxPercent" Type="Int32" />
+    <Property Name="before_cash" Type="Int32" />
+    <Property Name="matchId" Type="Int32" />
+    <Property Name="matchNum" Type="Int32" />
+    <Property Name="betTaiXiu" Type="Int32" />
+    <Property Name="valueCard" Type="Int32" />
+    <Property Name="telcoId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="game_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="game_id" Type="Int32" />
+    <Property Name="host_id" Type="Int32" />
+    <Property Name="winner_id" Type="Int32" />
+    <Property Name="room_id" Type="Int32" />
+    <Property Name="cash" Type="Int32" />
+    <Property Name="uniqueId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="time" Type="DateTime" Precision="3" />
+    <Property Name="room_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="numPlayers" Type="Int32" />
+    <Property Name="taixiuResult" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="taixiuType" Type="Int32" />
+    <Property Name="miniPokerWinCash" Type="Int32" />
+    <Property Name="miniPokerCards" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="miniPokerResult" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="miniPokerResultType" Type="Int32" />
+    <Property Name="slotMachineTotalLine" Type="Int32" />
+    <Property Name="slotMachineWinLine" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="slotMachineWinCash" Type="Int32" />
+    <Property Name="slotMachineNoHu" Type="Int32" />
+    <Property Name="slotMachineNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="miniPokerString" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="game_trans">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="code" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="gameflash">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="category" Type="String" MaxLength="750" FixedLength="false" Unicode="false" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="Int32" />
+    <Property Name="flash" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="screen" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="visit" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="gameGuide">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="game_id" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="gift">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="expired" Type="DateTime" Precision="3" />
+    <Property Name="type_id" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="value" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="volume" Type="Int32" />
+    <Property Name="IP" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="gift_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="value" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="expired" Type="DateTime" Precision="3" />
+    <Property Name="volume" Type="Int32" />
+    <Property Name="code" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="giftcode">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="value" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="dateCreated" Type="DateTime" Precision="3" />
+    <Property Name="dateExpired" Type="DateTime" Precision="3" />
+    <Property Name="dateUsed" Type="DateTime" Precision="3" />
+    <Property Name="used" Type="Int32" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="isVcash" Type="Int32" />
+  </EntityType>
+  <EntityType Name="level">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cash" Type="Double" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="level1" Type="Int32" Nullable="false" />
+    <Property Name="exp" Type="Int32" />
+    <Property Name="cashGift" Type="Int32" />
+  </EntityType>
+  <EntityType Name="link">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="link1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="clicked" Type="Int32" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="updated" Type="DateTime" Precision="3" />
+    <Property Name="user_intro" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="log_download">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="phone_name" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="brand_name" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datetime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="width" Type="Int32" />
+    <Property Name="height" Type="Int32" />
+    <Property Name="isqwerty" Type="Int32" />
+    <Property Name="setup" Type="Int32" Nullable="false" />
+    <Property Name="registry" Type="Int32" Nullable="false" />
+    <Property Name="login" Type="Int32" Nullable="false" />
+    <Property Name="version" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="setup_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="source" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="match_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="matchId" Type="Int32" Nullable="false" />
+    <Property Name="matchNum" Type="Int32" />
+    <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="news">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="photo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="category_id" Type="Int32" />
+    <Property Name="author" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="views" Type="Int32" />
+    <Property Name="spotlight" Type="Int32" />
+    <Property Name="modifydate" Type="DateTime" Precision="3" />
+    <Property Name="order" Type="Int32" />
+    <Property Name="slider" Type="Int32" />
+    <Property Name="website" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="popup" Type="Int32" />
+  </EntityType>
+  <EntityType Name="noel_bonus_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uid" Type="Int32" />
+    <Property Name="cash_bonus" Type="Int32" />
+    <Property Name="matchId" Type="Int32" />
+    <Property Name="gameId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="notification">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="push_message" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="push_time" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="push_date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="cp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="offlinemessage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="userIDSend" Type="Double" Nullable="false" />
+    <Property Name="userIDReceive" Type="Double" Nullable="false" />
+    <Property Name="mes" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datetimeSend" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="online_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="peak" Type="Int32" />
+    <Property Name="time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dateUp" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="phone_brands">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="brand" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="phone">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="model" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="marketing_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="brand_id" Type="Int32" />
+    <Property Name="width" Type="Int32" />
+    <Property Name="height" Type="Int32" />
+    <Property Name="qwerty_keyboard" Type="Int32" />
+  </EntityType>
+  <EntityType Name="play_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="matchId" Type="Int32" Nullable="false" />
+    <Property Name="matchNum" Type="Int32" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="game_id" Type="Int32" />
+    <Property Name="is_play" Type="Int32" />
+    <Property Name="time_log" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="bet_cash" Type="Int32" />
+  </EntityType>
+  <EntityType Name="regId">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="gcm_id" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="os" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="report_CCU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="CCU" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="room">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="min_cash" Type="Int32" Nullable="false" />
+    <Property Name="min_level" Type="Int32" Nullable="false" />
+    <Property Name="game_id" Type="Int32" Nullable="false" />
+    <Property Name="room_number" Type="Int32" Nullable="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="min_bet" Type="Int32" Nullable="false" />
+    <Property Name="tax" Type="Int32" />
+    <Property Name="end_time" Type="Int32" />
+    <Property Name="start_time" Type="Int32" />
+    <Property Name="money_type" Type="Int32" />
+    <Property Name="max_bet" Type="Int32" />
+  </EntityType>
+  <EntityType Name="slider">
+    <Key>
+      <PropertyRef Name="slide_id" />
+    </Key>
+    <Property Name="slide_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="slide_title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="slide_url" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="slide_start" Type="DateTime" Precision="3" />
+    <Property Name="slide_end" Type="DateTime" Precision="3" />
+    <Property Name="slide_status" Type="Int32" />
+    <Property Name="slide_file" Type="String" MaxLength="155" FixedLength="false" Unicode="false" />
+    <Property Name="slide_cp" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="slotMachineDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="matchId" Type="Int32" Nullable="false" />
+    <Property Name="stringLine" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="stringWinCash" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="taixiu_history_user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="matchId" Type="Int32" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="game_id" Type="Int32" />
+    <Property Name="bet_type" Type="Int32" />
+    <Property Name="bet_cash" Type="Int32" />
+    <Property Name="return_cash" Type="Int32" />
+    <Property Name="win_cash" Type="Int32" />
+  </EntityType>
+  <EntityType Name="taixiu_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="matchId" Type="Int32" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="user_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="bet_cash" Type="Int32" />
+    <Property Name="return_cash" Type="Int32" />
+    <Property Name="bet_type" Type="Int32" />
+    <Property Name="bet_time" Type="Int32" />
+    <Property Name="game_id" Type="Int32" />
+    <Property Name="time_log" Type="DateTime" Precision="3" />
+    <Property Name="win_cash" Type="Int32" />
+  </EntityType>
+  <EntityType Name="taixiu_log_result">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="matchId" Type="Int32" />
+    <Property Name="cashWin" Type="Int32" />
+    <Property Name="resultTaiXiu" Type="Int32" />
+    <Property Name="lastest" Type="Int32" />
+  </EntityType>
+  <EntityType Name="update_pass">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="log" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="time" Type="DateTime" Precision="3" />
+    <Property Name="mysql_user" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="oldpass" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="newpass" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="wap">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="cp" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="is_spam" Type="Int32" />
+  </EntityType>
+  <EntityType Name="bk_transaction">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cash" Type="Int32" />
+    <Property Name="des" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dateCreated" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="chan_table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="point" Type="Int32" />
+    <Property Name="dich" Type="Int32" />
+  </EntityType>
+  <EntityType Name="configBotTaixiu">
+    <Key>
+      <PropertyRef Name="a1" />
+    </Key>
+    <Property Name="a1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="a2" Type="Int32" />
+    <Property Name="a3" Type="Int32" />
+    <Property Name="a4" Type="Int32" />
+    <Property Name="a5" Type="Int32" />
+    <Property Name="a6" Type="Int32" />
+    <Property Name="a7" Type="Int32" />
+    <Property Name="a8" Type="Int32" />
+    <Property Name="a9" Type="Int32" />
+    <Property Name="a10" Type="Int32" />
+    <Property Name="a11" Type="Int32" />
+    <Property Name="a12" Type="Int32" />
+    <Property Name="a13" Type="Int32" />
+    <Property Name="a14" Type="Int32" />
+    <Property Name="a15" Type="Int32" />
+    <Property Name="a16" Type="Int32" />
+    <Property Name="a17" Type="Int32" />
+    <Property Name="a18" Type="Int32" />
+    <Property Name="a19" Type="Int32" />
+  </EntityType>
+  <EntityType Name="g_client">
+    <Key>
+      <PropertyRef Name="clientId" />
+    </Key>
+    <Property Name="clientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clientName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="g_provider">
+    <Key>
+      <PropertyRef Name="providerId" />
+      <PropertyRef Name="md5Key" />
+      <PropertyRef Name="CP" />
+    </Key>
+    <Property Name="providerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="providerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="md5Key" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="g_user">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="avatar_id" />
+      <PropertyRef Name="level_id" />
+      <PropertyRef Name="last_login" />
+      <PropertyRef Name="isOnline" />
+      <PropertyRef Name="isMobile" />
+      <PropertyRef Name="ip" />
+      <PropertyRef Name="device" />
+      <PropertyRef Name="screen" />
+      <PropertyRef Name="currentGame" />
+      <PropertyRef Name="username" />
+      <PropertyRef Name="start_playing_time" />
+      <PropertyRef Name="gift_times" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="avatar_id" Type="Int32" Nullable="false" />
+    <Property Name="level_id" Type="Int32" Nullable="false" />
+    <Property Name="last_login" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="isOnline" Type="Int32" Nullable="false" />
+    <Property Name="isMobile" Type="Int32" Nullable="false" />
+    <Property Name="ip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="device" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="screen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="currentGame" Type="Int32" Nullable="false" />
+    <Property Name="exp" Type="Int32" />
+    <Property Name="avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="gameCash" Type="Double" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="totalGame" Type="Int32" />
+    <Property Name="totalWin" Type="Int32" />
+    <Property Name="playing_game" Type="Int32" />
+    <Property Name="is_block" Type="Int32" />
+    <Property Name="start_playing_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cp" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="gift_times" Type="Int32" Nullable="false" />
+    <Property Name="vCash" Type="Double" />
+    <Property Name="referrer" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="agencyId" Type="Int32" />
+    <Property Name="region" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="facebook" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="item_event">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="trans_type">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="type" />
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="code" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_info">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="avatar_id" />
+      <PropertyRef Name="level_id" />
+      <PropertyRef Name="last_login" />
+      <PropertyRef Name="isOnline" />
+      <PropertyRef Name="isMobile" />
+      <PropertyRef Name="ip" />
+      <PropertyRef Name="device" />
+      <PropertyRef Name="screen" />
+      <PropertyRef Name="currentGame" />
+      <PropertyRef Name="username" />
+      <PropertyRef Name="start_playing_time" />
+      <PropertyRef Name="gift_times" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="avatar_id" Type="Int32" Nullable="false" />
+    <Property Name="level_id" Type="Int32" Nullable="false" />
+    <Property Name="last_login" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="isOnline" Type="Int32" Nullable="false" />
+    <Property Name="isMobile" Type="Int32" Nullable="false" />
+    <Property Name="ip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="device" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="screen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="currentGame" Type="Int32" Nullable="false" />
+    <Property Name="exp" Type="Int32" />
+    <Property Name="avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="gameCash" Type="Double" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="totalGame" Type="Int32" />
+    <Property Name="totalWin" Type="Int32" />
+    <Property Name="playing_game" Type="Int32" />
+    <Property Name="is_block" Type="Int32" />
+    <Property Name="start_playing_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cp" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="gift_times" Type="Int32" Nullable="false" />
+    <Property Name="gameGold" Type="Double" />
+  </EntityType>
+  <EntityType Name="VinhDanhCaoThap">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MucCuoc" Type="Int32" />
+    <Property Name="Thang" Type="Int32" />
+    <Property Name="BoBai" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="view_clan">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="level" />
+      <PropertyRef Name="avatarId" />
+      <PropertyRef Name="createTime" />
+      <PropertyRef Name="tag" />
+      <PropertyRef Name="ownerId" />
+      <PropertyRef Name="clanMoney" />
+      <PropertyRef Name="totalMember" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="level" Type="Int32" Nullable="false" />
+    <Property Name="avatarId" Type="Int32" Nullable="false" />
+    <Property Name="createTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="tag" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ownerId" Type="Int32" Nullable="false" />
+    <Property Name="bio" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="clanMoney" Type="Int32" Nullable="false" />
+    <Property Name="shortDesc" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="totalMember" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="view_openid">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="userId" />
+      <PropertyRef Name="openId" />
+      <PropertyRef Name="chanel" />
+      <PropertyRef Name="dateCreated" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="openId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="chanel" Type="Int32" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="view_user_info">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="fullname" />
+      <PropertyRef Name="username" />
+      <PropertyRef Name="password" />
+      <PropertyRef Name="age" />
+      <PropertyRef Name="sex" />
+      <PropertyRef Name="cash" />
+      <PropertyRef Name="is_active" />
+      <PropertyRef Name="avatar_id" />
+      <PropertyRef Name="level_id" />
+      <PropertyRef Name="last_login" />
+      <PropertyRef Name="isMobile" />
+      <PropertyRef Name="register_date" />
+      <PropertyRef Name="ip" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="fullname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="age" Type="Int32" Nullable="false" />
+    <Property Name="sex" Type="Int32" Nullable="false" />
+    <Property Name="cash" Type="Double" Nullable="false" />
+    <Property Name="mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="birth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="clanId" Type="Int32" />
+    <Property Name="is_active" Type="Int32" Nullable="false" />
+    <Property Name="avatar_id" Type="Int32" Nullable="false" />
+    <Property Name="level_id" Type="Int32" Nullable="false" />
+    <Property Name="exp" Type="Int32" />
+    <Property Name="gameCash" Type="Double" />
+    <Property Name="vCash" Type="Double" />
+    <Property Name="totalGame" Type="Int32" />
+    <Property Name="totalWin" Type="Int32" />
+    <Property Name="is_block" Type="Int32" />
+    <Property Name="last_login" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="is_bot" Type="Int32" />
+    <Property Name="cmnd" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="isMobile" Type="Int32" Nullable="false" />
+    <Property Name="register_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="referrer" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="agencyId" Type="Int32" />
+    <Property Name="region" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="facebook" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="newDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AppStoreCharges" EntityType="Self.AppStoreCharge" />
+    <EntitySet Name="AppStoreChargeHistories" EntityType="Self.AppStoreChargeHistory" />
+    <EntitySet Name="avatars" EntityType="Self.avatar" />
+    <EntitySet Name="avatar_category" EntityType="Self.avatar_category" />
+    <EntitySet Name="avatar_user" EntityType="Self.avatar_user" />
+    <EntitySet Name="banner_minigame" EntityType="Self.banner_minigame" />
+    <EntitySet Name="bets" EntityType="Self.bet" />
+    <EntitySet Name="bk_history" EntityType="Self.bk_history" />
+    <EntitySet Name="CaoThapLogs" EntityType="Self.CaoThapLog" />
+    <EntitySet Name="categories" EntityType="Self.category" />
+    <EntitySet Name="charge_cards" EntityType="Self.charge_cards" />
+    <EntitySet Name="client_version" EntityType="Self.client_version" />
+    <EntitySet Name="configs" EntityType="Self.config" />
+    <EntitySet Name="configAwardVersions" EntityType="Self.configAwardVersion" />
+    <EntitySet Name="configMiniPokers" EntityType="Self.configMiniPoker" />
+    <EntitySet Name="configQuayXengs" EntityType="Self.configQuayXeng" />
+    <EntitySet Name="count_download" EntityType="Self.count_download" />
+    <EntitySet Name="cps" EntityType="Self.cp" />
+    <EntitySet Name="cpkeys" EntityType="Self.cpkey" />
+    <EntitySet Name="data_log" EntityType="Self.data_log" />
+    <EntitySet Name="epay_log" EntityType="Self.epay_log" />
+    <EntitySet Name="events" EntityType="Self.event" />
+    <EntitySet Name="event_data_fake" EntityType="Self.event_data_fake" />
+    <EntitySet Name="event_register" EntityType="Self.event_register" />
+    <EntitySet Name="exp_value" EntityType="Self.exp_value" />
+    <EntitySet Name="g_version" EntityType="Self.g_version" />
+    <EntitySet Name="games" EntityType="Self.game" />
+    <EntitySet Name="game_history" EntityType="Self.game_history" />
+    <EntitySet Name="game_log" EntityType="Self.game_log" />
+    <EntitySet Name="game_trans" EntityType="Self.game_trans" />
+    <EntitySet Name="gameflashes" EntityType="Self.gameflash" />
+    <EntitySet Name="gameGuides" EntityType="Self.gameGuide" />
+    <EntitySet Name="gifts" EntityType="Self.gift" />
+    <EntitySet Name="gift_type" EntityType="Self.gift_type" />
+    <EntitySet Name="giftcodes" EntityType="Self.giftcode" />
+    <EntitySet Name="levels" EntityType="Self.level" />
+    <EntitySet Name="links" EntityType="Self.link" />
+    <EntitySet Name="log_download" EntityType="Self.log_download" />
+    <EntitySet Name="match_log" EntityType="Self.match_log" />
+    <EntitySet Name="news" EntityType="Self.news" />
+    <EntitySet Name="noel_bonus_log" EntityType="Self.noel_bonus_log" />
+    <EntitySet Name="notifications" EntityType="Self.notification" />
+    <EntitySet Name="offlinemessages" EntityType="Self.offlinemessage" />
+    <EntitySet Name="online_log" EntityType="Self.online_log" />
+    <EntitySet Name="phone_brands" EntityType="Self.phone_brands" />
+    <EntitySet Name="phones" EntityType="Self.phone" />
+    <EntitySet Name="play_log" EntityType="Self.play_log" />
+    <EntitySet Name="regIds" EntityType="Self.regId" />
+    <EntitySet Name="report_CCU" EntityType="Self.report_CCU" />
+    <EntitySet Name="rooms" EntityType="Self.room" />
+    <EntitySet Name="sliders" EntityType="Self.slider" />
+    <EntitySet Name="slotMachineDetails" EntityType="Self.slotMachineDetail" />
+    <EntitySet Name="taixiu_history_user" EntityType="Self.taixiu_history_user" />
+    <EntitySet Name="taixiu_log" EntityType="Self.taixiu_log" />
+    <EntitySet Name="taixiu_log_result" EntityType="Self.taixiu_log_result" />
+    <EntitySet Name="update_pass" EntityType="Self.update_pass" />
+    <EntitySet Name="waps" EntityType="Self.wap" />
+    <EntitySet Name="bk_transaction" EntityType="Self.bk_transaction" />
+    <EntitySet Name="chan_table" EntityType="Self.chan_table" />
+    <EntitySet Name="configBotTaixius" EntityType="Self.configBotTaixiu" />
+    <EntitySet Name="g_client" EntityType="Self.g_client" />
+    <EntitySet Name="g_provider" EntityType="Self.g_provider" />
+    <EntitySet Name="g_user" EntityType="Self.g_user" />
+    <EntitySet Name="item_event" EntityType="Self.item_event" />
+    <EntitySet Name="trans_type" EntityType="Self.trans_type" />
+    <EntitySet Name="user_info" EntityType="Self.user_info" />
+    <EntitySet Name="VinhDanhCaoThaps" EntityType="Self.VinhDanhCaoThap" />
+    <EntitySet Name="view_clan" EntityType="Self.view_clan" />
+    <EntitySet Name="view_openid" EntityType="Self.view_openid" />
+    <EntitySet Name="view_user_info" EntityType="Self.view_user_info" />
+  </EntityContainer>
+</Schema>

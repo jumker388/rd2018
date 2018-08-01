@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title Myina </title>
+    <meta name="description" content="@ViewBag.Description">
+    <meta name="keywords" content="@ViewBag.Keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="891599530864273" property="fb:app_id" />
+    <link rel="SHORTCUT ICON" href="/Images/favicon.ico" type="image/x-icon" />     
+    @Styles.Render("~/Content/css")  
+    @RenderSection("styles", required: false)
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="row-fluid bg-white margin-bottom5">
+                @Html.Action("Logo", "Layout")
+                @Html.Action("Header", "Layout")
+                @Html.Action("Navbar", "Layout")
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="left">
+
+                @Html.Action("Filter", "Layout")                
+
+                @RenderSection("left", required: false)
+                
+                @Html.Action("Library", "Layout")
+
+                @Html.Action("Support", "Layout")
+                
+            </div>
+            <div class="content">
+                @RenderBody()
+            </div>
+        </div>
+        <div class="footer">
+            @Html.Action("Footer", "Layout")
+        </div>
+    </div>    
+
+    @Scripts.Render("~/bundles/scripts")
+
+    @RenderSection("scripts", required: false)
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515bdd6e08edbe49" async="async"></script>
+
+</body>
+</html>

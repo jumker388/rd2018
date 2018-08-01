@@ -1,0 +1,93 @@
+﻿<form class="form-horizontal">
+    <div class="content-modal">
+        <div class="modal-header">
+            <a href="javascript:;" class="close" ng-click="cancel()">×</a>
+            <h3 class="modal-title">Chi tiết liên hệ</h3>
+        </div>
+        <div class="modal-body">
+            <div class="row-fluid">
+                <input type="hidden" name="ID" ng-value="data.ID" ng-model="data.ID" />
+                <div class="control-group">
+                    <label class="control-label" for="Name">Tên khách hàng:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <div class="control-text">{{data.Name}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Email">Email:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <div class="control-text">{{data.Email}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Phone">Số đt:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <div class="control-text">{{data.Phone}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Address">Đại chỉ:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <div class="control-text">{{data.Address}}</div>
+                        </div>
+                    </div>
+                </div>                              
+                <div class="control-group">
+                    <label class="control-label" for="IsViewed">Hiển thị:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <span class="label label-success" ng-if="data.IsViewed == true">Hiển thị</span>
+                            <span class="label label-warning" ng-if="data.IsViewed == false">Ẩn</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Title">Tiêu đề:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <div class="control-text">{{data.Title}}</div>
+                        </div>
+                    </div>
+                </div>  
+                <div class="control-group">
+                    <label class="control-label" for="Message">Chi tiết liên hệ:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <div class="control-text" ng-bind-html="renderHtml(data.Message)"></div>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="btn-group dropup">
+                <button data-toggle="dropdown" class="btn btn-success dropdown-toggle">
+                    Hành động
+                    <i class="icon-angle-up icon-on-right"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="javascript:;" ng-click="edit(data.ID)">Sửa</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" ng-click="show('loại sản phẩm', data.Name, data.ID)" ng-if="data.IsShow == false">Hiển thị</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" ng-click="hide('loại sản phẩm', data.Name, data.ID)" ng-if="data.IsShow == true">Ẩn</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" ng-click="delete('loại sản phẩm', data.Name, data.ID)">Xóa</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="javascript:;" class="btn btn-warning" ng-click="cancel()">Thoát</a>
+        </div>
+    </div>
+</form>

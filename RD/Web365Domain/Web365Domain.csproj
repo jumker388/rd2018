@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C24BE151-FC63-4A94-B796-FD222BD8399E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web365Domain</RootNamespace>
+    <AssemblyName>Web365Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>%24/Web365/Web365Domain</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>http://bvn-pc:8080/tfs/web365%2520project</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adverties\AdvertiesItem.cs" />
+    <Compile Include="Article\ArticleGroupTypeItem.cs" />
+    <Compile Include="Article\ArticleMapItem.cs" />
+    <Compile Include="Article\ArticleItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Article\ArticleAutoItem.cs" />
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="Article\ArticleTypeItem.cs" />
+    <Compile Include="Article\ArticleGroupItem.cs" />
+    <Compile Include="Customer\CustomerItem.cs" />
+    <Compile Include="File\FileItem.cs" />
+    <Compile Include="File\FileTypeItem.cs" />
+    <Compile Include="Game\PocGameAllItem.cs" />
+    <Compile Include="Game\ChuyenKhoanItem.cs" />
+    <Compile Include="Game\ConfigMiniPokerItem.cs" />
+    <Compile Include="Game\CardItem.cs" />
+    <Compile Include="Game\GameGuideItem.cs" />
+    <Compile Include="Game\GameLogsMoneyItem.cs" />
+    <Compile Include="Game\PaymentItem.cs" />
+    <Compile Include="Game\RoomItem.cs" />
+    <Compile Include="Game\SearchItem.cs" />
+    <Compile Include="Game\GameTextItem.cs" />
+    <Compile Include="Game\AnnouncementItem.cs" />
+    <Compile Include="Game\ChargeItem.cs" />
+    <Compile Include="Game\ChargeResult.cs" />
+    <Compile Include="Game\GameHistoryItem.cs" />
+    <Compile Include="Game\GameHistoryResult.cs" />
+    <Compile Include="Game\GameItem.cs" />
+    <Compile Include="Game\GiftCodeItem.cs" />
+    <Compile Include="Game\GiftCodeResult.cs" />
+    <Compile Include="Game\ReportUserChargeMoneyItem.cs" />
+    <Compile Include="Game\ReportUserPlayGameItem.cs" />
+    <Compile Include="Game\LogGameItem.cs" />
+    <Compile Include="Game\UserInfo.cs" />
+    <Compile Include="Game\UserInfoHistoryResult.cs" />
+    <Compile Include="Game\UserInfoSearchResult.cs" />
+    <Compile Include="Menu\MenuItem.cs" />
+    <Compile Include="Order\OrderDetailItem.cs" />
+    <Compile Include="Order\OrderShippingItem.cs" />
+    <Compile Include="Order\OrderStatusItem.cs" />
+    <Compile Include="Order\OrderItem.cs" />
+    <Compile Include="Other\ContactItem.cs" />
+    <Compile Include="Other\CommentItem.cs" />
+    <Compile Include="Other\ReceiveInfoItem.cs" />
+    <Compile Include="Other\ReceiveInfoGroupItem.cs" />
+    <Compile Include="Other\LayoutContentItem.cs" />
+    <Compile Include="Picture\PictureItem.cs" />
+    <Compile Include="Picture\PictureTypeItem.cs" />
+    <Compile Include="Product\ProductVariantItem.cs" />
+    <Compile Include="Product\ProductTypeGroupItem.cs" />
+    <Compile Include="Product\ProductGroupAttributeItem.cs" />
+    <Compile Include="Product\ProductAttributeItem.cs" />
+    <Compile Include="Product\ProductItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Product\ProductStatusItem.cs" />
+    <Compile Include="Product\ProductDistributorItem.cs" />
+    <Compile Include="Product\ProductManufacturerItem.cs" />
+    <Compile Include="Product\ProductFilterItem.cs" />
+    <Compile Include="Product\ProductLabelItem.cs" />
+    <Compile Include="Product\ProductTypeItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\GoogleMessageItem.cs" />
+    <Compile Include="Support\SupportItem.cs" />
+    <Compile Include="Support\SupportTypeItem.cs" />
+    <Compile Include="User\OAuthMembershipItem.cs" />
+    <Compile Include="User\MembershipItem.cs" />
+    <Compile Include="User\ReportOnlineItem.cs" />
+    <Compile Include="User\PageItem.cs" />
+    <Compile Include="User\UserRoleItem.cs" />
+    <Compile Include="User\UserProfileItem.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,382 @@
+﻿@model Web365Models.CustomerModel
+
+@{
+    ViewBag.Title = "";
+    ViewBag.Description = "";
+    ViewBag.Keywords = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+    <link href="~/Content/jquery.pwstabs-1.2.1.min.css" rel="stylesheet" />
+}
+
+<div class="main">
+    <div class="main-title">
+        <a href="/@Resources.Resource.LangugeCode">Trang chủ</a>&#187;
+        <a href="/@Resources.Resource.LangugeCode/thanh-vien">Thành viên</a>
+    </div>
+    <div class="main-content">
+        
+        @if (CustomerIdentity.Customer.IsLogged)
+        {
+            <div class="tabset0">
+                <div data-pws-tab="tab1" data-pws-tab-name="Thông tin">
+                    <form id="change-info">
+                        <table class="form">
+                            <tr>
+                                <td class="text">Email</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="email" type="text" placeholder="Email" value="@CustomerIdentity.Customer.Info.Email" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text">Số ĐT</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="phone" type="text" placeholder="Số ĐT" value="@CustomerIdentity.Customer.Info.Phone" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text">Địa chỉ</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <textarea name="address">@CustomerIdentity.Customer.Info.Address</textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="submit">Thay đổi thông tin</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div data-pws-tab="tab3" data-pws-tab-name="Đổi mật khẩu">
+                    <form id="change-password">
+                        <input name="username" type="hidden" value="@CustomerIdentity.Customer.Info.UserName" />
+                        <table class="form">
+                            <tr>
+                                <td class="text">Mật khẩu hiện tại</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="currentpassword" type="password" placeholder="Mật khẩu hiện tại" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text">Mật khẩu mới</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="password" type="password" placeholder="Mật khẩu mới" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text">Nhập lại mật khẩu mới</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="repassword" type="password" placeholder="Nhập lại mật khẩu" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="submit">Thay đổi mật khẩu</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div data-pws-tab="tab2" data-pws-tab-name="Nhật ký mua hàng">
+                    
+                    @if (Model.ListOrder != null && Model.ListOrder.Any())
+                    {
+                        <table cellpadding="1" cellspacing="1" class="tbl-cart">
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã đơn hàng</th>
+                                <th>Ngày đặt hàng</th>
+                                <th>Trạng thái</th>
+                                <th>Tổng giá trị</th>
+                            </tr>
+                            @for (int i = 0; i < Model.ListOrder.Count(); i++)
+                            {
+                                <tr class="cart-item">
+                                    <td class="cart-display-order">@(i + 1)</td>
+                                    <td class="cart-img">@Model.ListOrder.ElementAt(i).ID</td>
+                                    <td class="cart-name">@Model.ListOrder.ElementAt(i).DateCreated.Value.ToString("dd-MM-yyyy")</td>
+                                    <td class="cart-price">@Model.ListOrder.ElementAt(i).OrderStatus.Name</td>                                    
+                                    <td class="cart-total">@Web365Utility.Web365Utility.ConvertNumber(Model.ListOrder.ElementAt(i).TotalCost) VND</td>                              
+                                </tr>
+                            }
+                        </table>
+                    }
+                    else
+                    {
+                        <p class="message-empty">Lịch sử mua hàng trống.</p>
+                    }
+
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="tabset0">
+                <div data-pws-tab="tab1" data-pws-tab-name="Đăng nhập">
+                    <form id="login">
+                        <table class="form">
+                            <tr>
+                                <td class="text">Tên đăng nhập</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="username" type="text" placeholder="Tên đăng nhập" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text">Mật khẩu</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="password" type="password" placeholder="Mật khẩu" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="submit">Đăng nhập</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div data-pws-tab="tab2" data-pws-tab-name="Đăng ký">
+                    <form id="register">
+                        <table class="form">
+                            <tr>
+                                <td class="text">Tên của bạn</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="name" type="text" placeholder="Tên của bạn" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text">Email</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="email" type="text" placeholder="Email" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text">Mật khẩu</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="password" type="password" placeholder="Mật khẩu" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text">Nhập lại mật khẩu</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="repassword" type="password" placeholder="Nhập lại mật khẩu" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="submit">Đăng nhập</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div data-pws-tab="tab3" data-pws-tab-name="Quên mật khẩu">
+                    <form id="forget-password">
+                        <table class="form">
+                            <tr>
+                                <td class="text">Email của bạn</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="email" type="text" placeholder="Email" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="submit">Lấy lại mật khẩu</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        }          
+
+    </div>
+</div>
+
+@section left{}
+
+@section scripts{
+    <script src="~/Scripts/jquery.pwstabs-1.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.tabset0').pwstabs({
+                theme: 'pws_theme_green'
+            });
+
+            var isPost = false;
+
+            $("#login").validate({
+                rules: {
+                },
+                messages: {
+                },
+                submitHandler: function (e) {
+
+                    if (!isPost) {
+
+                        isPost = true;
+
+                        $.post('/Ajax/Customer/Login', $('#login').serialize(), function (res) {
+
+                            if(!res.error){
+                                document.location.reload();
+                            }
+                            else {
+                                alert(res.message);
+                            }
+                            
+                        }).complete(function () {
+                            isPost = false;
+                        });
+
+                    }
+
+                    return false;
+                }
+            });
+
+            $("#register").validate({
+                rules: {
+                },
+                messages: {
+                },
+                submitHandler: function (e) {
+
+                    if (!isPost) {
+
+                        isPost = true;
+
+                        $.post('/Ajax/Customer/Register', $('#register').serialize(), function (res) {                            
+                            if (!res.error) {
+                                document.location.reload();
+                            }
+                            else {
+                                alert(res.message);
+                            }
+                        }).complete(function () {
+                            isPost = false;
+                        });
+
+                    }
+
+                    return false;
+                }
+            });
+
+            $("#change-password").validate({
+                rules: {
+                },
+                messages: {
+                },
+                submitHandler: function (e) {
+
+                    if (!isPost) {
+
+                        isPost = true;
+
+                        $.post('/Ajax/Customer/ChangePassword', $('#change-password').serialize(), function (res) {
+                            alert(res.message);
+                        }).complete(function () {
+                            isPost = false;
+                        });
+
+                    }
+
+                    return false;
+                }
+            });
+
+            $("#forget-password").validate({
+                rules: {
+                },
+                messages: {
+                },
+                submitHandler: function (e) {
+
+                    if (!isPost) {
+
+                        isPost = true;
+
+                        $.post('/Ajax/Customer/ForgetPassword', $('#forget-password').serialize(), function (res) {
+                            alert(res.message);
+                        }).complete(function () {
+                            isPost = false;
+                        });
+
+                    }
+
+                    return false;
+                }
+            });
+
+            $("#change-info").validate({
+                rules: {
+                },
+                messages: {
+                },
+                submitHandler: function (e) {
+
+                    if (!isPost) {
+
+                        isPost = true;
+
+                        $.post('/Ajax/Customer/ChangeInfo', $('#change-info').serialize(), function (res) {
+                            alert(res.message);
+                        }).complete(function () {
+                            isPost = false;
+                        });
+
+                    }
+
+                    return false;
+                }
+            });
+
+        });
+    </script>
+}

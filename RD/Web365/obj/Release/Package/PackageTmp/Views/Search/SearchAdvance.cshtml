@@ -1,0 +1,73 @@
+﻿@model Web365Models.ProductModel
+
+@{
+    ViewBag.Title = "Kết quả tìm kiếm";
+    ViewBag.Description = "Kết quả tìm kiếm";
+    ViewBag.Keywords = "Kết quả tìm kiếm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+    <div class="main-title">
+        <a href="/@Resources.Resource.LangugeCode">Trang chủ</a>&#187;
+        <a href="javascript:;">Tìm kiếm</a>
+    </div>
+    <div class="main-content">
+
+        @if (Model.ListProduct.Any())
+        {
+            <div class="list-product">
+                @foreach (var item in Model.ListProduct)
+                {
+                    <div class="item-product">
+                        <div class="left-item-product">
+                            <a class="name-item-product" href="/@Resources.Resource.LangugeCode/@item.ProductType.NameAscii/@item.NameAscii">
+                                @item.Name
+                            </a>
+                            <a class="img-item-product" href="/@Resources.Resource.LangugeCode/@item.ProductType.NameAscii/@item.NameAscii">
+                                <img src="@Web365Utility.Web365Utility.GetPathPicture(item.Picture.FileName)" />
+                            </a>
+                            <div class="summary-item-product">
+                                @Html.Raw(item.Summary)
+                            </div>
+                            <a class="more-item-product" href="/@Resources.Resource.LangugeCode/@item.ProductType.NameAscii/@item.NameAscii">
+                                Chi tiết sản phẩm
+                            </a>
+                        </div>
+                        <div class="right-item-product">
+                            <ul>
+                                @foreach (var item1 in item.ListProductVariant)
+                                {
+                                    <li>
+                                        <input name="@("product" + item.ID)" type="radio" data-productid="@item.ID" data-productname="@item.Name" data-picture="@item.Picture.FileName" data-variantid="@item1.ID" data-variantname="@item1.Name" data-price="@item1.Price" />@item1.Name - @Web365Utility.Web365Utility.ConvertNumber(item1.Price) VND
+                                        @if (item1.IsOutOfStock)
+                                        {
+                                            <span class="not-order">hết hàng</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="can-order">Còn hàng</span>
+                                        }
+                                    </li>
+                                }
+                            </ul>
+                            <button class="add-order" type="button" data-name="@("product" + item.ID)">
+                                Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        }
+        else
+        {
+            <p class="message-empty">Không tìm thấy kết quả với nhu cầu của bạn.</p>
+        }
+
+    </div>
+</div>
+
+@section left{}
+
+@section scripts{}

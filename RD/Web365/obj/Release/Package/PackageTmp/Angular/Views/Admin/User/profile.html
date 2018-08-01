@@ -1,0 +1,149 @@
+﻿<div class="user-profile row-fluid">
+    <tabset>
+        <tab>
+            <tab-heading>
+                <i class="green icon-user bigger-120"></i> Thông tin
+            </tab-heading>
+            <div class="row-fluid">
+                <div class="span3 center">
+                    <span class="profile-picture">
+                        <img class="editable" alt="Alex's Avatar" id="avatar2" src="/Content/Admin/avatars/profile-pic.jpg" />
+                    </span>
+
+                    <div class="space space-4"></div>
+
+                    <!--<a href="javascript:;" class="btn btn-small btn-block btn-success">
+                        <i class="icon-plus-sign bigger-110"></i>
+                        Đổi avatar
+                    </a>-->
+                </div><!--/span-->
+
+                <div class="span9">
+                    <h4 class="blue">
+                        <span class="middle">{{data.FirstName}} {{data.LastName}}</span>
+
+                        <span class="label label-purple arrowed-in-right">
+                            <i class="icon-circle smaller-80"></i>
+                            online
+                        </span>
+                    </h4>
+                    <div class="profile-user-info">
+                        <div class="profile-info-row">
+                            <div class="profile-info-name"> Tên đăng nhập </div>
+
+                            <div class="profile-info-value">
+                                <span>{{data.UserName}}</span>
+                            </div>
+                        </div>
+                        <div class="profile-info-row">
+                            <div class="profile-info-name"> Location </div>
+
+                            <div class="profile-info-value">
+                                <i class="icon-map-marker light-orange bigger-110"></i>
+                                {{data.Address}}
+                            </div>
+                        </div>
+                        <div class="profile-info-row">
+                            <div class="profile-info-name"> Tên họ </div>
+
+                            <div class="profile-info-value">
+                                {{data.FirstName}}
+                            </div>
+                        </div>
+                        <div class="profile-info-row">
+                            <div class="profile-info-name"> Tên </div>
+
+                            <div class="profile-info-value">
+                                {{data.LastName}}
+                            </div>
+                        </div>  
+                        <div class="profile-info-row">
+                            <div class="profile-info-name"> Giới tính </div>
+
+                            <div class="profile-info-value">
+                                {{data.Gender == true ? 'Nam' : 'Nữ'}}
+                            </div>
+                        </div> 
+                        <div class="profile-info-row">
+                            <div class="profile-info-name"> Ngày tạo </div>
+
+                            <div class="profile-info-value">
+                                {{data.DateCreated}}
+                            </div>
+                        </div>                      
+                    </div>
+                </div><!--/span-->
+            </div><!--/row-fluid-->
+
+            <div class="space-20"></div>
+
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="widget-box transparent">
+                        <div class="widget-header widget-header-small">
+                            <h4 class="smaller">
+                                <i class="icon-check bigger-110"></i>
+                                Thông tin
+                            </h4>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main" ng-bind-html="renderHtml(data.Note)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="span6">
+                    <div class="widget-box transparent">
+                        <div class="widget-header widget-header-small header-color-blue2">
+                            <h4 class="smaller">
+                                <i class="icon-lightbulb bigger-120"></i>
+                                Quyền hạn
+                            </h4>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main padding-16">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </tab>
+        <tab heading="Đổi mật khẩu">
+            <form class="form-horizontal" ng-submit="changePass($event)">
+                <div class="control-group">
+                    <label class="control-label" for="password">Mật khẩu hiện tại</label>
+                    <div class="controls">
+                        <input type="password" name="currentPass">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="password">Mật khẩu mới</label>
+                    <div class="controls">
+                        <input type="password" name="newPass">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="repassword">Nhập lại mật khẩu</label>
+                    <div class="controls">
+                        <input type="password" name="reNewPass">
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button class="btn btn-info" type="submit">
+                        <i class="icon-ok bigger-110"></i>
+                        Lưu
+                    </button>
+                    <button class="btn" type="reset">
+                        <i class="icon-undo bigger-110"></i>
+                        Làm mới
+                    </button>
+                </div>
+            </form>
+        </tab>
+    </tabset>
+</div>
+

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="40191dd1def242ada4fa2c7bd6603053" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="Soft365Model.tblAdverties_Picture_Map" Width="1.5" PointX="6" PointY="48.25" />
+        <EntityTypeShape EntityType="Soft365Model.tblAdvertise" Width="1.5" PointX="3.75" PointY="41.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblArticle" Width="1.5" PointX="5.25" PointY="63" />
+        <EntityTypeShape EntityType="Soft365Model.tblArticleAuto" Width="1.5" PointX="7.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblComment" Width="1.5" PointX="10" PointY="1" />
+        <EntityTypeShape EntityType="Soft365Model.tblContact" Width="1.5" PointX="9.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblCustomer" Width="1.5" PointX="3" PointY="64.5" />
+        <EntityTypeShape EntityType="Soft365Model.tblDetail" Width="1.5" PointX="2.75" PointY="11.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblDistributor" Width="1.5" PointX="3" PointY="52.5" />
+        <EntityTypeShape EntityType="Soft365Model.tblDomain" Width="1.5" PointX="4.75" PointY="11.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblFile" Width="1.5" PointX="8.25" PointY="46.875" />
+        <EntityTypeShape EntityType="Soft365Model.tblGameConfigLogs" Width="1.5" PointX="11.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblGameLogsDetail" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblGameLogsMoney" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblGoogleMessage" Width="1.5" PointX="13.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblGroup_Article_Map" Width="1.5" PointX="7.5" PointY="43.25" />
+        <EntityTypeShape EntityType="Soft365Model.tblGroup_TypeArticle_Map" Width="1.5" PointX="5.25" PointY="58.25" />
+        <EntityTypeShape EntityType="Soft365Model.tblGroupArticle" Width="1.5" PointX="3" PointY="21.625" />
+        <EntityTypeShape EntityType="Soft365Model.tblGroupTypeArticle" Width="1.5" PointX="3" PointY="32.5" />
+        <EntityTypeShape EntityType="Soft365Model.tblLanguage" Width="1.5" PointX="13.75" PointY="10.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblLayoutContent" Width="1.5" PointX="3" PointY="69.875" />
+        <EntityTypeShape EntityType="Soft365Model.tblManufacturer" Width="1.5" PointX="3" PointY="27.25" />
+        <EntityTypeShape EntityType="Soft365Model.tblMenu" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblOrder" Width="1.5" PointX="8.25" PointY="64.5" />
+        <EntityTypeShape EntityType="Soft365Model.tblOrder_Shipping" Width="1.5" PointX="10.5" PointY="70.125" />
+        <EntityTypeShape EntityType="Soft365Model.tblOrder_Status" Width="1.5" PointX="6" PointY="73" />
+        <EntityTypeShape EntityType="Soft365Model.tblOrderDetail" Width="1.5" PointX="12.75" PointY="59.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblPage" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="Soft365Model.tblPicture" Width="1.5" PointX="0.75" PointY="45.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblProduct" Width="1.5" PointX="8.25" PointY="53" />
+        <EntityTypeShape EntityType="Soft365Model.tblProduct_Attribute_Map" Width="1.5" PointX="10.5" PointY="73.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblProduct_Status_Map" Width="1.5" PointX="10.5" PointY="55.875" />
+        <EntityTypeShape EntityType="Soft365Model.tblProduct_Variant" Width="1.5" PointX="10.5" PointY="64.5" />
+        <EntityTypeShape EntityType="Soft365Model.tblProductAttribute" Width="1.5" PointX="7.5" PointY="90.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblProductFilter" Width="1.5" PointX="10.5" PointY="59" />
+        <EntityTypeShape EntityType="Soft365Model.tblProductGroupAttribute" Width="1.5" PointX="5.25" PointY="90.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblProductLabel" Width="1.5" PointX="10.5" PointY="51.625" />
+        <EntityTypeShape EntityType="Soft365Model.tblProductStatus" Width="1.5" PointX="8.25" PointY="37.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblProductType_Group_Map" Width="1.5" PointX="5.25" PointY="87.625" />
+        <EntityTypeShape EntityType="Soft365Model.tblProductTypeGroup" Width="1.5" PointX="3" PointY="93.625" />
+        <EntityTypeShape EntityType="Soft365Model.tblReceiveInfo" Width="1.5" PointX="10" PointY="6" />
+        <EntityTypeShape EntityType="Soft365Model.tblReceiveInfoGroup" Width="1.5" PointX="7.75" PointY="6.125" />
+        <EntityTypeShape EntityType="Soft365Model.tblSupport" Width="1.5" PointX="5" PointY="7" />
+        <EntityTypeShape EntityType="Soft365Model.tblTags" Width="1.5" PointX="5.25" PointY="70.125" />
+        <EntityTypeShape EntityType="Soft365Model.tblTags_Mapping_News" Width="1.5" PointX="7.5" PointY="70" />
+        <EntityTypeShape EntityType="Soft365Model.tblTypeArticle" Width="1.5" PointX="3" PointY="80.5" />
+        <EntityTypeShape EntityType="Soft365Model.tblTypeComment" Width="1.5" PointX="7.75" PointY="2" />
+        <EntityTypeShape EntityType="Soft365Model.tblTypeFile" Width="1.5" PointX="3" PointY="46.5" />
+        <EntityTypeShape EntityType="Soft365Model.tblTypeLog" Width="1.5" PointX="13.75" PointY="13.75" />
+        <EntityTypeShape EntityType="Soft365Model.tblTypePicture" Width="1.5" PointX="3" PointY="74.875" />
+        <EntityTypeShape EntityType="Soft365Model.tblTypeProduct" Width="1.5" PointX="3" PointY="86.875" />
+        <EntityTypeShape EntityType="Soft365Model.tblTypeSupport" Width="1.5" PointX="2.75" PointY="7.25" />
+        <EntityTypeShape EntityType="Soft365Model.UserProfile" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="Soft365Model.webpages_Membership" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Soft365Model.webpages_OAuthMembership" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="Soft365Model.webpages_Roles" Width="1.5" PointX="3" PointY="1.625" />
+        <AssociationConnector Association="Soft365Model.FK_tblAdverties_Picture_tblAdvertise" />
+        <AssociationConnector Association="Soft365Model.FK_tblAdverties_Picture_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblArticle_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblGroup_News_Map_tblNews" />
+        <AssociationConnector Association="Soft365Model.FK_tblNews_tblTypeNews" />
+        <AssociationConnector Association="Soft365Model.FK_tblTags_Mapping_News_tblArticle" />
+        <AssociationConnector Association="Soft365Model.FK_tblComment_tblTypeComment" />
+        <AssociationConnector Association="Soft365Model.FK_tblCustomer_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblOrder_tblCustomer" />
+        <AssociationConnector Association="Soft365Model.FK_tblDistributor_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblProduct_tblDistributor" />
+        <AssociationConnector Association="Soft365Model.FK_tblFile_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblFile_tblTypeFile" />
+        <AssociationConnector Association="Soft365Model.FK_tblGroup_News_Map_tblGroupNews" />
+        <AssociationConnector Association="Soft365Model.FK_tblGroup_TypeArticle_Map_tblGroupTypeArticle" />
+        <AssociationConnector Association="Soft365Model.FK_tblGroup_TypeArticle_Map_tblTypeArticle" />
+        <AssociationConnector Association="Soft365Model.FK_tblGroupNews_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblGroupTypeArticle_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblLayoutContent_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblManufacturer_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblProduct_tblManufacturer" />
+        <AssociationConnector Association="Soft365Model.FK_tblMenu_tblMenu" />
+        <AssociationConnector Association="Soft365Model.FK_tblOrder_Shipping_tblOrder" />
+        <AssociationConnector Association="Soft365Model.FK_tblOrder_tblOrder_Status" />
+        <AssociationConnector Association="Soft365Model.FK_tblOrderDetail_tblOrder" />
+        <AssociationConnector Association="Soft365Model.FK_tblOrderDetail_tblProduct" />
+        <AssociationConnector Association="Soft365Model.FK_tblOrderDetail_tblProduct_Variant" />
+        <AssociationConnector Association="Soft365Model.FK_tblPage_tblPage" />
+        <AssociationConnector Association="Soft365Model.FK_tblImage_tblTypeImage" />
+        <AssociationConnector Association="Soft365Model.FK_tblProduct_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblProductLabel_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblTypeArticle_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblTypeFile_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblTypeImage_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblTypeProduct_tblPicture" />
+        <AssociationConnector Association="Soft365Model.FK_tblProduct_Attribute_Map_tblProduct" />
+        <AssociationConnector Association="Soft365Model.FK_tblProduct_Status_Map_tblProduct" />
+        <AssociationConnector Association="Soft365Model.FK_tblProduct_tblTypeProduct" />
+        <AssociationConnector Association="Soft365Model.FK_tblProduct_Variant_tblProduct" />
+        <AssociationConnector Association="Soft365Model.FK_tblProduct_Attribute_Map_tblProductAttribute" />
+        <AssociationConnector Association="Soft365Model.FK_tblProduct_Status_Map_tblProductStatus" />
+        <AssociationConnector Association="Soft365Model.FK_tblProductAttribute_tblProductGroupAttribute" />
+        <AssociationConnector Association="Soft365Model.FK_tblProductFilter_tblProductFilter" />
+        <AssociationConnector Association="Soft365Model.FK_tblProductGroupAttribute_tblTypeProduct" />
+        <AssociationConnector Association="Soft365Model.FK_tblProductType_Group_Map_tblProductTypeGroup" />
+        <AssociationConnector Association="Soft365Model.FK_tblProductType_Group_Map_tblTypeProduct" />
+        <AssociationConnector Association="Soft365Model.FK_tblReceiveInfo_tblReceiveInfoGroup" />
+        <AssociationConnector Association="Soft365Model.FK_tblSupport_tblTypeSupport" />
+        <AssociationConnector Association="Soft365Model.FK_tblTags_Mapping_News_tblTags" />
+        <AssociationConnector Association="Soft365Model.FK_tblTypeArticle_tblTypeArticle" />
+        <AssociationConnector Association="Soft365Model.FK_tblTypeFile_tblTypeFile" />
+        <AssociationConnector Association="Soft365Model.FK_tblTypeImage_tblTypeImage" />
+        <AssociationConnector Association="Soft365Model.FK_tblTypeProduct_tblTypeProduct1" />
+        <AssociationConnector Association="Soft365Model.tblPage_Role" />
+        <AssociationConnector Association="Soft365Model.tblProduct_Filter_Map" />
+        <AssociationConnector Association="Soft365Model.tblProduct_Label_Map" />
+        <AssociationConnector Association="Soft365Model.tblProduct_Picture_Map" />
+        <AssociationConnector Association="Soft365Model.tblTypeProduct_Picture_Map" />
+        <AssociationConnector Association="Soft365Model.webpages_UsersInRoles" />
+        <EntityTypeShape EntityType="Soft365Model.ReportSumMoney" Width="1.5" PointX="3.375" PointY="14.75" />
+        <EntityTypeShape EntityType="Soft365Model.ReportSumMoney2" Width="1.5" PointX="10.375" PointY="14.75" />
+        <EntityTypeShape EntityType="Soft365Model.ThongKePOC" Width="1.5" PointX="15.375" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

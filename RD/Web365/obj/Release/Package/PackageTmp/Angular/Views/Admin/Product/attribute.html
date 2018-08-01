@@ -1,0 +1,48 @@
+﻿<div class="content-modal" ng-controller="productModified">
+    <div class="modal-header">
+        <a href="javascript:;" class="close" ng-click="cancel()">×</a>
+        <h3 class="modal-title">Chỉnh sửa thuộc tính sản phẩm: {{dataFormAttribute.name}}</h3>
+    </div>
+    <div class="modal-body">
+        <div class="row-fluid">
+            <div class="widget-box" ng-repeat="item in listGroupAttribute | orderBy:'Number':false">
+                <div class="widget-header widget-hea1der-small header-color-blue">
+                    <h6>
+                        <i class="icon-cog"></i>
+                        {{item.Name}}
+                    </h6>
+
+                    <div class="widget-toolbar">
+                        <a href="#" data-action="collapse">
+                            <i class="icon-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <form class="form-horizontal" ng-submit="submitAttribute($event)" ng-repeat="item1 in listAttribute | filter: { GroupID: item.ID } | orderBy:'Number':false">
+                                    <div class="control-group">
+                                        <label class="control-label" for="Name">{{item1.Name}}:</label>
+                                        <div class="controls">
+                                            <div class="span12">
+                                                <input type="hidden" name="productId" value="{{dataFormAttribute.id}}" />
+                                                <input type="hidden" name="attributeId" value="{{item1.ID}}" />
+                                                <input type="text" class="span6" name="Value" value="{{item1.ValueMap}}" />
+                                                <button type="submit" class="btn btn-small btn-success">Lưu</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="javascript:;" class="btn btn-warning" ng-click="cancel()">Thoát</a>
+    </div>
+</div>

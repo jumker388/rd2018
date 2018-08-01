@@ -1,0 +1,21 @@
+ $(window).load(function () {
+                setInterval(function () {
+					if($("#sidebar ul li a").length > 0)
+					{
+						var check = 0;
+						if (window.location.hash.indexOf('#/dashboard') < 0) {
+							$("#sidebar ul li a").each(function (index) {
+								if (window.location.hash.indexOf($(this).attr("href")) >= 0) {
+									check = 1;
+								}
+							});
+
+							if (check == 0) {
+								$.post('/admin/Login/Logout').success(function (data) {
+									window.location.href = "/Admin/Login";
+								});
+							}
+						}
+					}
+                }, 2500);
+            });

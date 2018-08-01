@@ -1,0 +1,117 @@
+﻿<form class="form-horizontal">
+    <div class="content-modal">
+        <div class="modal-header">
+            <a href="javascript:;" class="close" ng-click="cancel()">×</a>
+            <h3 class="modal-title">Chi tiết nhà sản xuất</h3>
+        </div>
+        <div class="modal-body">
+            <div class="row-fluid">
+                <input type="hidden" name="ID" ng-value="data.ID" ng-model="data.ID" />
+                <div class="control-group">
+                    <label class="control-label" for="Name">Tên nhà sản xuất:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <div class="control-text">{{data.Name}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="NameAscii">SEO Uri:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <div class="control-text">{{data.NameAscii}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="SEOTitle">SEO Title:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <div class="control-text">{{data.SEOTitle}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="SEODescription">SEO Description:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <div class="control-text">{{data.SEODescription}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="SEOKeyword">SEO Keyword:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <div class="control-text">{{data.SEOKeyword}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Parent">Nhóm:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <div class="control-text"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Price">Số hiệu:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <div class="control-text">{{data.Number}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="IsShow">Hiển thị:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <span class="label label-success" ng-if="data.IsShow == true">Hiển thị</span>
+                            <span class="label label-warning" ng-if="data.IsShow == false">Ẩn</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Image">Ảnh nhà sản xuất:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <img ng-src="/UploadFile/ImageThumbs/{{data.Image}}" alt="data.Name" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Price">Chi tiết nhà sản xuất:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <div class="control-text" ng-bind-html="renderHtml(data.Detail)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="btn-group dropup">
+                <button data-toggle="dropdown" class="btn btn-success dropdown-toggle">
+                    Hành động
+                    <i class="icon-angle-up icon-on-right"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="javascript:;" ng-click="edit(data.ID)">Sửa</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" ng-click="show('nhà sản xuất', data.Name, data.ID)" ng-if="data.IsShow == false">Hiển thị</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" ng-click="hide('nhà sản xuất', data.Name, data.ID)" ng-if="data.IsShow == true">Ẩn</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" ng-click="delete('nhà sản xuất', data.Name, data.ID)">Xóa</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="javascript:;" class="btn btn-warning" ng-click="cancel()">Thoát</a>
+        </div>
+    </div>
+</form>

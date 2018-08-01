@@ -1,0 +1,87 @@
+﻿form {
+    margin: 0;
+}
+
+.form-horizontal .dropdown-menu {
+    display: none;
+}
+
+.form-horizontal .open .dropdown-menu {
+    display: block;
+}
+
+.control-text {
+    padding-top: 5px;
+    font-size: 15px;
+}
+
+.dataTables_paginate.pagination .pagination {
+    margin: 0;
+}
+
+.modal-footer .dropdown-menu li {
+    text-align: left;
+}
+
+input[type=checkbox].ace-switch + .lbl.gender::before {
+    content: "Nam\a0\a0\a0\a0\a0\a0\a0\a0\a0Nữ";
+}
+
+/*style tree*/
+.tree-folder-content.tree-hidden {
+    display: none;
+}
+
+.tree-folder-header > .select-folder {
+    color: #f9e8ce;
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+    font-size: 11px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #fafafa;
+    border: 1px solid #CCC;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    margin: 0 5px;
+    position: relative;
+    top: -2px;
+}
+
+.tree-folder-header > .selected-folder {
+    background-color: #f9a021;
+    border-color: #f9a021;
+    color: #FFF;
+}
+
+.tree .detail-item-tree {
+    margin: 0 0 0 10px;
+    position: relative;
+    top: -2px;
+    font-size: 14px;
+}
+
+/*end style tree*/
+/*select picture*/
+
+.ace-thumbnails li {
+    width: 150px;
+    height: 120px;
+}
+
+.ace-thumbnails a img {
+    width: 150px;
+    height: 120px;
+}
+
+.ace-thumbnails .choice-picture {
+    border: none;
+    font-size: 9em;
+}
+/*end select picture*/
+/*fix widget*/
+.widget-header-small{
+    height:31px;
+    overflow:hidden;
+}
+/*end widget*/

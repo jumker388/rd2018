@@ -1,0 +1,54 @@
+﻿@model Web365Domain.AdvertiesItem
+
+<div class="tq-slide">
+    <div class="container">
+        <div class="tq-slmain clearfix">
+            <div class="tq-sleft">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        @foreach (var item in Model.ListPicture)
+                        {
+                            <div class="swiper-slide">
+                                <a href='@item.Link' title='@item.Summary'>
+                                    <img src="@Web365Utility.Web365Utility.GetPathPicture(item.FileName)" alt="@item.Summary" />
+                                </a>
+                            </div>
+                        }
+                    </div>
+                    <!-- Add Arrows -->
+                </div>
+                <div class="tq-gsl-pagination"></div>
+            </div>
+            <div class="tq-sright">
+                <div class="tq-srifo">
+                    <h2 class="tq-sritit">Đăng ký</h2>
+                    <div class="tq-srform">
+                        <ul class="tq-srul">
+                            <li><input type="text" id="userName" class="form-control" placeholder="Tên đăng nhập"></li>
+                            <li><input type="password" id="passWord" class="form-control" placeholder="Mật khẩu"></li>
+                            <li><input type="password" id="repassWord" class="form-control" placeholder="Nhập lại mật khẩu"></li>
+                            <li class="tq-sru-check clearfix">
+                                <input type="text" class="form-control captcha-code" placeholder="Xác nhận">
+                                <canvas id="captcha" class="tq-srcapcha"></canvas>
+                            </li>
+                        </ul>
+                        <div class="tq-srdk clearfix">
+                            <a href="javascript:;" class="tq-srd-btndk">Đăng ký</a>
+                            <div class="tq-srd-share">
+                                <p class="tq-srd-tit">Đăng nhập bằng</p>
+                                <a href="javascript:;"><img src="~/Content/tq9v2/images/home/fb.png" alt=""></a>
+                                <a href="javascript:;"><img src="~/Content/tq9v2/images/home/google.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>           
+
+
+
+<!--END SLIDE-->

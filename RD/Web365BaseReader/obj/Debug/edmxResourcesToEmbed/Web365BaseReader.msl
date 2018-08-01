@@ -1,0 +1,1561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BaseReaderModelStoreContainer" CdmEntityContainer="Web365BaseReaderEntities">
+    <FunctionImportMapping FunctionImportName="POC_CreateChiPhi" FunctionName="BaseReaderModel.Store.POC_CreateChiPhi" />
+    <FunctionImportMapping FunctionImportName="POC_GetDetailGameHistory" FunctionName="BaseReaderModel.Store.POC_GetDetailGameHistory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.POC_GetDetailGameHistory_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="cash" ColumnName="cash" />
+          <ScalarProperty Name="current_cash" ColumnName="current_cash" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="game_id" ColumnName="game_id" />
+          <ScalarProperty Name="trans_type" ColumnName="trans_type" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="taxPercent" ColumnName="taxPercent" />
+          <ScalarProperty Name="before_cash" ColumnName="before_cash" />
+          <ScalarProperty Name="matchId" ColumnName="matchId" />
+          <ScalarProperty Name="matchNum" ColumnName="matchNum" />
+          <ScalarProperty Name="betTaiXiu" ColumnName="betTaiXiu" />
+          <ScalarProperty Name="valueCard" ColumnName="valueCard" />
+          <ScalarProperty Name="telcoId" ColumnName="telcoId" />
+          <ScalarProperty Name="cashPlay" ColumnName="cashPlay" />
+          <ScalarProperty Name="sourceDevice" ColumnName="sourceDevice" />
+          <ScalarProperty Name="CashFinal" ColumnName="CashFinal" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="gamename" ColumnName="gamename" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_GetDetailThongKePocChiPhi" FunctionName="BaseReaderModel.Store.POC_GetDetailThongKePocChiPhi" />
+    <FunctionImportMapping FunctionImportName="POC_GetGameHistory" FunctionName="BaseReaderModel.Store.POC_GetGameHistory" />
+    <FunctionImportMapping FunctionImportName="POC_GetGameHistoryMoney" FunctionName="BaseReaderModel.Store.POC_GetGameHistoryMoney" />
+    <FunctionImportMapping FunctionImportName="POC_GetGameHistoryTaiXiu" FunctionName="BaseReaderModel.Store.POC_GetGameHistoryTaiXiu" />
+    <FunctionImportMapping FunctionImportName="POC_GetHopThu" FunctionName="BaseReaderModel.Store.POC_GetHopThu" />
+    <FunctionImportMapping FunctionImportName="POC_GetListDaiLy" FunctionName="BaseReaderModel.Store.POC_GetListDaiLy">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.POC_GetListDaiLy_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="ShopLevel" ColumnName="ShopLevel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_GetListGiftCode" FunctionName="BaseReaderModel.Store.POC_GetListGiftCode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.POC_GetListGiftCode_Result">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUsed" ColumnName="DateUsed" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="DateExpired" ColumnName="DateExpired" />
+          <ScalarProperty Name="TurnID" ColumnName="TurnID" />
+          <ScalarProperty Name="Gift_ID" ColumnName="Gift_ID" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_GetListGiftCodeByTurnID" FunctionName="BaseReaderModel.Store.POC_GetListGiftCodeByTurnID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.POC_GetListGiftCodeByTurnID_Result">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUsed" ColumnName="DateUsed" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="DateExpired" ColumnName="DateExpired" />
+          <ScalarProperty Name="TurnID" ColumnName="TurnID" />
+          <ScalarProperty Name="Gift_ID" ColumnName="Gift_ID" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="Money1" ColumnName="Money1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_GetListGiftCodeTurn" FunctionName="BaseReaderModel.Store.POC_GetListGiftCodeTurn">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.POC_GetListGiftCodeTurn_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="DateExpired" ColumnName="DateExpired" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NoteFix" ColumnName="NoteFix" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_GetListGiftType" FunctionName="BaseReaderModel.Store.POC_GetListGiftType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.POC_GetListGiftType_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_GetReportCCU" FunctionName="BaseReaderModel.Store.POC_GetReportCCU" />
+    <FunctionImportMapping FunctionImportName="POC_GetReportCCUOneDay" FunctionName="BaseReaderModel.Store.POC_GetReportCCUOneDay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.POC_GetReportCCUOneDay_Result">
+          <ScalarProperty Name="avgccu" ColumnName="avgccu" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_GetReportGame" FunctionName="BaseReaderModel.Store.POC_GetReportGame" />
+    <FunctionImportMapping FunctionImportName="POC_GetReportGameOneDay" FunctionName="BaseReaderModel.Store.POC_GetReportGameOneDay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.POC_GetReportGameOneDay_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="cashPlay" ColumnName="cashPlay" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_InserLogsAdmin" FunctionName="BaseReaderModel.Store.POC_InserLogsAdmin" />
+    <FunctionImportMapping FunctionImportName="POC_ListPlayer" FunctionName="BaseReaderModel.Store.POC_ListPlayer" />
+    <FunctionImportMapping FunctionImportName="POC_ThongKePoc" FunctionName="BaseReaderModel.Store.POC_ThongKePoc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.POC_ThongKePoc_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TongTienUser" ColumnName="TongTienUser" />
+          <ScalarProperty Name="TongTienKetSatUser" ColumnName="TongTienKetSatUser" />
+          <ScalarProperty Name="TongTienKetSat" ColumnName="TongTienKetSat" />
+          <ScalarProperty Name="TongTienNickTongPoc" ColumnName="TongTienNickTongPoc" />
+          <ScalarProperty Name="TongTienKetSatNickTongPoc" ColumnName="TongTienKetSatNickTongPoc" />
+          <ScalarProperty Name="TongHu" ColumnName="TongHu" />
+          <ScalarProperty Name="TongGameBank" ColumnName="TongGameBank" />
+          <ScalarProperty Name="TongTienDaiLyCap1" ColumnName="TongTienDaiLyCap1" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap1" ColumnName="TongTienKetSatDaiLyCap1" />
+          <ScalarProperty Name="TongTienDaiLyCap2" ColumnName="TongTienDaiLyCap2" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap2" ColumnName="TongTienKetSatDaiLyCap2" />
+          <ScalarProperty Name="TongTienGiftCodeChuaNap" ColumnName="TongTienGiftCodeChuaNap" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_ThongKePocChiPhi" FunctionName="BaseReaderModel.Store.POC_ThongKePocChiPhi">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.POC_ThongKePocChiPhi_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TongTienUser" ColumnName="TongTienUser" />
+          <ScalarProperty Name="TongTienKetSatUser" ColumnName="TongTienKetSatUser" />
+          <ScalarProperty Name="TongTienKetSat" ColumnName="TongTienKetSat" />
+          <ScalarProperty Name="TongTienNickTongPoc" ColumnName="TongTienNickTongPoc" />
+          <ScalarProperty Name="TongTienKetSatNickTongPoc" ColumnName="TongTienKetSatNickTongPoc" />
+          <ScalarProperty Name="TongHu" ColumnName="TongHu" />
+          <ScalarProperty Name="TongGameBank" ColumnName="TongGameBank" />
+          <ScalarProperty Name="TongTienDaiLyCap1" ColumnName="TongTienDaiLyCap1" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap1" ColumnName="TongTienKetSatDaiLyCap1" />
+          <ScalarProperty Name="TongTienDaiLyCap2" ColumnName="TongTienDaiLyCap2" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap2" ColumnName="TongTienKetSatDaiLyCap2" />
+          <ScalarProperty Name="TongTienGiftCodeChuaNap" ColumnName="TongTienGiftCodeChuaNap" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="TongUser" ColumnName="TongUser" />
+          <ScalarProperty Name="TongGiftCodeDaNap" ColumnName="TongGiftCodeDaNap" />
+          <ScalarProperty Name="LoiNhuan" ColumnName="LoiNhuan" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_ThongKePocInHour" FunctionName="BaseReaderModel.Store.POC_ThongKePocInHour">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.POC_ThongKePocInHour_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TongTienUser" ColumnName="TongTienUser" />
+          <ScalarProperty Name="TongTienKetSatUser" ColumnName="TongTienKetSatUser" />
+          <ScalarProperty Name="TongTienKetSat" ColumnName="TongTienKetSat" />
+          <ScalarProperty Name="TongTienNickTongPoc" ColumnName="TongTienNickTongPoc" />
+          <ScalarProperty Name="TongTienKetSatNickTongPoc" ColumnName="TongTienKetSatNickTongPoc" />
+          <ScalarProperty Name="TongHu" ColumnName="TongHu" />
+          <ScalarProperty Name="TongGameBank" ColumnName="TongGameBank" />
+          <ScalarProperty Name="TongTienDaiLyCap1" ColumnName="TongTienDaiLyCap1" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap1" ColumnName="TongTienKetSatDaiLyCap1" />
+          <ScalarProperty Name="TongTienDaiLyCap2" ColumnName="TongTienDaiLyCap2" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap2" ColumnName="TongTienKetSatDaiLyCap2" />
+          <ScalarProperty Name="TongTienGiftCodeChuaNap" ColumnName="TongTienGiftCodeChuaNap" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="TongUser" ColumnName="TongUser" />
+          <ScalarProperty Name="TongGiftCodeDaNap" ColumnName="TongGiftCodeDaNap" />
+          <ScalarProperty Name="LoiNhuan" ColumnName="LoiNhuan" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_UpdatePlayerInfo" FunctionName="BaseReaderModel.Store.POC_UpdatePlayerInfo" />
+    <FunctionImportMapping FunctionImportName="PRC_AdminGetListDailyCap1" FunctionName="BaseReaderModel.Store.PRC_AdminGetListDailyCap1" />
+    <FunctionImportMapping FunctionImportName="PRC_AdminGetListDailyCap2" FunctionName="BaseReaderModel.Store.PRC_AdminGetListDailyCap2" />
+    <FunctionImportMapping FunctionImportName="PRC_AllChildTypeNews" FunctionName="BaseReaderModel.Store.PRC_AllChildTypeNews">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_AllChildTypeNews_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="UrlPicture" ColumnName="UrlPicture" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_AllChildTypeNewsByArrID" FunctionName="BaseReaderModel.Store.PRC_AllChildTypeNewsByArrID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_AllChildTypeNewsByArrID_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_BlockUser" FunctionName="BaseReaderModel.Store.PRC_BlockUser" />
+    <FunctionImportMapping FunctionImportName="PRC_ChecktOTP" FunctionName="BaseReaderModel.Store.PRC_ChecktOTP" />
+    <FunctionImportMapping FunctionImportName="PRC_CheckUserInMember" FunctionName="BaseReaderModel.Store.PRC_CheckUserInMember">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_CheckUserInMember_Result">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ShopLevel" ColumnName="ShopLevel" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_DeleteDetailGameGiftType" FunctionName="BaseReaderModel.Store.PRC_DeleteDetailGameGiftType" />
+    <FunctionImportMapping FunctionImportName="PRC_GetDetailGameGiftType" FunctionName="BaseReaderModel.Store.PRC_GetDetailGameGiftType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_GetDetailGameGiftType_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_GetDetailPlayer" FunctionName="BaseReaderModel.Store.PRC_GetDetailPlayer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_GetDetailPlayer_Result">
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="gameCash" ColumnName="gameCash" />
+          <ScalarProperty Name="gameCashD" ColumnName="gameCashD" />
+          <ScalarProperty Name="ShopLevel" ColumnName="ShopLevel" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="TienKet" ColumnName="TienKet" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_GetDetailPlayerNickName" FunctionName="BaseReaderModel.Store.PRC_GetDetailPlayerNickName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_GetDetailPlayerNickName_Result">
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="gameCash" ColumnName="gameCash" />
+          <ScalarProperty Name="gameCashD" ColumnName="gameCashD" />
+          <ScalarProperty Name="ShopLevel" ColumnName="ShopLevel" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="TienKet" ColumnName="TienKet" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_GetInfoMoneyInKetSat" FunctionName="BaseReaderModel.Store.PRC_GetInfoMoneyInKetSat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_GetInfoMoneyInKetSat_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Cash" ColumnName="Cash" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_GetInfoPlayerByUserId" FunctionName="BaseReaderModel.Store.PRC_GetInfoPlayerByUserId" />
+    <FunctionImportMapping FunctionImportName="PRC_GetListDailyCap2" FunctionName="BaseReaderModel.Store.PRC_GetListDailyCap2" />
+    <FunctionImportMapping FunctionImportName="PRC_GetListNewsByType" FunctionName="BaseReaderModel.Store.PRC_GetListNewsByType" />
+    <FunctionImportMapping FunctionImportName="PRC_GetListNewsSearch" FunctionName="BaseReaderModel.Store.PRC_GetListNewsSearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_GetListNewsSearch_Result">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TitleAscii" ColumnName="TitleAscii" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="LinkReference" ColumnName="LinkReference" />
+          <ScalarProperty Name="PictureURL" ColumnName="PictureURL" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="TypeNameAscii" ColumnName="TypeNameAscii" />
+          <ScalarProperty Name="TypeParentName" ColumnName="TypeParentName" />
+          <ScalarProperty Name="TypeParentNameAscii" ColumnName="TypeParentNameAscii" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_GetLogsMoneyByUserName" FunctionName="BaseReaderModel.Store.PRC_GetLogsMoneyByUserName" />
+    <FunctionImportMapping FunctionImportName="PRC_GetLogsPoc" FunctionName="BaseReaderModel.Store.PRC_GetLogsPoc" />
+    <FunctionImportMapping FunctionImportName="PRC_GetMenu" FunctionName="BaseReaderModel.Store.PRC_GetMenu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_GetMenu_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="LinkNew" ColumnName="LinkNew" />
+          <ScalarProperty Name="ClassAtrtibute" ColumnName="ClassAtrtibute" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="HasChild" ColumnName="HasChild" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_GetReportDaiLy" FunctionName="BaseReaderModel.Store.PRC_GetReportDaiLy" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertDetailGameGiftType" FunctionName="BaseReaderModel.Store.PRC_InsertDetailGameGiftType" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertFilterForProduct" FunctionName="BaseReaderModel.Store.PRC_InsertFilterForProduct" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertGiftTurn" FunctionName="BaseReaderModel.Store.PRC_InsertGiftTurn" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertLabelForProduct" FunctionName="BaseReaderModel.Store.PRC_InsertLabelForProduct" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertLogsGame" FunctionName="BaseReaderModel.Store.PRC_InsertLogsGame" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertOFFMessenger" FunctionName="BaseReaderModel.Store.PRC_InsertOFFMessenger" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertOTP" FunctionName="BaseReaderModel.Store.PRC_InsertOTP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_InsertOTP_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Otp_Plus" ColumnName="Otp_Plus" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="IsUsed" ColumnName="IsUsed" />
+          <ScalarProperty Name="CountFaild" ColumnName="CountFaild" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_InsertPageForRole" FunctionName="BaseReaderModel.Store.PRC_InsertPageForRole" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertRoleForUser" FunctionName="BaseReaderModel.Store.PRC_InsertRoleForUser" />
+    <FunctionImportMapping FunctionImportName="PRC_MenuByParentId" FunctionName="BaseReaderModel.Store.PRC_MenuByParentId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_MenuByParentId_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="CssClass" ColumnName="CssClass" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_PortalUser" FunctionName="BaseReaderModel.Store.PRC_PortalUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_PortalUser_Result">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="ShopLevel" ColumnName="ShopLevel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_Product_GetAllChildTypeByParentID" FunctionName="BaseReaderModel.Store.PRC_Product_GetAllChildTypeByParentID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_Product_GetAllChildTypeByParentID_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="UrlPicture" ColumnName="UrlPicture" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_RefundPoc" FunctionName="BaseReaderModel.Store.PRC_RefundPoc" />
+    <FunctionImportMapping FunctionImportName="PRC_ResetPictureProduct" FunctionName="BaseReaderModel.Store.PRC_ResetPictureProduct" />
+    <FunctionImportMapping FunctionImportName="PRC_ResetPictureProductType" FunctionName="BaseReaderModel.Store.PRC_ResetPictureProductType" />
+    <FunctionImportMapping FunctionImportName="PRC_Role_UpdateTestTypeForQuestion" FunctionName="BaseReaderModel.Store.PRC_Role_UpdateTestTypeForQuestion" />
+    <FunctionImportMapping FunctionImportName="PRC_SendMoneyKetSet" FunctionName="BaseReaderModel.Store.PRC_SendMoneyKetSet" />
+    <FunctionImportMapping FunctionImportName="PRC_SendToMessenger" FunctionName="BaseReaderModel.Store.PRC_SendToMessenger" />
+    <FunctionImportMapping FunctionImportName="PRC_SetDaiLy" FunctionName="BaseReaderModel.Store.PRC_SetDaiLy">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_SetDaiLy_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="identity" ColumnName="identity" />
+          <ScalarProperty Name="cmnd" ColumnName="cmnd" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="birth" ColumnName="birth" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="register_date" ColumnName="register_date" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="cash" ColumnName="cash" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="totalGame" ColumnName="totalGame" />
+          <ScalarProperty Name="clanId" ColumnName="clanId" />
+          <ScalarProperty Name="roleid" ColumnName="roleid" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="refid" ColumnName="refid" />
+          <ScalarProperty Name="hits" ColumnName="hits" />
+          <ScalarProperty Name="activeCode" ColumnName="activeCode" />
+          <ScalarProperty Name="is_partner" ColumnName="is_partner" />
+          <ScalarProperty Name="is_bot" ColumnName="is_bot" />
+          <ScalarProperty Name="register_ip" ColumnName="register_ip" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="ShopLevel" ColumnName="ShopLevel" />
+          <ScalarProperty Name="IsActiveSms" ColumnName="IsActiveSms" />
+          <ScalarProperty Name="last_login" ColumnName="last_login" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="device" ColumnName="device" />
+          <ScalarProperty Name="screen" ColumnName="screen" />
+          <ScalarProperty Name="IsChat" ColumnName="IsChat" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_UnBlockUser" FunctionName="BaseReaderModel.Store.PRC_UnBlockUser" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateDetailGameGiftType" FunctionName="BaseReaderModel.Store.PRC_UpdateDetailGameGiftType" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateLevelDaiLy" FunctionName="BaseReaderModel.Store.PRC_UpdateLevelDaiLy" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateLogsGameDetail" FunctionName="BaseReaderModel.Store.PRC_UpdateLogsGameDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BaseReaderModel.PRC_UpdateLogsGameDetail_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_UpdateLogsNoteLv2" FunctionName="BaseReaderModel.Store.PRC_UpdateLogsNoteLv2" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateReportSumMoney" FunctionName="BaseReaderModel.Store.PRC_UpdateReportSumMoney" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateReportThongKeChiPhi" FunctionName="BaseReaderModel.Store.PRC_UpdateReportThongKeChiPhi" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateReportThongKeChiPhiInHour" FunctionName="BaseReaderModel.Store.PRC_UpdateReportThongKeChiPhiInHour" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateTopVinhDanhGame" FunctionName="BaseReaderModel.Store.PRC_UpdateTopVinhDanhGame" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateTopWin" FunctionName="BaseReaderModel.Store.PRC_UpdateTopWin" />
+    <FunctionImportMapping FunctionImportName="PRC_WithDrawMoneyKetSet" FunctionName="BaseReaderModel.Store.PRC_WithDrawMoneyKetSet" />
+    <EntitySetMapping Name="ReportSumMoney">
+      <EntityTypeMapping TypeName="BaseReaderModel.ReportSumMoney">
+        <MappingFragment StoreEntitySet="ReportSumMoney">
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="TongTienGiftCodeChuaNap" ColumnName="TongTienGiftCodeChuaNap" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap2" ColumnName="TongTienKetSatDaiLyCap2" />
+          <ScalarProperty Name="TongTienDaiLyCap2" ColumnName="TongTienDaiLyCap2" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap1" ColumnName="TongTienKetSatDaiLyCap1" />
+          <ScalarProperty Name="TongTienDaiLyCap1" ColumnName="TongTienDaiLyCap1" />
+          <ScalarProperty Name="TongGameBank" ColumnName="TongGameBank" />
+          <ScalarProperty Name="TongHu" ColumnName="TongHu" />
+          <ScalarProperty Name="TongTienKetSatNickTongPoc" ColumnName="TongTienKetSatNickTongPoc" />
+          <ScalarProperty Name="TongTienNickTongPoc" ColumnName="TongTienNickTongPoc" />
+          <ScalarProperty Name="TongTienKetSat" ColumnName="TongTienKetSat" />
+          <ScalarProperty Name="TongTienKetSatUser" ColumnName="TongTienKetSatUser" />
+          <ScalarProperty Name="TongTienUser" ColumnName="TongTienUser" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportSumMoney2">
+      <EntityTypeMapping TypeName="BaseReaderModel.ReportSumMoney2">
+        <MappingFragment StoreEntitySet="ReportSumMoney2">
+          <ScalarProperty Name="LoiNhuan" ColumnName="LoiNhuan" />
+          <ScalarProperty Name="TongGiftCodeDaNap" ColumnName="TongGiftCodeDaNap" />
+          <ScalarProperty Name="TongUser" ColumnName="TongUser" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="TongTienGiftCodeChuaNap" ColumnName="TongTienGiftCodeChuaNap" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap2" ColumnName="TongTienKetSatDaiLyCap2" />
+          <ScalarProperty Name="TongTienDaiLyCap2" ColumnName="TongTienDaiLyCap2" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap1" ColumnName="TongTienKetSatDaiLyCap1" />
+          <ScalarProperty Name="TongTienDaiLyCap1" ColumnName="TongTienDaiLyCap1" />
+          <ScalarProperty Name="TongGameBank" ColumnName="TongGameBank" />
+          <ScalarProperty Name="TongHu" ColumnName="TongHu" />
+          <ScalarProperty Name="TongTienKetSatNickTongPoc" ColumnName="TongTienKetSatNickTongPoc" />
+          <ScalarProperty Name="TongTienNickTongPoc" ColumnName="TongTienNickTongPoc" />
+          <ScalarProperty Name="TongTienKetSat" ColumnName="TongTienKetSat" />
+          <ScalarProperty Name="TongTienKetSatUser" ColumnName="TongTienKetSatUser" />
+          <ScalarProperty Name="TongTienUser" ColumnName="TongTienUser" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportSumMoneyInHour">
+      <EntityTypeMapping TypeName="BaseReaderModel.ReportSumMoneyInHour">
+        <MappingFragment StoreEntitySet="ReportSumMoneyInHour">
+          <ScalarProperty Name="LoiNhuan" ColumnName="LoiNhuan" />
+          <ScalarProperty Name="TongGiftCodeDaNap" ColumnName="TongGiftCodeDaNap" />
+          <ScalarProperty Name="TongUser" ColumnName="TongUser" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="TongTienGiftCodeChuaNap" ColumnName="TongTienGiftCodeChuaNap" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap2" ColumnName="TongTienKetSatDaiLyCap2" />
+          <ScalarProperty Name="TongTienDaiLyCap2" ColumnName="TongTienDaiLyCap2" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap1" ColumnName="TongTienKetSatDaiLyCap1" />
+          <ScalarProperty Name="TongTienDaiLyCap1" ColumnName="TongTienDaiLyCap1" />
+          <ScalarProperty Name="TongGameBank" ColumnName="TongGameBank" />
+          <ScalarProperty Name="TongHu" ColumnName="TongHu" />
+          <ScalarProperty Name="TongTienKetSatNickTongPoc" ColumnName="TongTienKetSatNickTongPoc" />
+          <ScalarProperty Name="TongTienNickTongPoc" ColumnName="TongTienNickTongPoc" />
+          <ScalarProperty Name="TongTienKetSat" ColumnName="TongTienKetSat" />
+          <ScalarProperty Name="TongTienKetSatUser" ColumnName="TongTienKetSatUser" />
+          <ScalarProperty Name="TongTienUser" ColumnName="TongTienUser" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAdverties_Picture_Map">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblAdverties_Picture_Map">
+        <MappingFragment StoreEntitySet="tblAdverties_Picture_Map">
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="AdvertiesID" ColumnName="AdvertiesID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAdvertise">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblAdvertise">
+        <MappingFragment StoreEntitySet="tblAdvertise">
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblArticle">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblArticle">
+        <MappingFragment StoreEntitySet="tblArticle">
+          <ScalarProperty Name="LinkReferenPicture" ColumnName="LinkReferenPicture" />
+          <ScalarProperty Name="RelatedArticles" ColumnName="RelatedArticles" />
+          <ScalarProperty Name="LinkReference" ColumnName="LinkReference" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="Viewed" ColumnName="Viewed" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="TitleAscii" ColumnName="TitleAscii" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblArticleAuto">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblArticleAuto">
+        <MappingFragment StoreEntitySet="tblArticleAuto">
+          <ScalarProperty Name="ListGroupArticle" ColumnName="ListGroupArticle" />
+          <ScalarProperty Name="XpathPaging" ColumnName="XpathPaging" />
+          <ScalarProperty Name="Xpage" ColumnName="Xpage" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="XpathImage" ColumnName="XpathImage" />
+          <ScalarProperty Name="XpathDetail" ColumnName="XpathDetail" />
+          <ScalarProperty Name="XpathSummary" ColumnName="XpathSummary" />
+          <ScalarProperty Name="XpathTitle" ColumnName="XpathTitle" />
+          <ScalarProperty Name="Xpath" ColumnName="Xpath" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblComment">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblComment">
+        <MappingFragment StoreEntitySet="tblComment">
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CateJoinID" ColumnName="CateJoinID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="JoinID" ColumnName="JoinID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblContact">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblContact">
+        <MappingFragment StoreEntitySet="tblContact">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCustomer">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblCustomer">
+        <MappingFragment StoreEntitySet="tblCustomer">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateExpiredToken" ColumnName="DateExpiredToken" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDetail">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblDetail">
+        <MappingFragment StoreEntitySet="tblDetail">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDistributor">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblDistributor">
+        <MappingFragment StoreEntitySet="tblDistributor">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDomain">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblDomain">
+        <MappingFragment StoreEntitySet="tblDomain">
+          <ScalarProperty Name="FileCss" ColumnName="FileCss" />
+          <ScalarProperty Name="TypeProductID" ColumnName="TypeProductID" />
+          <ScalarProperty Name="Domain" ColumnName="Domain" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFile">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblFile">
+        <MappingFragment StoreEntitySet="tblFile">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGameConfigLogs">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblGameConfigLogs">
+        <MappingFragment StoreEntitySet="tblGameConfigLogs">
+          <ScalarProperty Name="DateCreared" ColumnName="DateCreared" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="a10" ColumnName="a10" />
+          <ScalarProperty Name="a9" ColumnName="a9" />
+          <ScalarProperty Name="a8" ColumnName="a8" />
+          <ScalarProperty Name="a7" ColumnName="a7" />
+          <ScalarProperty Name="a6" ColumnName="a6" />
+          <ScalarProperty Name="a5" ColumnName="a5" />
+          <ScalarProperty Name="a4" ColumnName="a4" />
+          <ScalarProperty Name="a3" ColumnName="a3" />
+          <ScalarProperty Name="a2" ColumnName="a2" />
+          <ScalarProperty Name="a1" ColumnName="a1" />
+          <ScalarProperty Name="a" ColumnName="a" />
+          <ScalarProperty Name="gameId" ColumnName="gameId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGameLogsDetail">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblGameLogsDetail">
+        <MappingFragment StoreEntitySet="tblGameLogsDetail">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGameLogsMoney">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblGameLogsMoney">
+        <MappingFragment StoreEntitySet="tblGameLogsMoney">
+          <ScalarProperty Name="IsTruyThu" ColumnName="IsTruyThu" />
+          <ScalarProperty Name="ContentTransaction" ColumnName="ContentTransaction" />
+          <ScalarProperty Name="TaxMoneySystem" ColumnName="TaxMoneySystem" />
+          <ScalarProperty Name="TaxMoneyParent" ColumnName="TaxMoneyParent" />
+          <ScalarProperty Name="TaxMoney" ColumnName="TaxMoney" />
+          <ScalarProperty Name="TaxSystem" ColumnName="TaxSystem" />
+          <ScalarProperty Name="TaxParent" ColumnName="TaxParent" />
+          <ScalarProperty Name="Tax" ColumnName="Tax" />
+          <ScalarProperty Name="MoneyRecive" ColumnName="MoneyRecive" />
+          <ScalarProperty Name="MoneySend" ColumnName="MoneySend" />
+          <ScalarProperty Name="UserRecive" ColumnName="UserRecive" />
+          <ScalarProperty Name="UserSend" ColumnName="UserSend" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGoogleMessage">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblGoogleMessage">
+        <MappingFragment StoreEntitySet="tblGoogleMessage">
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="GoogleId" ColumnName="GoogleId" />
+          <ScalarProperty Name="ContentText" ColumnName="ContentText" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGroup_Article_Map">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblGroup_Article_Map">
+        <MappingFragment StoreEntitySet="tblGroup_Article_Map">
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="NewsID" ColumnName="NewsID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGroup_TypeArticle_Map">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblGroup_TypeArticle_Map">
+        <MappingFragment StoreEntitySet="tblGroup_TypeArticle_Map">
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="GroupTypeID" ColumnName="GroupTypeID" />
+          <ScalarProperty Name="ArticleTypeID" ColumnName="ArticleTypeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGroupArticle">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblGroupArticle">
+        <MappingFragment StoreEntitySet="tblGroupArticle">
+          <ScalarProperty Name="IsShowMenu" ColumnName="IsShowMenu" />
+          <ScalarProperty Name="IsShowHome" ColumnName="IsShowHome" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGroupTypeArticle">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblGroupTypeArticle">
+        <MappingFragment StoreEntitySet="tblGroupTypeArticle">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLanguage">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblLanguage">
+        <MappingFragment StoreEntitySet="tblLanguage">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLayoutContent">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblLayoutContent">
+        <MappingFragment StoreEntitySet="tblLayoutContent">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblManufacturer">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblManufacturer">
+        <MappingFragment StoreEntitySet="tblManufacturer">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMenu">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblMenu">
+        <MappingFragment StoreEntitySet="tblMenu">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="CssClass" ColumnName="CssClass" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrder">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblOrder">
+        <MappingFragment StoreEntitySet="tblOrder">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="OrderStatusID" ColumnName="OrderStatusID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrder_Shipping">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblOrder_Shipping">
+        <MappingFragment StoreEntitySet="tblOrder_Shipping">
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrder_Status">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblOrder_Status">
+        <MappingFragment StoreEntitySet="tblOrder_Status">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrderDetail">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblOrderDetail">
+        <MappingFragment StoreEntitySet="tblOrderDetail">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ProductVariantID" ColumnName="ProductVariantID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPage">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblPage">
+        <MappingFragment StoreEntitySet="tblPage">
+          <ScalarProperty Name="LinkNew" ColumnName="LinkNew" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="HasChild" ColumnName="HasChild" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="ClassAtrtibute" ColumnName="ClassAtrtibute" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPicture">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblPicture">
+        <MappingFragment StoreEntitySet="tblPicture">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Alt" ColumnName="Alt" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProduct">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblProduct">
+        <MappingFragment StoreEntitySet="tblProduct">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="Viewed" ColumnName="Viewed" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="HighLights" ColumnName="HighLights" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Distributor" ColumnName="Distributor" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProduct_Attribute_Map">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblProduct_Attribute_Map">
+        <MappingFragment StoreEntitySet="tblProduct_Attribute_Map">
+          <ScalarProperty Name="AttributeID" ColumnName="AttributeID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProduct_Status_Map">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblProduct_Status_Map">
+        <MappingFragment StoreEntitySet="tblProduct_Status_Map">
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="ProductStatusID" ColumnName="ProductStatusID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProduct_Variant">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblProduct_Variant">
+        <MappingFragment StoreEntitySet="tblProduct_Variant">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="IsOutOfStock" ColumnName="IsOutOfStock" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductAttribute">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblProductAttribute">
+        <MappingFragment StoreEntitySet="tblProductAttribute">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdaetdBy" ColumnName="UpdaetdBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductFilter">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblProductFilter">
+        <MappingFragment StoreEntitySet="tblProductFilter">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductGroupAttribute">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblProductGroupAttribute">
+        <MappingFragment StoreEntitySet="tblProductGroupAttribute">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductLabel">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblProductLabel">
+        <MappingFragment StoreEntitySet="tblProductLabel">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductStatus">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblProductStatus">
+        <MappingFragment StoreEntitySet="tblProductStatus">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductType_Group_Map">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblProductType_Group_Map">
+        <MappingFragment StoreEntitySet="tblProductType_Group_Map">
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="GroupTypeID" ColumnName="GroupTypeID" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductTypeGroup">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblProductTypeGroup">
+        <MappingFragment StoreEntitySet="tblProductTypeGroup">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblReceiveInfo">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblReceiveInfo">
+        <MappingFragment StoreEntitySet="tblReceiveInfo">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblReceiveInfoGroup">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblReceiveInfoGroup">
+        <MappingFragment StoreEntitySet="tblReceiveInfoGroup">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSupport">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblSupport">
+        <MappingFragment StoreEntitySet="tblSupport">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Skype" ColumnName="Skype" />
+          <ScalarProperty Name="Yahoo" ColumnName="Yahoo" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTags">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblTags">
+        <MappingFragment StoreEntitySet="tblTags">
+          <ScalarProperty Name="TitleAcsii" ColumnName="TitleAcsii" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTags_Mapping_News">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblTags_Mapping_News">
+        <MappingFragment StoreEntitySet="tblTags_Mapping_News">
+          <ScalarProperty Name="TagsID" ColumnName="TagsID" />
+          <ScalarProperty Name="NewsID" ColumnName="NewsID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeArticle">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblTypeArticle">
+        <MappingFragment StoreEntitySet="tblTypeArticle">
+          <ScalarProperty Name="IsSinglePage" ColumnName="IsSinglePage" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeComment">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblTypeComment">
+        <MappingFragment StoreEntitySet="tblTypeComment">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeFile">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblTypeFile">
+        <MappingFragment StoreEntitySet="tblTypeFile">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeLog">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblTypeLog">
+        <MappingFragment StoreEntitySet="tblTypeLog">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypePicture">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblTypePicture">
+        <MappingFragment StoreEntitySet="tblTypePicture">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeProduct">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblTypeProduct">
+        <MappingFragment StoreEntitySet="tblTypeProduct">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeSupport">
+      <EntityTypeMapping TypeName="BaseReaderModel.tblTypeSupport">
+        <MappingFragment StoreEntitySet="tblTypeSupport">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThongKePOC">
+      <EntityTypeMapping TypeName="BaseReaderModel.ThongKePOC">
+        <MappingFragment StoreEntitySet="ThongKePOC">
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="SoTien" ColumnName="SoTien" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserProfile">
+      <EntityTypeMapping TypeName="BaseReaderModel.UserProfile">
+        <MappingFragment StoreEntitySet="UserProfile">
+          <ScalarProperty Name="ShopLevel" ColumnName="ShopLevel" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_Membership">
+      <EntityTypeMapping TypeName="BaseReaderModel.webpages_Membership">
+        <MappingFragment StoreEntitySet="webpages_Membership">
+          <ScalarProperty Name="PasswordVerificationTokenExpirationDate" ColumnName="PasswordVerificationTokenExpirationDate" />
+          <ScalarProperty Name="PasswordVerificationToken" ColumnName="PasswordVerificationToken" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="PasswordChangedDate" ColumnName="PasswordChangedDate" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordFailuresSinceLastSuccess" ColumnName="PasswordFailuresSinceLastSuccess" />
+          <ScalarProperty Name="LastPasswordFailureDate" ColumnName="LastPasswordFailureDate" />
+          <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+          <ScalarProperty Name="ConfirmationToken" ColumnName="ConfirmationToken" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_OAuthMembership">
+      <EntityTypeMapping TypeName="BaseReaderModel.webpages_OAuthMembership">
+        <MappingFragment StoreEntitySet="webpages_OAuthMembership">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProviderUserId" ColumnName="ProviderUserId" />
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_Roles">
+      <EntityTypeMapping TypeName="BaseReaderModel.webpages_Roles">
+        <MappingFragment StoreEntitySet="webpages_Roles">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tblPage_Role" TypeName="BaseReaderModel.tblPage_Role" StoreEntitySet="tblPage_Role">
+      <EndProperty Name="webpages_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="tblPage">
+        <ScalarProperty Name="ID" ColumnName="PageId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProduct_Filter_Map" TypeName="BaseReaderModel.tblProduct_Filter_Map" StoreEntitySet="tblProduct_Filter_Map">
+      <EndProperty Name="tblProductFilter">
+        <ScalarProperty Name="ID" ColumnName="FilterID" />
+      </EndProperty>
+      <EndProperty Name="tblProduct">
+        <ScalarProperty Name="ID" ColumnName="ProductID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProduct_Label_Map" TypeName="BaseReaderModel.tblProduct_Label_Map" StoreEntitySet="tblProduct_Label_Map">
+      <EndProperty Name="tblProductLabel">
+        <ScalarProperty Name="ID" ColumnName="ProductLabelID" />
+      </EndProperty>
+      <EndProperty Name="tblProduct">
+        <ScalarProperty Name="ID" ColumnName="ProductID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProduct_Picture_Map" TypeName="BaseReaderModel.tblProduct_Picture_Map" StoreEntitySet="tblProduct_Picture_Map">
+      <EndProperty Name="tblProduct">
+        <ScalarProperty Name="ID" ColumnName="ProductID" />
+      </EndProperty>
+      <EndProperty Name="tblPicture">
+        <ScalarProperty Name="ID" ColumnName="PictureID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblTypeProduct_Picture_Map" TypeName="BaseReaderModel.tblTypeProduct_Picture_Map" StoreEntitySet="tblTypeProduct_Picture_Map">
+      <EndProperty Name="tblTypeProduct">
+        <ScalarProperty Name="ID" ColumnName="ProductTypeID" />
+      </EndProperty>
+      <EndProperty Name="tblPicture">
+        <ScalarProperty Name="ID" ColumnName="PictureID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="webpages_UsersInRoles" TypeName="BaseReaderModel.webpages_UsersInRoles" StoreEntitySet="webpages_UsersInRoles">
+      <EndProperty Name="UserProfile">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="webpages_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

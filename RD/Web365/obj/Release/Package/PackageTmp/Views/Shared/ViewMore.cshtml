@@ -1,0 +1,23 @@
+﻿@model Web365Models.ListArticleModel
+
+@foreach (var item in Model.List)
+{
+    <div class="news_item">
+        <span class="news_item_img">
+            <a href="@Resources.Resource.LinkLanguage@(string.IsNullOrEmpty(item.ArticleType.ParentAscii) ? string.Empty : "/" + item.ArticleType.ParentAscii)/@item.ArticleType.NameAscii/@item.TitleAscii-@(item.ID).html" title="@item.Title">
+                <img src="@Web365Utility.Web365Utility.GetPathPicture(item.Picture.FileName)" alt="@item.Title" onerror="this.src='/Images/noimage.png'" />
+            </a>
+        </span>
+        <h2>
+            <a href="@Resources.Resource.LinkLanguage@(string.IsNullOrEmpty(item.ArticleType.ParentAscii) ? string.Empty : "/" + item.ArticleType.ParentAscii)/@item.ArticleType.NameAscii/@item.TitleAscii-@(item.ID).html" title="@item.Title">
+                @item.Title
+            </a>
+        </h2>
+        <span class="news_item_summary">
+            @Html.Raw(item.Summary)
+        </span>
+        <span class="txtDetail">
+            <a href="@Resources.Resource.LinkLanguage@(string.IsNullOrEmpty(item.ArticleType.ParentAscii) ? string.Empty : "/" + item.ArticleType.ParentAscii)/@item.ArticleType.NameAscii/@item.TitleAscii-@(item.ID).html" title="@item.Title">Chi tiết ...</a>
+        </span>
+    </div>
+}

@@ -1,0 +1,28 @@
+﻿@model Web365Models.FilterLayoutModel
+
+<div class="left-content">
+    <div class="left-header">
+        Tìm nhanh
+    </div>
+    <div class="left-main search-adv">
+        <form id="select-filter">
+            <select id="product-type">
+                <option>Tôi tìm</option>
+                <option value="tat-ca">Tất cả</option>
+                @foreach (var item in Model.ListProductType)
+                {
+                    <option value="@item.NameAscii">@item.Name</option>
+                }
+            </select>
+            <select id="product-filter">
+                <option>Để làm</option>
+                <option value="tat-ca">Tất cả</option>
+                @foreach (var item in Model.ListProductFilter)
+                {
+                    <option value="@item.NameAscii">@item.Name</option>
+                }
+            </select>
+            <button type="submit"></button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Statistics>
+  <Yesterday>
+    <Total>48</Total>
+  </Yesterday>
+  <Day>
+    <Number>12</Number>
+    <Total>14</Total>
+  </Day>
+  <PreWeek>
+    <Total>2</Total>
+  </PreWeek>
+  <Week>
+    <ToPreWeek>false</ToPreWeek>
+    <Total>88</Total>
+  </Week>
+  <Month>
+    <Total>30416</Total>
+  </Month>
+  <Total>
+    <Number>70244</Number>
+  </Total>
+</Statistics>

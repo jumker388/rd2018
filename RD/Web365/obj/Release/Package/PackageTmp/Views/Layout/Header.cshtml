@@ -1,0 +1,53 @@
+﻿@model Web365Models.HeaderModel
+
+<div class="wrap-header">    
+    <div class="link-search">
+        <div class="search">
+            <form id="search">
+                <input type="text" placeholder="Nhập từ khóa" />
+                <button type="submit" />
+            </form>
+        </div>
+        <div class="link">
+
+            @for (int i = 0; i < Model.ListLinkTop.Count; i++)
+            {
+                <a href="@Model.ListLinkTop.ElementAt(i).Link">@Model.ListLinkTop.ElementAt(i).Name</a>
+                
+                if (i < Model.ListLinkTop.Count - 1)
+                {
+                    <span>|</span>
+                }
+            }
+
+        </div>        
+    </div>    
+    <div class="customer">
+
+        @if(CustomerIdentity.Customer.IsLogged)
+        {
+            <div class="user">
+                Xin chào! 
+                <a href="/vn/thanh-vien">@CustomerIdentity.Customer.Info.FullName</a>
+                <a class="logout" href="javascript:;">(Thoát)</a>
+                <a class="cart" href="/vn/gio-hang">Giỏ hàng</a>
+            </div>            
+        }
+        else
+        {
+            for (int i = 0; i < Model.ListLinkCustomer.Count; i++)
+            {
+                <a @(!string.IsNullOrEmpty(Model.ListLinkCustomer.ElementAt(i).CssClass) ? "class=" + Model.ListLinkCustomer.ElementAt(i).CssClass : string.Empty) href="@Model.ListLinkCustomer.ElementAt(i).Link">@Model.ListLinkCustomer.ElementAt(i).Name</a>
+
+                if (i < Model.ListLinkCustomer.Count - 1)
+                {
+                    <span>|</span>
+                }
+            }
+        }        
+
+    </div>
+    <div class="content-header">
+        @Html.Raw(Model.Content.Detail)
+    </div>
+</div>

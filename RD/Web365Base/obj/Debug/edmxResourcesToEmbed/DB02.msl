@@ -1,0 +1,1561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB02ModelStoreContainer" CdmEntityContainer="DB02Entities">
+    <EntitySetMapping Name="ReportSumMoneys">
+      <EntityTypeMapping TypeName="DB02Model.ReportSumMoney">
+        <MappingFragment StoreEntitySet="ReportSumMoney">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TongTienUser" ColumnName="TongTienUser" />
+          <ScalarProperty Name="TongTienKetSatUser" ColumnName="TongTienKetSatUser" />
+          <ScalarProperty Name="TongTienKetSat" ColumnName="TongTienKetSat" />
+          <ScalarProperty Name="TongTienNickTongPoc" ColumnName="TongTienNickTongPoc" />
+          <ScalarProperty Name="TongTienKetSatNickTongPoc" ColumnName="TongTienKetSatNickTongPoc" />
+          <ScalarProperty Name="TongHu" ColumnName="TongHu" />
+          <ScalarProperty Name="TongGameBank" ColumnName="TongGameBank" />
+          <ScalarProperty Name="TongTienDaiLyCap1" ColumnName="TongTienDaiLyCap1" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap1" ColumnName="TongTienKetSatDaiLyCap1" />
+          <ScalarProperty Name="TongTienDaiLyCap2" ColumnName="TongTienDaiLyCap2" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap2" ColumnName="TongTienKetSatDaiLyCap2" />
+          <ScalarProperty Name="TongTienGiftCodeChuaNap" ColumnName="TongTienGiftCodeChuaNap" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportSumMoney2">
+      <EntityTypeMapping TypeName="DB02Model.ReportSumMoney2">
+        <MappingFragment StoreEntitySet="ReportSumMoney2">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TongTienUser" ColumnName="TongTienUser" />
+          <ScalarProperty Name="TongTienKetSatUser" ColumnName="TongTienKetSatUser" />
+          <ScalarProperty Name="TongTienKetSat" ColumnName="TongTienKetSat" />
+          <ScalarProperty Name="TongTienNickTongPoc" ColumnName="TongTienNickTongPoc" />
+          <ScalarProperty Name="TongTienKetSatNickTongPoc" ColumnName="TongTienKetSatNickTongPoc" />
+          <ScalarProperty Name="TongHu" ColumnName="TongHu" />
+          <ScalarProperty Name="TongGameBank" ColumnName="TongGameBank" />
+          <ScalarProperty Name="TongTienDaiLyCap1" ColumnName="TongTienDaiLyCap1" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap1" ColumnName="TongTienKetSatDaiLyCap1" />
+          <ScalarProperty Name="TongTienDaiLyCap2" ColumnName="TongTienDaiLyCap2" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap2" ColumnName="TongTienKetSatDaiLyCap2" />
+          <ScalarProperty Name="TongTienGiftCodeChuaNap" ColumnName="TongTienGiftCodeChuaNap" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="TongUser" ColumnName="TongUser" />
+          <ScalarProperty Name="TongGiftCodeDaNap" ColumnName="TongGiftCodeDaNap" />
+          <ScalarProperty Name="LoiNhuan" ColumnName="LoiNhuan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportSumMoneyInHours">
+      <EntityTypeMapping TypeName="DB02Model.ReportSumMoneyInHour">
+        <MappingFragment StoreEntitySet="ReportSumMoneyInHour">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TongTienUser" ColumnName="TongTienUser" />
+          <ScalarProperty Name="TongTienKetSatUser" ColumnName="TongTienKetSatUser" />
+          <ScalarProperty Name="TongTienKetSat" ColumnName="TongTienKetSat" />
+          <ScalarProperty Name="TongTienNickTongPoc" ColumnName="TongTienNickTongPoc" />
+          <ScalarProperty Name="TongTienKetSatNickTongPoc" ColumnName="TongTienKetSatNickTongPoc" />
+          <ScalarProperty Name="TongHu" ColumnName="TongHu" />
+          <ScalarProperty Name="TongGameBank" ColumnName="TongGameBank" />
+          <ScalarProperty Name="TongTienDaiLyCap1" ColumnName="TongTienDaiLyCap1" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap1" ColumnName="TongTienKetSatDaiLyCap1" />
+          <ScalarProperty Name="TongTienDaiLyCap2" ColumnName="TongTienDaiLyCap2" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap2" ColumnName="TongTienKetSatDaiLyCap2" />
+          <ScalarProperty Name="TongTienGiftCodeChuaNap" ColumnName="TongTienGiftCodeChuaNap" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="TongUser" ColumnName="TongUser" />
+          <ScalarProperty Name="TongGiftCodeDaNap" ColumnName="TongGiftCodeDaNap" />
+          <ScalarProperty Name="LoiNhuan" ColumnName="LoiNhuan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAdverties_Picture_Map">
+      <EntityTypeMapping TypeName="DB02Model.tblAdverties_Picture_Map">
+        <MappingFragment StoreEntitySet="tblAdverties_Picture_Map">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AdvertiesID" ColumnName="AdvertiesID" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAdvertises">
+      <EntityTypeMapping TypeName="DB02Model.tblAdvertise">
+        <MappingFragment StoreEntitySet="tblAdvertise">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblArticles">
+      <EntityTypeMapping TypeName="DB02Model.tblArticle">
+        <MappingFragment StoreEntitySet="tblArticle">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TitleAscii" ColumnName="TitleAscii" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Viewed" ColumnName="Viewed" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="LinkReference" ColumnName="LinkReference" />
+          <ScalarProperty Name="RelatedArticles" ColumnName="RelatedArticles" />
+          <ScalarProperty Name="LinkReferenPicture" ColumnName="LinkReferenPicture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblArticleAutoes">
+      <EntityTypeMapping TypeName="DB02Model.tblArticleAuto">
+        <MappingFragment StoreEntitySet="tblArticleAuto">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Xpath" ColumnName="Xpath" />
+          <ScalarProperty Name="XpathTitle" ColumnName="XpathTitle" />
+          <ScalarProperty Name="XpathSummary" ColumnName="XpathSummary" />
+          <ScalarProperty Name="XpathDetail" ColumnName="XpathDetail" />
+          <ScalarProperty Name="XpathImage" ColumnName="XpathImage" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Xpage" ColumnName="Xpage" />
+          <ScalarProperty Name="XpathPaging" ColumnName="XpathPaging" />
+          <ScalarProperty Name="ListGroupArticle" ColumnName="ListGroupArticle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblComments">
+      <EntityTypeMapping TypeName="DB02Model.tblComment">
+        <MappingFragment StoreEntitySet="tblComment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="JoinID" ColumnName="JoinID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="CateJoinID" ColumnName="CateJoinID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblContacts">
+      <EntityTypeMapping TypeName="DB02Model.tblContact">
+        <MappingFragment StoreEntitySet="tblContact">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCustomers">
+      <EntityTypeMapping TypeName="DB02Model.tblCustomer">
+        <MappingFragment StoreEntitySet="tblCustomer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="DateExpiredToken" ColumnName="DateExpiredToken" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDetails">
+      <EntityTypeMapping TypeName="DB02Model.tblDetail">
+        <MappingFragment StoreEntitySet="tblDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDistributors">
+      <EntityTypeMapping TypeName="DB02Model.tblDistributor">
+        <MappingFragment StoreEntitySet="tblDistributor">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDomains">
+      <EntityTypeMapping TypeName="DB02Model.tblDomain">
+        <MappingFragment StoreEntitySet="tblDomain">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Domain" ColumnName="Domain" />
+          <ScalarProperty Name="TypeProductID" ColumnName="TypeProductID" />
+          <ScalarProperty Name="FileCss" ColumnName="FileCss" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFiles">
+      <EntityTypeMapping TypeName="DB02Model.tblFile">
+        <MappingFragment StoreEntitySet="tblFile">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGameConfigLogs">
+      <EntityTypeMapping TypeName="DB02Model.tblGameConfigLog">
+        <MappingFragment StoreEntitySet="tblGameConfigLogs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="gameId" ColumnName="gameId" />
+          <ScalarProperty Name="a" ColumnName="a" />
+          <ScalarProperty Name="a1" ColumnName="a1" />
+          <ScalarProperty Name="a2" ColumnName="a2" />
+          <ScalarProperty Name="a3" ColumnName="a3" />
+          <ScalarProperty Name="a4" ColumnName="a4" />
+          <ScalarProperty Name="a5" ColumnName="a5" />
+          <ScalarProperty Name="a6" ColumnName="a6" />
+          <ScalarProperty Name="a7" ColumnName="a7" />
+          <ScalarProperty Name="a8" ColumnName="a8" />
+          <ScalarProperty Name="a9" ColumnName="a9" />
+          <ScalarProperty Name="a10" ColumnName="a10" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DateCreared" ColumnName="DateCreared" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGameLogsDetails">
+      <EntityTypeMapping TypeName="DB02Model.tblGameLogsDetail">
+        <MappingFragment StoreEntitySet="tblGameLogsDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGameLogsMoneys">
+      <EntityTypeMapping TypeName="DB02Model.tblGameLogsMoney">
+        <MappingFragment StoreEntitySet="tblGameLogsMoney">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserSend" ColumnName="UserSend" />
+          <ScalarProperty Name="UserRecive" ColumnName="UserRecive" />
+          <ScalarProperty Name="MoneySend" ColumnName="MoneySend" />
+          <ScalarProperty Name="MoneyRecive" ColumnName="MoneyRecive" />
+          <ScalarProperty Name="Tax" ColumnName="Tax" />
+          <ScalarProperty Name="TaxParent" ColumnName="TaxParent" />
+          <ScalarProperty Name="TaxSystem" ColumnName="TaxSystem" />
+          <ScalarProperty Name="TaxMoney" ColumnName="TaxMoney" />
+          <ScalarProperty Name="TaxMoneyParent" ColumnName="TaxMoneyParent" />
+          <ScalarProperty Name="TaxMoneySystem" ColumnName="TaxMoneySystem" />
+          <ScalarProperty Name="ContentTransaction" ColumnName="ContentTransaction" />
+          <ScalarProperty Name="IsTruyThu" ColumnName="IsTruyThu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGoogleMessages">
+      <EntityTypeMapping TypeName="DB02Model.tblGoogleMessage">
+        <MappingFragment StoreEntitySet="tblGoogleMessage">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ContentText" ColumnName="ContentText" />
+          <ScalarProperty Name="GoogleId" ColumnName="GoogleId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGroup_Article_Map">
+      <EntityTypeMapping TypeName="DB02Model.tblGroup_Article_Map">
+        <MappingFragment StoreEntitySet="tblGroup_Article_Map">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NewsID" ColumnName="NewsID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGroup_TypeArticle_Map">
+      <EntityTypeMapping TypeName="DB02Model.tblGroup_TypeArticle_Map">
+        <MappingFragment StoreEntitySet="tblGroup_TypeArticle_Map">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ArticleTypeID" ColumnName="ArticleTypeID" />
+          <ScalarProperty Name="GroupTypeID" ColumnName="GroupTypeID" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGroupArticles">
+      <EntityTypeMapping TypeName="DB02Model.tblGroupArticle">
+        <MappingFragment StoreEntitySet="tblGroupArticle">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsShowHome" ColumnName="IsShowHome" />
+          <ScalarProperty Name="IsShowMenu" ColumnName="IsShowMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGroupTypeArticles">
+      <EntityTypeMapping TypeName="DB02Model.tblGroupTypeArticle">
+        <MappingFragment StoreEntitySet="tblGroupTypeArticle">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLanguages">
+      <EntityTypeMapping TypeName="DB02Model.tblLanguage">
+        <MappingFragment StoreEntitySet="tblLanguage">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLayoutContents">
+      <EntityTypeMapping TypeName="DB02Model.tblLayoutContent">
+        <MappingFragment StoreEntitySet="tblLayoutContent">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblManufacturers">
+      <EntityTypeMapping TypeName="DB02Model.tblManufacturer">
+        <MappingFragment StoreEntitySet="tblManufacturer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMenus">
+      <EntityTypeMapping TypeName="DB02Model.tblMenu">
+        <MappingFragment StoreEntitySet="tblMenu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="CssClass" ColumnName="CssClass" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrders">
+      <EntityTypeMapping TypeName="DB02Model.tblOrder">
+        <MappingFragment StoreEntitySet="tblOrder">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OrderStatusID" ColumnName="OrderStatusID" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrder_Shipping">
+      <EntityTypeMapping TypeName="DB02Model.tblOrder_Shipping">
+        <MappingFragment StoreEntitySet="tblOrder_Shipping">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrder_Status">
+      <EntityTypeMapping TypeName="DB02Model.tblOrder_Status">
+        <MappingFragment StoreEntitySet="tblOrder_Status">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrderDetails">
+      <EntityTypeMapping TypeName="DB02Model.tblOrderDetail">
+        <MappingFragment StoreEntitySet="tblOrderDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductVariantID" ColumnName="ProductVariantID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPages">
+      <EntityTypeMapping TypeName="DB02Model.tblPage">
+        <MappingFragment StoreEntitySet="tblPage">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="ClassAtrtibute" ColumnName="ClassAtrtibute" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="HasChild" ColumnName="HasChild" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LinkNew" ColumnName="LinkNew" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPictures">
+      <EntityTypeMapping TypeName="DB02Model.tblPicture">
+        <MappingFragment StoreEntitySet="tblPicture">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Alt" ColumnName="Alt" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProducts">
+      <EntityTypeMapping TypeName="DB02Model.tblProduct">
+        <MappingFragment StoreEntitySet="tblProduct">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="Distributor" ColumnName="Distributor" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="HighLights" ColumnName="HighLights" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Viewed" ColumnName="Viewed" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProduct_Attribute_Map">
+      <EntityTypeMapping TypeName="DB02Model.tblProduct_Attribute_Map">
+        <MappingFragment StoreEntitySet="tblProduct_Attribute_Map">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="AttributeID" ColumnName="AttributeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProduct_Status_Map">
+      <EntityTypeMapping TypeName="DB02Model.tblProduct_Status_Map">
+        <MappingFragment StoreEntitySet="tblProduct_Status_Map">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductStatusID" ColumnName="ProductStatusID" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProduct_Variant">
+      <EntityTypeMapping TypeName="DB02Model.tblProduct_Variant">
+        <MappingFragment StoreEntitySet="tblProduct_Variant">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="IsOutOfStock" ColumnName="IsOutOfStock" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductAttributes">
+      <EntityTypeMapping TypeName="DB02Model.tblProductAttribute">
+        <MappingFragment StoreEntitySet="tblProductAttribute">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdaetdBy" ColumnName="UpdaetdBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductFilters">
+      <EntityTypeMapping TypeName="DB02Model.tblProductFilter">
+        <MappingFragment StoreEntitySet="tblProductFilter">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductGroupAttributes">
+      <EntityTypeMapping TypeName="DB02Model.tblProductGroupAttribute">
+        <MappingFragment StoreEntitySet="tblProductGroupAttribute">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductLabels">
+      <EntityTypeMapping TypeName="DB02Model.tblProductLabel">
+        <MappingFragment StoreEntitySet="tblProductLabel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductStatus">
+      <EntityTypeMapping TypeName="DB02Model.tblProductStatu">
+        <MappingFragment StoreEntitySet="tblProductStatus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductType_Group_Map">
+      <EntityTypeMapping TypeName="DB02Model.tblProductType_Group_Map">
+        <MappingFragment StoreEntitySet="tblProductType_Group_Map">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="GroupTypeID" ColumnName="GroupTypeID" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductTypeGroups">
+      <EntityTypeMapping TypeName="DB02Model.tblProductTypeGroup">
+        <MappingFragment StoreEntitySet="tblProductTypeGroup">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblReceiveInfoes">
+      <EntityTypeMapping TypeName="DB02Model.tblReceiveInfo">
+        <MappingFragment StoreEntitySet="tblReceiveInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblReceiveInfoGroups">
+      <EntityTypeMapping TypeName="DB02Model.tblReceiveInfoGroup">
+        <MappingFragment StoreEntitySet="tblReceiveInfoGroup">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSupports">
+      <EntityTypeMapping TypeName="DB02Model.tblSupport">
+        <MappingFragment StoreEntitySet="tblSupport">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Yahoo" ColumnName="Yahoo" />
+          <ScalarProperty Name="Skype" ColumnName="Skype" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTags">
+      <EntityTypeMapping TypeName="DB02Model.tblTag">
+        <MappingFragment StoreEntitySet="tblTags">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TitleAcsii" ColumnName="TitleAcsii" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTags_Mapping_News">
+      <EntityTypeMapping TypeName="DB02Model.tblTags_Mapping_News">
+        <MappingFragment StoreEntitySet="tblTags_Mapping_News">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NewsID" ColumnName="NewsID" />
+          <ScalarProperty Name="TagsID" ColumnName="TagsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeArticles">
+      <EntityTypeMapping TypeName="DB02Model.tblTypeArticle">
+        <MappingFragment StoreEntitySet="tblTypeArticle">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsSinglePage" ColumnName="IsSinglePage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeComments">
+      <EntityTypeMapping TypeName="DB02Model.tblTypeComment">
+        <MappingFragment StoreEntitySet="tblTypeComment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeFiles">
+      <EntityTypeMapping TypeName="DB02Model.tblTypeFile">
+        <MappingFragment StoreEntitySet="tblTypeFile">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeLogs">
+      <EntityTypeMapping TypeName="DB02Model.tblTypeLog">
+        <MappingFragment StoreEntitySet="tblTypeLog">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypePictures">
+      <EntityTypeMapping TypeName="DB02Model.tblTypePicture">
+        <MappingFragment StoreEntitySet="tblTypePicture">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeProducts">
+      <EntityTypeMapping TypeName="DB02Model.tblTypeProduct">
+        <MappingFragment StoreEntitySet="tblTypeProduct">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeSupports">
+      <EntityTypeMapping TypeName="DB02Model.tblTypeSupport">
+        <MappingFragment StoreEntitySet="tblTypeSupport">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThongKePOCs">
+      <EntityTypeMapping TypeName="DB02Model.ThongKePOC">
+        <MappingFragment StoreEntitySet="ThongKePOC">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="SoTien" ColumnName="SoTien" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserProfiles">
+      <EntityTypeMapping TypeName="DB02Model.UserProfile">
+        <MappingFragment StoreEntitySet="UserProfile">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ShopLevel" ColumnName="ShopLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_Membership">
+      <EntityTypeMapping TypeName="DB02Model.webpages_Membership">
+        <MappingFragment StoreEntitySet="webpages_Membership">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ConfirmationToken" ColumnName="ConfirmationToken" />
+          <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+          <ScalarProperty Name="LastPasswordFailureDate" ColumnName="LastPasswordFailureDate" />
+          <ScalarProperty Name="PasswordFailuresSinceLastSuccess" ColumnName="PasswordFailuresSinceLastSuccess" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordChangedDate" ColumnName="PasswordChangedDate" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="PasswordVerificationToken" ColumnName="PasswordVerificationToken" />
+          <ScalarProperty Name="PasswordVerificationTokenExpirationDate" ColumnName="PasswordVerificationTokenExpirationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_OAuthMembership">
+      <EntityTypeMapping TypeName="DB02Model.webpages_OAuthMembership">
+        <MappingFragment StoreEntitySet="webpages_OAuthMembership">
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+          <ScalarProperty Name="ProviderUserId" ColumnName="ProviderUserId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_Roles">
+      <EntityTypeMapping TypeName="DB02Model.webpages_Roles">
+        <MappingFragment StoreEntitySet="webpages_Roles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tblPage_Role" TypeName="DB02Model.tblPage_Role" StoreEntitySet="tblPage_Role">
+      <EndProperty Name="tblPage">
+        <ScalarProperty Name="ID" ColumnName="PageId" />
+      </EndProperty>
+      <EndProperty Name="webpages_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProduct_Filter_Map" TypeName="DB02Model.tblProduct_Filter_Map" StoreEntitySet="tblProduct_Filter_Map">
+      <EndProperty Name="tblProduct">
+        <ScalarProperty Name="ID" ColumnName="ProductID" />
+      </EndProperty>
+      <EndProperty Name="tblProductFilter">
+        <ScalarProperty Name="ID" ColumnName="FilterID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProduct_Label_Map" TypeName="DB02Model.tblProduct_Label_Map" StoreEntitySet="tblProduct_Label_Map">
+      <EndProperty Name="tblProduct">
+        <ScalarProperty Name="ID" ColumnName="ProductID" />
+      </EndProperty>
+      <EndProperty Name="tblProductLabel">
+        <ScalarProperty Name="ID" ColumnName="ProductLabelID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProduct_Picture_Map" TypeName="DB02Model.tblProduct_Picture_Map" StoreEntitySet="tblProduct_Picture_Map">
+      <EndProperty Name="tblPicture">
+        <ScalarProperty Name="ID" ColumnName="PictureID" />
+      </EndProperty>
+      <EndProperty Name="tblProduct">
+        <ScalarProperty Name="ID" ColumnName="ProductID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblTypeProduct_Picture_Map" TypeName="DB02Model.tblTypeProduct_Picture_Map" StoreEntitySet="tblTypeProduct_Picture_Map">
+      <EndProperty Name="tblPicture">
+        <ScalarProperty Name="ID" ColumnName="PictureID" />
+      </EndProperty>
+      <EndProperty Name="tblTypeProduct">
+        <ScalarProperty Name="ID" ColumnName="ProductTypeID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="webpages_UsersInRoles" TypeName="DB02Model.webpages_UsersInRoles" StoreEntitySet="webpages_UsersInRoles">
+      <EndProperty Name="webpages_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="UserProfile">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="POC_CreateChiPhi" FunctionName="DB02Model.Store.POC_CreateChiPhi" />
+    <FunctionImportMapping FunctionImportName="POC_GetDetailGameHistory" FunctionName="DB02Model.Store.POC_GetDetailGameHistory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.POC_GetDetailGameHistory_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="cash" ColumnName="cash" />
+          <ScalarProperty Name="current_cash" ColumnName="current_cash" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="game_id" ColumnName="game_id" />
+          <ScalarProperty Name="trans_type" ColumnName="trans_type" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="taxPercent" ColumnName="taxPercent" />
+          <ScalarProperty Name="before_cash" ColumnName="before_cash" />
+          <ScalarProperty Name="matchId" ColumnName="matchId" />
+          <ScalarProperty Name="matchNum" ColumnName="matchNum" />
+          <ScalarProperty Name="betTaiXiu" ColumnName="betTaiXiu" />
+          <ScalarProperty Name="valueCard" ColumnName="valueCard" />
+          <ScalarProperty Name="telcoId" ColumnName="telcoId" />
+          <ScalarProperty Name="cashPlay" ColumnName="cashPlay" />
+          <ScalarProperty Name="sourceDevice" ColumnName="sourceDevice" />
+          <ScalarProperty Name="CashFinal" ColumnName="CashFinal" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="gamename" ColumnName="gamename" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_GetDetailThongKePocChiPhi" FunctionName="DB02Model.Store.POC_GetDetailThongKePocChiPhi" />
+    <FunctionImportMapping FunctionImportName="POC_GetGameHistory" FunctionName="DB02Model.Store.POC_GetGameHistory" />
+    <FunctionImportMapping FunctionImportName="POC_GetGameHistoryMoney" FunctionName="DB02Model.Store.POC_GetGameHistoryMoney" />
+    <FunctionImportMapping FunctionImportName="POC_GetGameHistoryTaiXiu" FunctionName="DB02Model.Store.POC_GetGameHistoryTaiXiu" />
+    <FunctionImportMapping FunctionImportName="POC_GetHopThu" FunctionName="DB02Model.Store.POC_GetHopThu" />
+    <FunctionImportMapping FunctionImportName="POC_GetListDaiLy" FunctionName="DB02Model.Store.POC_GetListDaiLy">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.POC_GetListDaiLy_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="ShopLevel" ColumnName="ShopLevel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_GetListGiftCode" FunctionName="DB02Model.Store.POC_GetListGiftCode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.POC_GetListGiftCode_Result">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUsed" ColumnName="DateUsed" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="DateExpired" ColumnName="DateExpired" />
+          <ScalarProperty Name="TurnID" ColumnName="TurnID" />
+          <ScalarProperty Name="Gift_ID" ColumnName="Gift_ID" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_GetListGiftCodeByTurnID" FunctionName="DB02Model.Store.POC_GetListGiftCodeByTurnID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.POC_GetListGiftCodeByTurnID_Result">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUsed" ColumnName="DateUsed" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="DateExpired" ColumnName="DateExpired" />
+          <ScalarProperty Name="TurnID" ColumnName="TurnID" />
+          <ScalarProperty Name="Gift_ID" ColumnName="Gift_ID" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="Money1" ColumnName="Money1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_GetListGiftCodeTurn" FunctionName="DB02Model.Store.POC_GetListGiftCodeTurn">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.POC_GetListGiftCodeTurn_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="DateExpired" ColumnName="DateExpired" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NoteFix" ColumnName="NoteFix" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_GetListGiftType" FunctionName="DB02Model.Store.POC_GetListGiftType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.POC_GetListGiftType_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_GetReportCCU" FunctionName="DB02Model.Store.POC_GetReportCCU" />
+    <FunctionImportMapping FunctionImportName="POC_GetReportCCUOneDay" FunctionName="DB02Model.Store.POC_GetReportCCUOneDay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.POC_GetReportCCUOneDay_Result">
+          <ScalarProperty Name="avgccu" ColumnName="avgccu" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_GetReportGame" FunctionName="DB02Model.Store.POC_GetReportGame" />
+    <FunctionImportMapping FunctionImportName="POC_GetReportGameOneDay" FunctionName="DB02Model.Store.POC_GetReportGameOneDay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.POC_GetReportGameOneDay_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="cashPlay" ColumnName="cashPlay" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_InserLogsAdmin" FunctionName="DB02Model.Store.POC_InserLogsAdmin" />
+    <FunctionImportMapping FunctionImportName="POC_ListPlayer" FunctionName="DB02Model.Store.POC_ListPlayer" />
+    <FunctionImportMapping FunctionImportName="POC_ThongKePoc" FunctionName="DB02Model.Store.POC_ThongKePoc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.POC_ThongKePoc_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TongTienUser" ColumnName="TongTienUser" />
+          <ScalarProperty Name="TongTienKetSatUser" ColumnName="TongTienKetSatUser" />
+          <ScalarProperty Name="TongTienKetSat" ColumnName="TongTienKetSat" />
+          <ScalarProperty Name="TongTienNickTongPoc" ColumnName="TongTienNickTongPoc" />
+          <ScalarProperty Name="TongTienKetSatNickTongPoc" ColumnName="TongTienKetSatNickTongPoc" />
+          <ScalarProperty Name="TongHu" ColumnName="TongHu" />
+          <ScalarProperty Name="TongGameBank" ColumnName="TongGameBank" />
+          <ScalarProperty Name="TongTienDaiLyCap1" ColumnName="TongTienDaiLyCap1" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap1" ColumnName="TongTienKetSatDaiLyCap1" />
+          <ScalarProperty Name="TongTienDaiLyCap2" ColumnName="TongTienDaiLyCap2" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap2" ColumnName="TongTienKetSatDaiLyCap2" />
+          <ScalarProperty Name="TongTienGiftCodeChuaNap" ColumnName="TongTienGiftCodeChuaNap" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_ThongKePocChiPhi" FunctionName="DB02Model.Store.POC_ThongKePocChiPhi">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.POC_ThongKePocChiPhi_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TongTienUser" ColumnName="TongTienUser" />
+          <ScalarProperty Name="TongTienKetSatUser" ColumnName="TongTienKetSatUser" />
+          <ScalarProperty Name="TongTienKetSat" ColumnName="TongTienKetSat" />
+          <ScalarProperty Name="TongTienNickTongPoc" ColumnName="TongTienNickTongPoc" />
+          <ScalarProperty Name="TongTienKetSatNickTongPoc" ColumnName="TongTienKetSatNickTongPoc" />
+          <ScalarProperty Name="TongHu" ColumnName="TongHu" />
+          <ScalarProperty Name="TongGameBank" ColumnName="TongGameBank" />
+          <ScalarProperty Name="TongTienDaiLyCap1" ColumnName="TongTienDaiLyCap1" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap1" ColumnName="TongTienKetSatDaiLyCap1" />
+          <ScalarProperty Name="TongTienDaiLyCap2" ColumnName="TongTienDaiLyCap2" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap2" ColumnName="TongTienKetSatDaiLyCap2" />
+          <ScalarProperty Name="TongTienGiftCodeChuaNap" ColumnName="TongTienGiftCodeChuaNap" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="TongUser" ColumnName="TongUser" />
+          <ScalarProperty Name="TongGiftCodeDaNap" ColumnName="TongGiftCodeDaNap" />
+          <ScalarProperty Name="LoiNhuan" ColumnName="LoiNhuan" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_ThongKePocInHour" FunctionName="DB02Model.Store.POC_ThongKePocInHour">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.POC_ThongKePocInHour_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TongTienUser" ColumnName="TongTienUser" />
+          <ScalarProperty Name="TongTienKetSatUser" ColumnName="TongTienKetSatUser" />
+          <ScalarProperty Name="TongTienKetSat" ColumnName="TongTienKetSat" />
+          <ScalarProperty Name="TongTienNickTongPoc" ColumnName="TongTienNickTongPoc" />
+          <ScalarProperty Name="TongTienKetSatNickTongPoc" ColumnName="TongTienKetSatNickTongPoc" />
+          <ScalarProperty Name="TongHu" ColumnName="TongHu" />
+          <ScalarProperty Name="TongGameBank" ColumnName="TongGameBank" />
+          <ScalarProperty Name="TongTienDaiLyCap1" ColumnName="TongTienDaiLyCap1" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap1" ColumnName="TongTienKetSatDaiLyCap1" />
+          <ScalarProperty Name="TongTienDaiLyCap2" ColumnName="TongTienDaiLyCap2" />
+          <ScalarProperty Name="TongTienKetSatDaiLyCap2" ColumnName="TongTienKetSatDaiLyCap2" />
+          <ScalarProperty Name="TongTienGiftCodeChuaNap" ColumnName="TongTienGiftCodeChuaNap" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="TongUser" ColumnName="TongUser" />
+          <ScalarProperty Name="TongGiftCodeDaNap" ColumnName="TongGiftCodeDaNap" />
+          <ScalarProperty Name="LoiNhuan" ColumnName="LoiNhuan" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="POC_UpdatePlayerInfo" FunctionName="DB02Model.Store.POC_UpdatePlayerInfo" />
+    <FunctionImportMapping FunctionImportName="PRC_AdminGetListDailyCap1" FunctionName="DB02Model.Store.PRC_AdminGetListDailyCap1" />
+    <FunctionImportMapping FunctionImportName="PRC_AdminGetListDailyCap2" FunctionName="DB02Model.Store.PRC_AdminGetListDailyCap2" />
+    <FunctionImportMapping FunctionImportName="PRC_AllChildTypeNews" FunctionName="DB02Model.Store.PRC_AllChildTypeNews">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_AllChildTypeNews_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="UrlPicture" ColumnName="UrlPicture" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_AllChildTypeNewsByArrID" FunctionName="DB02Model.Store.PRC_AllChildTypeNewsByArrID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_AllChildTypeNewsByArrID_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_BlockUser" FunctionName="DB02Model.Store.PRC_BlockUser" />
+    <FunctionImportMapping FunctionImportName="PRC_ChecktOTP" FunctionName="DB02Model.Store.PRC_ChecktOTP" />
+    <FunctionImportMapping FunctionImportName="PRC_CheckUserInMember" FunctionName="DB02Model.Store.PRC_CheckUserInMember">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_CheckUserInMember_Result">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ShopLevel" ColumnName="ShopLevel" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_DeleteDetailGameGiftType" FunctionName="DB02Model.Store.PRC_DeleteDetailGameGiftType" />
+    <FunctionImportMapping FunctionImportName="PRC_GetDetailGameGiftType" FunctionName="DB02Model.Store.PRC_GetDetailGameGiftType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_GetDetailGameGiftType_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_GetDetailPlayer" FunctionName="DB02Model.Store.PRC_GetDetailPlayer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_GetDetailPlayer_Result">
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="gameCash" ColumnName="gameCash" />
+          <ScalarProperty Name="gameCashD" ColumnName="gameCashD" />
+          <ScalarProperty Name="ShopLevel" ColumnName="ShopLevel" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="TienKet" ColumnName="TienKet" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_GetDetailPlayerNickName" FunctionName="DB02Model.Store.PRC_GetDetailPlayerNickName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_GetDetailPlayerNickName_Result">
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="gameCash" ColumnName="gameCash" />
+          <ScalarProperty Name="gameCashD" ColumnName="gameCashD" />
+          <ScalarProperty Name="ShopLevel" ColumnName="ShopLevel" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="TienKet" ColumnName="TienKet" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_GetInfoMoneyInKetSat" FunctionName="DB02Model.Store.PRC_GetInfoMoneyInKetSat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_GetInfoMoneyInKetSat_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Cash" ColumnName="Cash" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_GetInfoPlayerByUserId" FunctionName="DB02Model.Store.PRC_GetInfoPlayerByUserId" />
+    <FunctionImportMapping FunctionImportName="PRC_GetListDailyCap2" FunctionName="DB02Model.Store.PRC_GetListDailyCap2" />
+    <FunctionImportMapping FunctionImportName="PRC_GetListNewsByType" FunctionName="DB02Model.Store.PRC_GetListNewsByType" />
+    <FunctionImportMapping FunctionImportName="PRC_GetListNewsSearch" FunctionName="DB02Model.Store.PRC_GetListNewsSearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_GetListNewsSearch_Result">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TitleAscii" ColumnName="TitleAscii" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="LinkReference" ColumnName="LinkReference" />
+          <ScalarProperty Name="PictureURL" ColumnName="PictureURL" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="TypeNameAscii" ColumnName="TypeNameAscii" />
+          <ScalarProperty Name="TypeParentName" ColumnName="TypeParentName" />
+          <ScalarProperty Name="TypeParentNameAscii" ColumnName="TypeParentNameAscii" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_GetLogsMoneyByUserName" FunctionName="DB02Model.Store.PRC_GetLogsMoneyByUserName" />
+    <FunctionImportMapping FunctionImportName="PRC_GetLogsPoc" FunctionName="DB02Model.Store.PRC_GetLogsPoc" />
+    <FunctionImportMapping FunctionImportName="PRC_GetMenu" FunctionName="DB02Model.Store.PRC_GetMenu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_GetMenu_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="LinkNew" ColumnName="LinkNew" />
+          <ScalarProperty Name="ClassAtrtibute" ColumnName="ClassAtrtibute" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="HasChild" ColumnName="HasChild" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_GetReportDaiLy" FunctionName="DB02Model.Store.PRC_GetReportDaiLy" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertDetailGameGiftType" FunctionName="DB02Model.Store.PRC_InsertDetailGameGiftType" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertFilterForProduct" FunctionName="DB02Model.Store.PRC_InsertFilterForProduct" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertGiftTurn" FunctionName="DB02Model.Store.PRC_InsertGiftTurn" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertLabelForProduct" FunctionName="DB02Model.Store.PRC_InsertLabelForProduct" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertLogsGame" FunctionName="DB02Model.Store.PRC_InsertLogsGame" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertOFFMessenger" FunctionName="DB02Model.Store.PRC_InsertOFFMessenger" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertOTP" FunctionName="DB02Model.Store.PRC_InsertOTP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_InsertOTP_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Otp_Plus" ColumnName="Otp_Plus" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="IsUsed" ColumnName="IsUsed" />
+          <ScalarProperty Name="CountFaild" ColumnName="CountFaild" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_InsertPageForRole" FunctionName="DB02Model.Store.PRC_InsertPageForRole" />
+    <FunctionImportMapping FunctionImportName="PRC_InsertRoleForUser" FunctionName="DB02Model.Store.PRC_InsertRoleForUser" />
+    <FunctionImportMapping FunctionImportName="PRC_MenuByParentId" FunctionName="DB02Model.Store.PRC_MenuByParentId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_MenuByParentId_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="CssClass" ColumnName="CssClass" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_PortalUser" FunctionName="DB02Model.Store.PRC_PortalUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_PortalUser_Result">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="ShopLevel" ColumnName="ShopLevel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_Product_GetAllChildTypeByParentID" FunctionName="DB02Model.Store.PRC_Product_GetAllChildTypeByParentID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_Product_GetAllChildTypeByParentID_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAscii" ColumnName="NameAscii" />
+          <ScalarProperty Name="SEOTitle" ColumnName="SEOTitle" />
+          <ScalarProperty Name="SEODescription" ColumnName="SEODescription" />
+          <ScalarProperty Name="SEOKeyword" ColumnName="SEOKeyword" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+          <ScalarProperty Name="UrlPicture" ColumnName="UrlPicture" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_RefundPoc" FunctionName="DB02Model.Store.PRC_RefundPoc" />
+    <FunctionImportMapping FunctionImportName="PRC_ResetPictureProduct" FunctionName="DB02Model.Store.PRC_ResetPictureProduct" />
+    <FunctionImportMapping FunctionImportName="PRC_ResetPictureProductType" FunctionName="DB02Model.Store.PRC_ResetPictureProductType" />
+    <FunctionImportMapping FunctionImportName="PRC_Role_UpdateTestTypeForQuestion" FunctionName="DB02Model.Store.PRC_Role_UpdateTestTypeForQuestion" />
+    <FunctionImportMapping FunctionImportName="PRC_SendMoneyKetSet" FunctionName="DB02Model.Store.PRC_SendMoneyKetSet" />
+    <FunctionImportMapping FunctionImportName="PRC_SendToMessenger" FunctionName="DB02Model.Store.PRC_SendToMessenger" />
+    <FunctionImportMapping FunctionImportName="PRC_SetDaiLy" FunctionName="DB02Model.Store.PRC_SetDaiLy">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_SetDaiLy_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="identity" ColumnName="identity" />
+          <ScalarProperty Name="cmnd" ColumnName="cmnd" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="birth" ColumnName="birth" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="register_date" ColumnName="register_date" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="cash" ColumnName="cash" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="totalGame" ColumnName="totalGame" />
+          <ScalarProperty Name="clanId" ColumnName="clanId" />
+          <ScalarProperty Name="roleid" ColumnName="roleid" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="refid" ColumnName="refid" />
+          <ScalarProperty Name="hits" ColumnName="hits" />
+          <ScalarProperty Name="activeCode" ColumnName="activeCode" />
+          <ScalarProperty Name="is_partner" ColumnName="is_partner" />
+          <ScalarProperty Name="is_bot" ColumnName="is_bot" />
+          <ScalarProperty Name="register_ip" ColumnName="register_ip" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="ShopLevel" ColumnName="ShopLevel" />
+          <ScalarProperty Name="IsActiveSms" ColumnName="IsActiveSms" />
+          <ScalarProperty Name="last_login" ColumnName="last_login" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="device" ColumnName="device" />
+          <ScalarProperty Name="screen" ColumnName="screen" />
+          <ScalarProperty Name="IsChat" ColumnName="IsChat" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_UnBlockUser" FunctionName="DB02Model.Store.PRC_UnBlockUser" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateDetailGameGiftType" FunctionName="DB02Model.Store.PRC_UpdateDetailGameGiftType" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateLevelDaiLy" FunctionName="DB02Model.Store.PRC_UpdateLevelDaiLy" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateLogsGameDetail" FunctionName="DB02Model.Store.PRC_UpdateLogsGameDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB02Model.PRC_UpdateLogsGameDetail_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRC_UpdateLogsNoteLv2" FunctionName="DB02Model.Store.PRC_UpdateLogsNoteLv2" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateReportSumMoney" FunctionName="DB02Model.Store.PRC_UpdateReportSumMoney" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateReportThongKeChiPhi" FunctionName="DB02Model.Store.PRC_UpdateReportThongKeChiPhi" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateReportThongKeChiPhiInHour" FunctionName="DB02Model.Store.PRC_UpdateReportThongKeChiPhiInHour" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateTopVinhDanhGame" FunctionName="DB02Model.Store.PRC_UpdateTopVinhDanhGame" />
+    <FunctionImportMapping FunctionImportName="PRC_UpdateTopWin" FunctionName="DB02Model.Store.PRC_UpdateTopWin" />
+    <FunctionImportMapping FunctionImportName="PRC_WithDrawMoneyKetSet" FunctionName="DB02Model.Store.PRC_WithDrawMoneyKetSet" />
+  </EntityContainerMapping>
+</Mapping>

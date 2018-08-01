@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Web365Domain.MenuItem>
+
+<div class="nav">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="@item.Link" title="@item.Name">@item.Name</a>
+            </li>
+        }        
+    </ul>
+</div>

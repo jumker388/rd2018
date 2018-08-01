@@ -1,0 +1,71 @@
+﻿<div id="sample-table-2_wrapper" class="dataTables_wrapper" role="grid">
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="dataTables_length">
+                <label>
+                    Hiển thị
+                    <select ng-model="dataFilter.numberRecord" ng-options="item for item in listNumberRow" ng-change="changeNumberRecord()"></select> 
+                    bảng ghi
+                </label>
+            </div>
+        </div>
+        <div class="span6">&nbsp;</div>        
+    </div>
+    <table class="table table-striped table-bordered table-hover dataTable primaryTable">
+        <tr>
+            <th class="center">
+                <label>
+                    <input type="checkbox" ng-click="checkedAll($event)" />
+                    <span class="lbl"></span>
+                </label>
+            </th>
+            <th class="sorting" propertynamesort="ID" ng-click="sortList($event)">ID</th>
+            <th class="sorting" propertynamesort="Name" ng-click="sortList($event)">Tên nhãn sản phẩm</th>
+            <th class="sorting hidden-480" propertynamesort="Number" ng-click="sortList($event)">Số hiệu</th>
+            <th class="hidden-480">Trạng thái</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="item in listData">
+            <td class="center">
+                <label>
+                    <input type="checkbox" data-id="{{item.ID}}" ng-model="checked" ng-click="changeCheck(item.ID)" />
+                    <span class="lbl"></span>
+                </label>
+            </td>
+            <td>{{item.ID}}</td>
+            <td>{{item.Name}}</td>
+            <td class="hidden-480">{{item.Number}}</td>
+            <td class="hidden-phone">
+                <span class="label label-success" ng-if="item.IsShow == true">Hiển thị</span>
+                <span class="label label-warning" ng-if="item.IsShow == false">Ẩn</span>
+            </td>
+            <td class="td-actions">
+                <div class="hidden-phone visible-desktop action-buttons">
+                    <a class="blue detail-item-list" href="javascript:;" ng-click="view(item.ID)">
+                        <i class="icon-zoom-in bigger-130"></i>
+                    </a>
+                    <a class="green edit-item-list" href="javascript:;" ng-click="edit(item.ID)">
+                        <i class="icon-pencil bigger-130"></i>
+                    </a>
+                    <a class="orange" href="javascript:;" ng-click="show('nhãn sản phẩm', item.Name, item.ID)" ng-if="item.IsShow == false">
+                        <i class="icon-eye-open bigger-130"></i>
+                    </a>
+                    <a class="orange" href="javascript:;" ng-click="hide('nhãn sản phẩm', item.Name, item.ID)" ng-if="item.IsShow == true">
+                        <i class="icon-eye-close bigger-130"></i>
+                    </a>
+                    <a class="red delete-item-list" href="javascript:;" ng-click="delete('nhãn sản phẩm', item.Name, item.ID)">
+                        <i class="icon-trash bigger-130"></i>
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="row-fluid">
+        <div class="span6">&nbsp;</div>
+        <div class="span6">
+            <div class="dataTables_paginate paging_bootstrap pagination">
+                <pagination total-items="total" ng-model="dataFilter.currentPage" items-per-page="dataFilter.numberRecord" max-size="3" class="pagination-sm" boundary-links="true" ng-change="pageChanged()"></pagination>
+            </div>
+        </div>
+    </div>
+</div>

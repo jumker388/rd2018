@@ -1,0 +1,303 @@
+﻿@model Web365Models.CartModel
+
+@{
+    ViewBag.Title = "";
+    ViewBag.Description = "";
+    ViewBag.Keywords = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+    <div class="main-title">
+        <a href="/@Resources.Resource.LangugeCode">Trang chủ</a>&#187;
+        <a href="javascript:;">Giỏ hàng của bạn</a>
+    </div>
+    <div class="main-des">
+        @Html.Raw(Model.Content.Detail)
+    </div>
+    <div class="main-content">
+
+        @if (Model.ListOrder != null && Model.ListOrder.Any())
+        {
+            <div class="box-order">
+                <table cellpadding="1" cellspacing="1" class="tbl-cart">
+                    <tr>
+                        <th>STT</th>
+                        <th>Ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                        <th></th>
+                    </tr>
+                    @for (int i = 0; i < Model.ListOrder.Count(); i++)
+                    {
+                        <tr class="cart-item">
+                            <td class="cart-display-order">@(i + 1)</td>
+                            <td class="cart-img"><img src="@Web365Utility.Web365Utility.GetPathPicture(Model.ListOrder.ElementAt(i).Picture)" /></td>
+                            <td class="cart-name">@Model.ListOrder.ElementAt(i).ProductName</td>
+                            <td class="cart-price">@Web365Utility.Web365Utility.ConvertNumber(Model.ListOrder.ElementAt(i).Price) VND</td>
+                            <td class="cart-quantity">
+                                <input type="text" value="@Model.ListOrder.ElementAt(i).Quantity"
+                                       data-productid="@Model.ListOrder.ElementAt(i).ProductID"
+                                       data-productname="@Model.ListOrder.ElementAt(i).ProductName"
+                                       data-variantid="@Model.ListOrder.ElementAt(i).ProductVariantID"
+                                       data-variantname="@Model.ListOrder.ElementAt(i).ProductVariantName"
+                                       data-picture="@Model.ListOrder.ElementAt(i).Picture"
+                                       data-price="@Model.ListOrder.ElementAt(i).Price" />
+                            </td>
+                            <td class="cart-total">@Web365Utility.Web365Utility.ConvertNumber(Model.ListOrder.ElementAt(i).Price * Model.ListOrder.ElementAt(i).Quantity) VND</td>
+                            <td class="cart-action">
+                                <button>Xóa</button>
+                            </td>
+                        </tr>
+                    }
+                </table>
+                <div class="txt-total">
+                    <a href="/">Tiếp tục mua hàng</a> Tổng giá trị giỏ hàng: <label>@Web365Utility.Web365Utility.ConvertNumber(Model.ListOrder.Sum(o => o.Quantity * o.Price))</label> VND
+                </div>
+                <div class="form-order">
+                    <form id="order-submit">
+
+                        <div class="box-order-info">
+                            <h3>Thông tin khách hàng</h3>
+                            <table class="form">
+                                <tr>
+                                    <td class="text">Tên khách hàng</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input name="name" type="text" placeholder="Tên khách hàng" value="@CustomerIdentity.Customer.Info.FullName" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text">Email</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input name="email" type="text" placeholder="Email" value="@CustomerIdentity.Customer.Info.Email" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text">Số ĐT</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input name="phone" type="text" placeholder="Số ĐT" value="@CustomerIdentity.Customer.Info.Phone" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text">Địa chỉ</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <textarea name="address" type="text" placeholder="Địa chỉ">@CustomerIdentity.Customer.Info.Address</textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="box-order-info">
+                            <h3>Thông tin khách nhận hàng</h3>
+                            <table class="form">
+                                <tr>
+                                    <td class="text">Khách hàng nhận</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input name="nameShipping" type="text" placeholder="Khách hàng nhận" value="@CustomerIdentity.Customer.Info.FullName" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text">Email</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input name="emailShipping" type="text" placeholder="Email khách nhận hàng" value="@CustomerIdentity.Customer.Info.Email" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text">Số ĐT</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input name="phoneShipping" type="text" placeholder="Số ĐT khách nhận hàng" value="@CustomerIdentity.Customer.Info.Phone" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text">Địa chỉ nhận</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <textarea name="addressShipping" type="text" placeholder="Địa chỉ khách nhận hàng">@CustomerIdentity.Customer.Info.Address</textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <button type="submit">Đặt hàng</button>
+
+                    </form>
+                </div>
+            </div>
+
+            <p class="message-empty order-success">Đặt hàng thành công. Cảm ơn bạn đã mua hàng tại Myina.vn. Chúng tôi sẽ liên lạc sớm với bạn để hoàn tất đơn hàng.</p>
+
+            <p class="message-empty order-empty">Không có sản phẩm trong giỏ hàng.</p>
+        }
+        else
+        {
+            <p class="message-empty">Không có sản phẩm trong giỏ hàng.</p>
+        }
+
+    </div>
+</div>
+
+@section left{
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var isPost = false;
+
+            $("#order-submit").validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 2
+                    },
+                    phone: {
+                        required: true,
+                        minlength: 5,
+                        number: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    title: {
+                        required: true
+                    },
+                    content: {
+                        required: true
+                    }
+                },
+                messages: {
+                    name: 'Bạn cần nhập tên',
+                    phone: 'Bạn cần nhập số đt',
+                    email: 'Bạn cần nhập email',
+                    address: 'Bạn cần nhập địa chỉ'
+                },
+                submitHandler: function (e) {
+
+                    if (!isPost) {
+
+                        isPost = true;
+
+                        $.post('/Ajax/Cart/AddOrder', $('#order-submit').serialize(), function (res) {
+                            if (!res.error) {
+                                $('.box-order').remove();
+                                $('.order-success').show();
+                                $.removeCookie('_coc', { path: '/' });
+                            }
+                            else {
+                                alert(res.message);
+                            }
+                        }).complete(function () {
+                            isPost = false;
+                        });
+
+                    }
+
+                    return false;
+                }
+            });
+
+            $('.cart-item button').click(function (e) {
+                e.preventDefault();
+
+                $(this).closest('tr').remove();
+
+                calculatorCost();
+            });
+
+            $('.cart-item .cart-quantity input').keyup(function (e) {
+                e.preventDefault();
+
+                calculatorCost();
+
+            });
+
+        });
+
+        function calculatorCost() {
+
+            var totalCost = 0;
+
+            var list = [];
+
+            $('.cart-item .cart-quantity input').each(function (i) {
+
+                var quantity = parseInt($(this).val());
+
+                var price = parseFloat($(this).attr('data-price'));
+
+                var productId = parseInt($(this).attr('data-productid'));
+
+                var productName = $(this).attr('data-productname');
+
+                var variantId = parseInt($(this).attr('data-variantid'));
+
+                var variantName = $(this).attr('data-variantname');
+
+                var picture = $(this).attr('data-picture');
+
+                var total = quantity * price;
+
+                totalCost += total;
+
+                $(this).closest('.cart-item').find('.cart-total').text(formatPrice(total) + ' VND');
+
+                list.push({
+                    ProductID: productId,
+                    ProductName: productName,
+                    Picture: picture,
+                    ProductVariantID: variantId,
+                    ProductVariantName: variantName,
+                    Price: price,
+                    Quantity: quantity
+                });
+
+            });
+
+            $.cookie('_coc', Base64.encode(JSON.stringify(list)), { expires: 1, path: '/' });
+
+            $('.txt-total label').text(formatPrice(totalCost));
+
+            if (list.length < 1) {
+                $('.box-order').remove();
+                $('.order-empty').show();                
+            }
+
+        }
+
+        function formatPrice(str) {
+            str = typeof str != 'string' ? str.toString() : str;
+            return str.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+        }
+    </script>
+}

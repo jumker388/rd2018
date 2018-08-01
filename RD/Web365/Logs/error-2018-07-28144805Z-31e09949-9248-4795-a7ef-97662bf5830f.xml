@@ -1,0 +1,176 @@
+﻿<error errorId="31e09949-9248-4795-a7ef-97662bf5830f" application="/LM/W3SVC/6/ROOT" host="DESKTOP-VUFFPMB" type="System.FormatException" message="String was not recognized as a valid DateTime." source="mscorlib" detail="System.FormatException: String was not recognized as a valid DateTime.&#xD;&#xA;   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)&#xD;&#xA;   at System.Convert.ToDateTime(String value)&#xD;&#xA;   at Web365Business.Back_End.Repository.GamePlayerRepository.GetReportGameOneDay(FilterItem objFilter) in d:\Proj\RD\Web365Business\Back-End\Repository\GamePlayerRepository.cs:line 2901&#xD;&#xA;   at Web365.Areas.Admin.Controllers.ReportController.GetCcuMinute(Int32 gameId, String source, String date, Int32 currentRecord, Int32 numberRecord) in d:\Proj\RD\Web365\Areas\Admin\Controllers\ReportController.cs:line 42&#xD;&#xA;   at lambda_method(Closure , ControllerBase , Object[] )&#xD;&#xA;   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass42.&lt;BeginInvokeSynchronousActionMethod&gt;b__41()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass37.&lt;&gt;c__DisplayClass39.&lt;BeginInvokeActionMethodWithFilters&gt;b__33()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass4f.&lt;InvokeActionMethodFilterAsynchronously&gt;b__49()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass4f.&lt;InvokeActionMethodFilterAsynchronously&gt;b__49()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass25.&lt;&gt;c__DisplayClass2a.&lt;BeginInvokeAction&gt;b__20()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass25.&lt;BeginInvokeAction&gt;b__22(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c__DisplayClass1d.&lt;BeginExecuteCore&gt;b__18(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass4.&lt;MakeVoidDelegate&gt;b__3(IAsyncResult ar)&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass4.&lt;MakeVoidDelegate&gt;b__3(IAsyncResult ar)&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass8.&lt;BeginProcessRequest&gt;b__3(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass4.&lt;MakeVoidDelegate&gt;b__3(IAsyncResult ar)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="administrator" time="2018-07-28T14:48:05.3035080Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:*/*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:vi,en-US;q=0.9,en;q=0.8&#xD;&#xA;HTTP_COOKIE:ASP.NET_SessionId=vobpteigpw1tq22fnzrijr3e; .ASPXAUTH=AFCA4D4BA8FE75C7F6D45A64AE8B716E2EF332689A289EFEC1F1C9225707ADEE13239E039AD3D8120C7060DA2D2279094FBAFF66383CE3A0CBAF6BA32FB095A566F0073C988D50C9A500B68E7B50CBABCFA305FE87990EA27872F75E3331C6889D10021750943FB83EE821BB4FE9606EE350840D66C87EBB6A74D2936BB3C07984A9273D682895578A35BC6462C7039A&#xD;&#xA;HTTP_HOST:192.168.0.16:7676&#xD;&#xA;HTTP_REFERER:http://192.168.0.16:7676/Admin/Report/CcuMinute&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: */*&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: vi,en-US;q=0.9,en;q=0.8&#xD;&#xA;Cookie: ASP.NET_SessionId=vobpteigpw1tq22fnzrijr3e; .ASPXAUTH=AFCA4D4BA8FE75C7F6D45A64AE8B716E2EF332689A289EFEC1F1C9225707ADEE13239E039AD3D8120C7060DA2D2279094FBAFF66383CE3A0CBAF6BA32FB095A566F0073C988D50C9A500B68E7B50CBABCFA305FE87990EA27872F75E3331C6889D10021750943FB83EE821BB4FE9606EE350840D66C87EBB6A74D2936BB3C07984A9273D682895578A35BC6462C7039A&#xD;&#xA;Host: 192.168.0.16:7676&#xD;&#xA;Referer: http://192.168.0.16:7676/Admin/Report/CcuMinute&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&#xD;&#xA;X-Requested-With: XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/6/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Proj\RD\Web365\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="administrator" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="administrator" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="administrator" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="6" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/6" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="192.168.0.16" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/admin/Report/GetCcuMinute" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Proj\RD\Web365\admin\Report\GetCcuMinute" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="gameId=0&amp;date=" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="192.168.0.16" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="192.168.0.16" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="22320" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/admin/Report/GetCcuMinute" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="192.168.0.16" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="7676" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/admin/Report/GetCcuMinute" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="*/*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="vi,en-US;q=0.9,en;q=0.8" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="ASP.NET_SessionId=vobpteigpw1tq22fnzrijr3e; .ASPXAUTH=AFCA4D4BA8FE75C7F6D45A64AE8B716E2EF332689A289EFEC1F1C9225707ADEE13239E039AD3D8120C7060DA2D2279094FBAFF66383CE3A0CBAF6BA32FB095A566F0073C988D50C9A500B68E7B50CBABCFA305FE87990EA27872F75E3331C6889D10021750943FB83EE821BB4FE9606EE350840D66C87EBB6A74D2936BB3C07984A9273D682895578A35BC6462C7039A" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="192.168.0.16:7676" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://192.168.0.16:7676/Admin/Report/CcuMinute" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="gameId">
+      <value string="0" />
+    </item>
+    <item name="date">
+      <value string="" />
+    </item>
+  </queryString>
+  <cookies>
+    <item name="ASP.NET_SessionId">
+      <value string="vobpteigpw1tq22fnzrijr3e" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="AFCA4D4BA8FE75C7F6D45A64AE8B716E2EF332689A289EFEC1F1C9225707ADEE13239E039AD3D8120C7060DA2D2279094FBAFF66383CE3A0CBAF6BA32FB095A566F0073C988D50C9A500B68E7B50CBABCFA305FE87990EA27872F75E3331C6889D10021750943FB83EE821BB4FE9606EE350840D66C87EBB6A74D2936BB3C07984A9273D682895578A35BC6462C7039A" />
+    </item>
+  </cookies>
+</error>

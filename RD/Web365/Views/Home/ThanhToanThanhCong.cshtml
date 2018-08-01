@@ -1,0 +1,86 @@
+﻿<link href="~/Content/tq99/css/bootstrap.min.css" rel="stylesheet" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+@model Web365Domain.Game.PaymentItem
+
+<div style="width: 85%; margin: 0 auto;">
+
+    <form class="form-horizontal" style="border: 1px solid #ccc; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">
+
+        <div class="row">
+            <div class="span12" style=" text-align: center;">
+                @if (Model != null)
+                {
+                    if (Model.transaction_status == "00")
+                    {
+                        <img style="width : 100px;" src="~/Content/tq99/images/i7379jf.png" />
+                    }
+                    else
+                    {
+                        <img style="width : 100px;" src="~/Content/tq99/images/Icon_Fail_1.png" />
+                    }
+                }
+                else
+                {
+                    <img style="width : 100px;" src="~/Content/tq99/images/Icon_Fail_1.png" />
+                }
+            </div>
+        </div>
+        @if (Model != null)
+        {
+            if (Model.transaction_status == "00")
+            {
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Họ tên</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">@Model.buyer_fullname</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Số điện thoại</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">@Model.buyer_mobile</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Mã đơn hàng</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">@Model.order_code</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Token</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">@Model.token</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Trạng thái</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">Thành công</p>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="form-group" style="text-align: center;">
+                    <h4> Giao dịch không thành công</h4>
+                </div>
+            }
+
+        }
+        else
+        {
+            <div class="form-group" style="text-align: center;">
+                <h4> Giao dịch không thành công</h4>
+            </div>
+        }
+
+
+    </form>
+</div>

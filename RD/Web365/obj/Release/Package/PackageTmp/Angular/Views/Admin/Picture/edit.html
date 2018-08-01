@@ -1,0 +1,70 @@
+﻿<form class="form-horizontal" id="modified-form" ng-submit="submit($event)" ng-controller="pictureModified">
+    <div class="content-modal">
+        <div class="modal-header">
+            <a href="javascript:;" class="close" ng-click="cancel()">×</a>
+            <h3 class="modal-title">Chỉnh sửa hình ảnh: {{data.Name}}</h3>
+        </div>
+        <div class="modal-body">
+            <div class="row-fluid">
+                <input type="hidden" name="ID" ng-value="data.ID" ng-model="data.ID" />
+                <div class="control-group">
+                    <label class="control-label" for="Name">Tên hình ảnh:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="Name" ng-model="data.Name" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Alt">Alt:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="Alt" ng-model="data.Alt" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Link">Link:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="Link" ng-model="data.Link" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Summary">Summary</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <textarea class="span6" name="Summary" ng-model="data.Summary"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="TypeID">Nhóm ảnh:</label>
+                    <div class="controls">
+                        <div class="span6">
+                            <tree list="listTreeDataForm" title="Nhóm ảnh" name="TypeID" value="{{data.TypeID}}" select-one="true" collapsed="collapsed"></tree>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Image">Hình ảnh:</label>
+                    <div class="controls">
+                        <div class="span4" ng-if="data.FileName != null">
+                            <img ng-src="/UploadFile/ImageThumbs/{{data.FileName}}" alt="data.Name" />
+                        </div>
+                        <div class="span4">
+                            <div class="widget-main">
+                                <input multiple="multiple" type="file" id="upload-image" class="uploadFile" dataname="FileName" value="{{data.FileName}}" upload-file />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Lưu</button>
+            <a href="javascript:;" class="btn btn-warning" ng-click="cancel()">Thoát</a>
+        </div>
+    </div>
+</form>

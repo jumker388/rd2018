@@ -1,0 +1,44 @@
+﻿<form class="form-horizontal" id="modified-form" ng-submit="submit($event)" ng-controller="userRoleModified">
+    <div class="content-modal">
+        <div class="modal-header">
+            <a href="javascript:;" class="close" ng-click="cancel()">×</a>
+            <h3 class="modal-title" ng-if="data.RoleId == 0">Thêm mới quyền quản trị</h3>
+            <h3 class="modal-title" ng-if="data.RoleId != 0">Chỉnh sửa quyền quản trị: {{data.RoleName}}</h3>
+        </div>
+        <div class="modal-body">
+            <div class="row-fluid">
+                <input type="hidden" name="RoleId" ng-value="data.RoleId" ng-model="data.RoleId" />
+                <div class="control-group">
+                    <label class="control-label" for="Name">Tên quyền quản trị:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="RoleName" ng-model="data.RoleName" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="IsShow">Hiển thị:</label>
+                    <div class="controls">
+                        <div class="span3">
+                            <label>                                                               
+                                <input type="checkbox" class="ace-switch ace-switch-1" name="IsShow" ng-value="data.IsShow" ng-model="data.IsShow" />                                
+                                <span class="lbl"></span>
+                                <input type="hidden" name="IsShow" ng-value="data.IsShow" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Price">Chi tiết quyền quản trị:</label>
+                    <div class="controls">
+                        <textarea name="Detail" ng-model="data.Detail" ck-editor></textarea>                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Lưu</button>
+            <a href="javascript:;" class="btn btn-warning" ng-click="cancel()">Thoát</a>
+        </div>
+    </div>
+</form>

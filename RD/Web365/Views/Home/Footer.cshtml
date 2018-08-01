@@ -1,0 +1,51 @@
+﻿@model Web365Models.FooterModel
+<div class="fs-callfix">
+    <label>
+        <a onclick="goog_report_conversion()" href="tel:0915262224" title="">
+            <span></span>
+            <p>Tư vấn miễn phí(24/7)<br> <strong>0915.26.22.24</strong></p>
+        </a>
+        <i></i>
+    </label>
+</div>
+<div class="nt-bottom">
+    <div class="container">        
+        <p class="nt-btimg">
+            @*<a href="/@Model.TypeDSCT.NameAscii" title="@Model.TypeDSCT.Name">
+                <img src="@Web365Utility.Web365Utility.GetPathPicture(Model.TypeDSCT.UrlPicture)" />
+            </a>*@
+            <a href="/chuyen-muc/danh-sach-cong-trinh" title="Danh sách công trình">
+                <img src="@Web365Utility.Web365Utility.GetPathPicture(Model.TypeDSCT.UrlPicture)" />
+            </a>
+        </p>
+    </div>
+</div>
+<div class="nt-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-xs-12">
+                @Html.Raw(Model.FooterInfo.Detail)
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="text-center">
+                    <img src="~/Content/Eke/images/logoBot.jpg" />
+                </div>
+                <ul class="nt-ftsc">
+                    <li><a rel="nofollow" href="" class="hvr-bob nt-scrss"> </a></li>
+                    <li><a rel="nofollow" href="" class="hvr-bob nt-scq"> </a></li>
+                    <li><a rel="nofollow" href="" class="hvr-bob nt-scfb"> </a></li>
+                    <li><a rel="nofollow" href="" class="hvr-bob nt-sctw"> </a></li>
+                    <li><a rel="nofollow" href="" class="hvr-bob nt-scgg"> </a></li>
+                    <li><a rel="nofollow" href="" class="hvr-bob nt-sctu"> </a></li>
+                    <li><a rel="nofollow" href="" class="hvr-bob nt-scyt"> </a></li>
+                    <li><a rel="nofollow" href="" class="hvr-bob nt-scfl"> </a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="nt-ftaddr">
+                    @Html.Raw(Model.FooterHotline.Detail)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

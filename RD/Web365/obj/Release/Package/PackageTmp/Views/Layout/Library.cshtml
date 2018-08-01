@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Web365Domain.MenuItem>
+
+<div class="left-content">
+    <div class="left-header">
+        @Resources.Resource.LabelLibrary
+    </div>
+    <div class="left-main menu-left">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li><a href="@item.Link">@item.Name</a></li>
+            }
+        </ul>
+    </div>
+</div>

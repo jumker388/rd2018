@@ -1,0 +1,9 @@
+﻿body, html, .btn {
+    font-family: sans-serif;
+}
+.tblData tr:nth-child(even){
+    background-color: #f3f3f3;
+}
+.tblData th,.tblData tr,.tblData td {
+    text-align: center;
+}

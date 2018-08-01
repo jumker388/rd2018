@@ -1,0 +1,25 @@
+﻿<form class="form-horizontal" id="modified-form" ng-submit="submitFilter($event)" ng-controller="productModified">
+    <div class="content-modal">
+        <div class="modal-header">
+            <a href="javascript:;" class="close" ng-click="cancel()">×</a>
+            <h3 class="modal-title">Chỉnh sửa lọc sản phẩm: {{dataFilter.Name}}</h3>
+        </div>
+        <div class="modal-body">
+            <div class="row-fluid">
+                <input type="hidden" name="productId" ng-value="dataFilter.ID" ng-model="dataFilter.ID" />
+                <div class="control-group">
+                    <label class="control-label" for="filterId">Nhóm lọc sản phẩm:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <tree list="listFilter" title="Lọc sản phẩm" name="filterId" value="{{dataFilter.ListFilterId}}" multiselect="true"></tree>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Lưu</button>
+            <a href="javascript:;" class="btn btn-warning" ng-click="cancel()">Thoát</a>
+        </div>
+    </div>
+</form>

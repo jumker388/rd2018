@@ -1,0 +1,39 @@
+﻿<form class="form-horizontal" id="modified-form" ng-submit="sendMail($event)">
+    <div class="content-modal">
+        <div class="modal-header">
+            <a href="javascript:;" class="close" ng-click="cancel()">×</a>
+            <h3 class="modal-title">Gửi mail khách hàng</h3>
+        </div>
+        <div class="modal-body">
+            <div class="row-fluid">
+                <div class="control-group">
+                    <label class="control-label" for="To">Gửi đến:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <textarea class="span6" name="listEmail" ng-model="dataMail.To"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Title">Tiêu đề:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="title" ng-model="dataMail.Title" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Content">Nội dung:</label>
+                    <div class="controls">
+                        <input type="hidden" name="content" ng-value="dataMail.Content" />
+                        <div class="wysiwyg-editor editor" ng-bind-html="renderHtml(dataMail.Content)" wysiwyg></div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Gửi mail</button>
+            <a href="javascript:;" class="btn btn-warning" ng-click="cancel()">Thoát</a>
+        </div>
+    </div>
+</form>

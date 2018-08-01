@@ -1,0 +1,5 @@
+D:\websolution\code\Web365.Cached\obj\Debug\Web365.Cached.csprojResolveAssemblyReference.cache
+D:\websolution\code\Web365.Cached\bin\Debug\Web365.Cached.dll
+D:\websolution\code\Web365.Cached\bin\Debug\Web365.Cached.pdb
+D:\websolution\code\Web365.Cached\obj\Debug\Web365.Cached.dll
+D:\websolution\code\Web365.Cached\obj\Debug\Web365.Cached.pdb

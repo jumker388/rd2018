@@ -1,0 +1,358 @@
+﻿#thoitiet {
+    width: 100%;
+    position: relative;
+    background: #f4f4f4;
+    padding-bottom: 20px;
+}
+
+.block_temp.width_common{
+    overflow:hidden;
+}
+
+.title_thoitiet {
+    width: 100%;
+    float: left;
+    height: 37px;
+    background: #fff;
+}
+
+.txt_title_thoitiet {
+    font: 700 16px/37px arial;
+    margin: 0 0 0 20px;
+}
+
+.txt_time_thoitiet {
+    margin: 0 40px 0 0;
+    line-height: 37px;
+}
+
+.content_thoitiet {
+    padding: 0 2%;
+    width: 96%;
+}
+
+.location {
+    font: 400 16px arial;
+    color: #666;
+}
+
+    .location .change_location {
+        text-decoration: underline;
+        margin: 0 0 0 20px;
+        color: #666;
+        font: 400 12px arial;
+    }
+
+        .location .change_location.active {
+            padding: 0 13px 0 0;
+            background: url(/images/icon_thaydoi_tt.gif) no-repeat right 2px;
+        }
+
+.block_location {
+    padding: 0;
+    border-bottom: 1px dotted #e2e2e3;
+    width: 100%;
+    margin: 0 0 10px;
+}
+
+.txt_doc_big {
+    font: 400 60px arial;
+}
+
+.icon_thoitiet_big {
+    background: url(/images/icon_thoitiet_big.png) no-repeat;
+    float:left;
+}
+
+.tt_big_340, .tt_big_1 {
+    background-position: 0 0;
+}
+
+.tt_big_90, .tt_big_2 {
+    background-position: 0 -80px;
+}
+
+.tt_big_3 {
+    background-position: 0 -160px;
+}
+
+.tt_big_300, .tt_big_4 {
+    background-position: 0 -248px;
+}
+
+.tt_big_5 {
+    background-position: 0 -344px;
+}
+
+.tt_big_6 {
+    background-position: 0 -430px;
+}
+
+.tt_big_7 {
+    background-position: 0 -523px;
+}
+
+.tt_big_260, .tt_big_8 {
+    background-position: -145px 5px;
+}
+
+.tt_big_40, .tt_big_9 {
+    background-position: -145px -75px;
+}
+
+.tt_big_10 {
+    background-position: -145px -160px;
+}
+
+.tt_big_11 {
+    background-position: -145px -240px;
+}
+
+.tt_big_390, .tt_big_110, .tt_big_12 {
+    background-position: -145px -325px;
+}
+
+.tt_big_13 {
+    background-position: -145px -408px;
+}
+
+.tt_big_14 {
+    background-position: -145px -490px;
+}
+
+.tt_big_15 {
+    background-position: -295px 5px;
+}
+
+.tt_big_16 {
+    background-position: -295px -75px;
+}
+
+.tt_big_17 {
+    background-position: -295px -160px;
+}
+
+.tt_big_18 {
+    background-position: -295px -240px;
+}
+
+.tt_big_300, .tt_big_270, .tt_big_19 {
+    background-position: -295px -320px;
+}
+
+.tt_big_20 {
+    background-position: -295px -405px;
+}
+
+.tt_big_21 {
+    background-position: -295px -490px;
+}
+
+.tt_big_22 {
+    background-position: -295px -490px;
+}
+
+.tt_big_6lge, .tt_big_23 {
+    background-position: -435px -5px;
+}
+
+.icon_thoitiet_small {
+    background: url(/images/icon_thoitiet_small.png) no-repeat;
+    width: 45px;
+    height: 45px;
+}
+
+.tt_small_340, .tt_small_1 {
+    background-position: -120px -5px;
+}
+
+.tt_small_2 {
+    background-position: -120px -75px;
+}
+
+.tt_small_300, .tt_small_3 {
+    background-position: -120px -150px;
+}
+
+.tt_small_90, .tt_small_4 {
+    background-position: -120px -222px;
+}
+
+.tt_small_40, .tt_small_5 {
+    background-position: -120px -295px;
+}
+
+.tt_small_6 {
+    background-position: -120px -368px;
+}
+
+.tt_small_7 {
+    background-position: -120px -440px;
+}
+
+.tt_small_260, .tt_small_8 {
+    background-position: -330px -5px;
+}
+
+.tt_small_9 {
+    background-position: -330px -75px;
+}
+
+.tt_small_390, .tt_small_110, .tt_small_10 {
+    background-position: -330px -150px;
+}
+
+.tt_small_11 {
+    background-position: -330px -222px;
+}
+
+.tt_small_12 {
+    background-position: -330px -295px;
+}
+
+.tt_small_13 {
+    background-position: -330px -370px;
+}
+
+.tt_small_14 {
+    background-position: -330px -440px;
+}
+
+.tt_small_15 {
+    background-position: -550px -5px;
+}
+
+.tt_small_330, .tt_small_270, .tt_small_16 {
+    background-position: -550px -75px;
+}
+
+.tt_small_17 {
+    background-position: -550px -150px;
+}
+
+.tt_small_18 {
+    background-position: -550px -220px;
+}
+
+.tt_small_19 {
+    background-position: -550px -295px;
+}
+
+.tt_small_20 {
+    background-position: -550px -370px;
+}
+
+.tt_small_21 {
+    background-position: -550px -5px;
+}
+
+.tt_small_22 {
+    background-position: -710px -5px;
+}
+
+.tt_small_23 {
+    background-position: -710px -80px;
+}
+
+.block_info_temp {
+    width: 50%;
+    float: left;
+}
+
+.more_info_temp {
+    width: 50%;
+    float: right;
+}
+
+    .more_info_temp .list_news_dot_3x3_300 {
+        color: #000;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+.furture_tem {
+    background: #ddd;
+}
+
+    .furture_tem p {
+        padding: 5px 10px;
+    }
+
+.txt_decs_tt {
+    width: 100px;
+    font: 700 14px arial;
+}
+
+.block_txt_des_tt {
+    float: left;
+    width: 15%;
+    font: 700 14px arial;
+    padding: 10px 0 0;
+}
+
+    .block_txt_des_tt .txt_thoigian {
+        padding: 0 0 53px;
+    }
+
+    .block_txt_des_tt .txt_nhietdo {
+        padding: 0 0 10px;
+    }
+
+.tt_detail {
+    width: 100%;
+    padding: 13px 0 0;
+}
+
+    .tt_detail li {
+        width: 33%;
+        float: left;
+        border-left: 1px solid #e2e2e3;
+        padding: 0 2%;
+    }
+
+        .tt_detail li .txt_center {
+            padding-bottom: 10px;
+        }
+
+.txt_center {
+    text-align: center;
+}
+
+.search_location {
+    position: relative;
+    z-index: 999;
+    margin: 10px 0 0;
+    display: none;
+}
+
+.txt_select_location {
+    width: 250px;
+    font: 400 14px arial;
+    padding:5px;
+}
+
+.txt_doC_den {
+    background: url(/images/graphics/bg_o.gif) no-repeat scroll right 15px rgba(0,0,0,0);
+    display: inline-block;
+    float: left;
+    font: 700 1.5em/44px arial;
+    padding: 0 7px 0 5px;
+    margin: 0 10px 0 0;
+}
+
+.txt_location_topbar {
+    background: url(/images/graphics/icon_arrow_5x9_topbar.gif) no-repeat left 16px;
+    display: inline-block;
+    height: 43px;
+    font: 400 14px/43px arial;
+    padding: 0 0 0 10px;
+    float: left;
+    color: #666;
+    margin: 0 5px 0 0;
+}
+
+.block_icon_menu_header .block_location_tt img {
+    border: none;
+    height: 43px;
+}

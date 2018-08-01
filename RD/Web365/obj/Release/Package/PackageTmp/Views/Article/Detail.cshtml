@@ -1,0 +1,32 @@
+﻿@model Web365Domain.ArticleItem
+
+@{
+    ViewBag.Title = Model.SEOTitle;
+    ViewBag.Description = Model.SEODescription;
+    ViewBag.Keywords = Model.SEOKeyword;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+    <div class="main-title">
+        <a href="/@Resources.Resource.LangugeCode">Trang chủ</a>&#187;
+        <a href="/@Resources.Resource.LangugeCode/bai-viet/@Model.ArticleType.NameAscii">@Model.ArticleType.Name</a>
+    </div>
+    <div class="main-content">        
+        <div class="content-main">
+            <h1 class="title-news">
+                @Model.Title
+            </h1>
+            <div class="summary-news">
+                @Html.Raw(Model.Summary)
+            </div>
+            <div class="detail-news">
+                @Html.Raw(Model.Detail)
+            </div>
+        </div>
+    </div>
+</div>
+
+@section left{}
+
+@section scripts{}

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<acount>
+  <merchant_site_code>45371</merchant_site_code>
+  <receiver>cva0211@gmail.com</receiver>
+  <Password>28c1da89d5f58c3b427039fe999faa68</Password>
+  <return_url>http://10.13.141.155:9999/lien-he</return_url>
+  <cancel_url>http://10.13.141.155:9999/tin-tuc</cancel_url>
+  <ws_nl>http://sandbox.nganluong.vn:8088/nl30/micro_checkout_api.php?wsdl</ws_nl>
+</acount>

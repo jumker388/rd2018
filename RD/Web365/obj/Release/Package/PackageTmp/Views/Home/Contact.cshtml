@@ -1,0 +1,88 @@
+﻿@model Web365Domain.LayoutContentItem
+
+@{
+    ViewBag.Title = Model.SEOTitle;
+    ViewBag.Description = Model.SEODescription;
+    ViewBag.Keywords = Model.SEOKeyword;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+    <div class="main-title">
+        <a href="/@Resources.Resource.LangugeCode">Trang chủ</a>&#187;
+        <a href="javascript:;">Liên hệ</a>
+    </div>
+    <div class="main-content">
+        @Html.Raw(Model.Detail)
+    </div>
+</div>
+
+@section left{
+}
+
+@section scripts{
+    <script src="/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+
+        var isPost = false;
+
+        $("#contact").validate({
+            errorClass: 'help-block',
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: {
+                    required: true,
+                    minlength: 5,
+                    number: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                title: {
+                    required: true
+                },
+                content: {
+                    required: true
+                }
+            },
+            messages: {
+                    name: '',
+                    phone: '',
+                    email: '',
+                    title: '',
+                    content: ''
+                },
+                highlight: function (element) {
+                    $(element).closest('.control-group').removeClass('success').addClass('error');
+                },
+                success: function(element) {
+                    element.text('OK!').addClass('valid help-inline').closest('.control-group').removeClass('error').addClass('success');
+                },
+                submitHandler: function (e) {
+
+                    if (!isPost) {
+
+                        isPost = true;
+
+                        $('.btn-send-contact').text('...');
+
+                        $.post('/Ajax/Home/AddContact', $('#contact').serialize(), function (res) {
+                        }).complete(function () {
+                            $('#contact').remove();
+                            $('.contact-success').show();
+                        });
+
+                    }
+
+                    return false;
+                }
+            });
+
+        });
+    </script>
+}

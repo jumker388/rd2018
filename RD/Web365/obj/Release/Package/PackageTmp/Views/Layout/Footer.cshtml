@@ -1,0 +1,33 @@
+﻿@model Web365Models.FooterModel
+
+@foreach (var item in Model.ListMenu.Where(m => m.Parent == Convert.ToInt32(Resources.ResourceID.MenuFooter)))
+{
+    <div class="menu-footer">
+        <h3>
+            @item.Name
+        </h3>
+        <ul>
+            @foreach (var item1 in Model.ListMenu.Where(m => m.Parent == item.ID))
+            {
+                <li>
+                    <a href="@item1.Link">@item1.Name</a>
+                </li>
+            }
+        </ul>
+    </div>
+}
+
+<div class="menu-footer">
+    <h3>
+        @Model.Social.Name
+    </h3>
+    <div class="social-share">
+        @Html.Raw(Model.Social.Detail)
+    </div>
+</div>
+
+
+
+<div class="content-footer">
+    @Html.Raw(Model.Content.Detail)
+</div>

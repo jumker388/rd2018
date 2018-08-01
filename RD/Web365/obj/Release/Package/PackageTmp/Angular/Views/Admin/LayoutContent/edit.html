@@ -1,0 +1,85 @@
+﻿<form name="modified_form" class="form-horizontal" id="modified-form" ng-submit="submit($event)" ng-controller="layoutContentModified" novalidate>
+    <div class="content-modal">
+        <div class="modal-header">
+            <a href="javascript:;" class="close" ng-click="cancel()">×</a>
+            <h3 class="modal-title" ng-if="data.ID == 0">Thêm mới nội dung web</h3>
+            <h3 class="modal-title" ng-if="data.ID != 0">Chỉnh sửa nội dung web: {{data.Name}}</h3>
+        </div>
+        <div class="modal-body">
+            <div class="row-fluid">
+                <input type="hidden" name="ID" ng-value="data.ID" ng-model="data.ID" />
+                <div class="control-group" ng-class="{error: modified_form.Name.$dirty && modified_form.Name.$invalid}">
+                    <label class="control-label" for="Name">Tên nội dung web:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="Name" ng-model="data.Name" field="NameAscii" toascii dataid="{{data.ID}}" datactrl="LayoutContent" name-only required ng-minlength="6" ng-maxlength="32" />
+                            <span for="Name" class="help-inline" ng-if="modified_form.Name.$error.required">Bạn cần nhập tên nội dung</span>
+                            <span for="Name" class="help-inline" ng-if="modified_form.Name.$error.minlength || modified_form.Name.$error.maxlength">Bạn cần nhập lớn hơn 6 và nhỏ hơn 32 ký tự</span>
+                            <span for="Name" class="help-inline" ng-if="modified_form.Name.$error.unique">Tên nội dung đã tồn tại</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="NameAscii">SEO Uri:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="NameAscii" ng-model="data.NameAscii" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="SEOTitle">SEO Title:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="SEOTitle" ng-model="data.SEOTitle" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="SEODescription">SEO Description:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="SEODescription" ng-model="data.SEODescription" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="SEOKeyword">SEO Keyword:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <input type="text" class="span6" name="SEOKeyword" ng-model="data.SEOKeyword" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="IsShow">Hiển thị:</label>
+                    <div class="controls">
+                        <div class="span3">
+                            <label>
+                                <input type="checkbox" class="ace-switch ace-switch-1" name="IsShow" ng-value="data.IsShow" ng-model="data.IsShow" />
+                                <span class="lbl"></span>
+                                <input type="hidden" name="IsShow" ng-value="data.IsShow" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Image">Ảnh nội dung web:</label>
+                    <div class="controls">
+                        <box-picture arrid="data.PictureID" only="true" property="PictureID"></box-picture>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Price">Chi tiết nội dung web:</label>
+                    <div class="controls">
+                        <textarea name="Detail" ng-model="data.Detail" ck-editor></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Lưu</button>
+            <a href="javascript:;" class="btn btn-warning" ng-click="cancel()">Thoát</a>
+        </div>
+    </div>
+</form>

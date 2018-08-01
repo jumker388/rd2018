@@ -1,0 +1,25 @@
+﻿<form class="form-horizontal" id="modified-form" ng-submit="submitRole($event)" ng-controller="userModified">
+    <div class="content-modal">
+        <div class="modal-header">
+            <a href="javascript:;" class="close" ng-click="cancel()">×</a>
+            <h3 class="modal-title">Chỉnh sửa các quyền quản trị: {{data.UserName}}</h3>
+        </div>
+        <div class="modal-body">
+            <div class="row-fluid">
+                <input type="hidden" name="userId" ng-value="data.UserId" ng-model="data.UserId" />
+                <div class="control-group">
+                    <label class="control-label" for="Name">Quyền quản trị:</label>
+                    <div class="controls">
+                        <div class="span12">
+                            <tree list="listRole" title="Nhóm quyền" name="roleId" value="{{data.ListRoleId.toString()}}" field-id="RoleId" field-name="RoleName" multiselect="true"></tree>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Lưu</button>
+            <a href="javascript:;" class="btn btn-warning" ng-click="cancel()">Thoát</a>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="portalModelStoreContainer" CdmEntityContainer="portalEntities">
+    <EntitySetMapping Name="a_bankcharge">
+      <EntityTypeMapping TypeName="portalModel.a_bankcharge">
+        <MappingFragment StoreEntitySet="a_bankcharge">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="buyer_uid" ColumnName="buyer_uid" />
+          <ScalarProperty Name="buyer_fullname" ColumnName="buyer_fullname" />
+          <ScalarProperty Name="buyer_mobile" ColumnName="buyer_mobile" />
+          <ScalarProperty Name="total_amount" ColumnName="total_amount" />
+          <ScalarProperty Name="order_code" ColumnName="order_code" />
+          <ScalarProperty Name="payment_method" ColumnName="payment_method" />
+          <ScalarProperty Name="bank_code" ColumnName="bank_code" />
+          <ScalarProperty Name="payment_type" ColumnName="payment_type" />
+          <ScalarProperty Name="transaction_status" ColumnName="transaction_status" />
+          <ScalarProperty Name="transaction_id" ColumnName="transaction_id" />
+          <ScalarProperty Name="time_request" ColumnName="time_request" />
+          <ScalarProperty Name="time_receive" ColumnName="time_receive" />
+          <ScalarProperty Name="token" ColumnName="token" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="a_paycard">
+      <EntityTypeMapping TypeName="portalModel.a_paycard">
+        <MappingFragment StoreEntitySet="a_paycard">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cardNumber" ColumnName="cardNumber" />
+          <ScalarProperty Name="cardSerial" ColumnName="cardSerial" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="cardProvider" ColumnName="cardProvider" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+          <ScalarProperty Name="channel" ColumnName="channel" />
+          <ScalarProperty Name="refNo" ColumnName="refNo" />
+          <ScalarProperty Name="cardPrice" ColumnName="cardPrice" />
+          <ScalarProperty Name="gamePrice" ColumnName="gamePrice" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="resMsg" ColumnName="resMsg" />
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="tranNo" ColumnName="tranNo" />
+          <ScalarProperty Name="source" ColumnName="source" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="a_smsplus">
+      <EntityTypeMapping TypeName="portalModel.a_smsplus">
+        <MappingFragment StoreEntitySet="a_smsplus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="command_code" ColumnName="command_code" />
+          <ScalarProperty Name="telco" ColumnName="telco" />
+          <ScalarProperty Name="msisdn" ColumnName="msisdn" />
+          <ScalarProperty Name="mo_message" ColumnName="mo_message" />
+          <ScalarProperty Name="targetUser" ColumnName="targetUser" />
+          <ScalarProperty Name="receivedTime" ColumnName="receivedTime" />
+          <ScalarProperty Name="mtBody" ColumnName="mtBody" />
+          <ScalarProperty Name="responeTime" ColumnName="responeTime" />
+          <ScalarProperty Name="request_id" ColumnName="request_id" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="active_email">
+      <EntityTypeMapping TypeName="portalModel.active_email">
+        <MappingFragment StoreEntitySet="active_email">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="activeCode" ColumnName="activeCode" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="expiredDate" ColumnName="expiredDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="portalModel.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+          <ScalarProperty Name="roleid" ColumnName="roleid" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="admin_permission">
+      <EntityTypeMapping TypeName="portalModel.admin_permission">
+        <MappingFragment StoreEntitySet="admin_permission">
+          <ScalarProperty Name="per_id" ColumnName="per_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="per_class" ColumnName="per_class" />
+          <ScalarProperty Name="per_action" ColumnName="per_action" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="admin_role">
+      <EntityTypeMapping TypeName="portalModel.admin_role">
+        <MappingFragment StoreEntitySet="admin_role">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="full" ColumnName="full" />
+          <ScalarProperty Name="level" ColumnName="level" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="announcements">
+      <EntityTypeMapping TypeName="portalModel.announcement">
+        <MappingFragment StoreEntitySet="announcement">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="begin_time" ColumnName="begin_time" />
+          <ScalarProperty Name="end_time" ColumnName="end_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="announcement_readed">
+      <EntityTypeMapping TypeName="portalModel.announcement_readed">
+        <MappingFragment StoreEntitySet="announcement_readed">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="readedId" ColumnName="readedId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="portalModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Menu_Text" ColumnName="Menu_Text" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="modifyDate" ColumnName="modifyDate" />
+          <ScalarProperty Name="by" ColumnName="by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chuchaychays">
+      <EntityTypeMapping TypeName="portalModel.chuchaychay">
+        <MappingFragment StoreEntitySet="chuchaychay">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="DataStart" ColumnName="DataStart" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="Orders" ColumnName="Orders" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clans">
+      <EntityTypeMapping TypeName="portalModel.clan">
+        <MappingFragment StoreEntitySet="clan">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="avatarId" ColumnName="avatarId" />
+          <ScalarProperty Name="createTime" ColumnName="createTime" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="ownerId" ColumnName="ownerId" />
+          <ScalarProperty Name="bio" ColumnName="bio" />
+          <ScalarProperty Name="clanMoney" ColumnName="clanMoney" />
+          <ScalarProperty Name="shortDesc" ColumnName="shortDesc" />
+          <ScalarProperty Name="totalMember" ColumnName="totalMember" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clanMembers">
+      <EntityTypeMapping TypeName="portalModel.clanMember">
+        <MappingFragment StoreEntitySet="clanMember">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="joinDate" ColumnName="joinDate" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="applyStatus" ColumnName="applyStatus" />
+          <ScalarProperty Name="clanPoint" ColumnName="clanPoint" />
+          <ScalarProperty Name="clanDonate" ColumnName="clanDonate" />
+          <ScalarProperty Name="clanId" ColumnName="clanId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clanRoles">
+      <EntityTypeMapping TypeName="portalModel.clanRole">
+        <MappingFragment StoreEntitySet="clanRole">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="approve" ColumnName="approve" />
+          <ScalarProperty Name="kick" ColumnName="kick" />
+          <ScalarProperty Name="changeBio" ColumnName="changeBio" />
+          <ScalarProperty Name="sendAll" ColumnName="sendAll" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clanUpgrades">
+      <EntityTypeMapping TypeName="portalModel.clanUpgrade">
+        <MappingFragment StoreEntitySet="clanUpgrade">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="totalSlot" ColumnName="totalSlot" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clanWalls">
+      <EntityTypeMapping TypeName="portalModel.clanWall">
+        <MappingFragment StoreEntitySet="clanWall">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="clanId" ColumnName="clanId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="postDate" ColumnName="postDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="config_card">
+      <EntityTypeMapping TypeName="portalModel.config_card">
+        <MappingFragment StoreEntitySet="config_card">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="system" ColumnName="system" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+          <ScalarProperty Name="system_card" ColumnName="system_card" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emoticons">
+      <EntityTypeMapping TypeName="portalModel.emoticon">
+        <MappingFragment StoreEntitySet="emoticon">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="emoticon1" ColumnName="emoticon" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="exchangeCardInfoes">
+      <EntityTypeMapping TypeName="portalModel.exchangeCardInfo">
+        <MappingFragment StoreEntitySet="exchangeCardInfo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="serial" ColumnName="serial" />
+          <ScalarProperty Name="cardNo" ColumnName="cardNo" />
+          <ScalarProperty Name="dateExpired" ColumnName="dateExpired" />
+          <ScalarProperty Name="dateInput" ColumnName="dateInput" />
+          <ScalarProperty Name="dateUse" ColumnName="dateUse" />
+          <ScalarProperty Name="used" ColumnName="used" />
+          <ScalarProperty Name="partner" ColumnName="partner" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="telcoId" ColumnName="telcoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="exchangeHistories">
+      <EntityTypeMapping TypeName="portalModel.exchangeHistory">
+        <MappingFragment StoreEntitySet="exchangeHistory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cardId" ColumnName="cardId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="exchangeOptions">
+      <EntityTypeMapping TypeName="portalModel.exchangeOption">
+        <MappingFragment StoreEntitySet="exchangeOption">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="isShow" ColumnName="isShow" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="exchangeTelcoes">
+      <EntityTypeMapping TypeName="portalModel.exchangeTelco">
+        <MappingFragment StoreEntitySet="exchangeTelco">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="isShow" ColumnName="isShow" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="friends">
+      <EntityTypeMapping TypeName="portalModel.friend">
+        <MappingFragment StoreEntitySet="friend">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user1_id" ColumnName="user1_id" />
+          <ScalarProperty Name="user2_id" ColumnName="user2_id" />
+          <ScalarProperty Name="datetime" ColumnName="datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gameflashes">
+      <EntityTypeMapping TypeName="portalModel.gameflash">
+        <MappingFragment StoreEntitySet="gameflash">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="flash" ColumnName="flash" />
+          <ScalarProperty Name="screen" ColumnName="screen" />
+          <ScalarProperty Name="visit" ColumnName="visit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histories">
+      <EntityTypeMapping TypeName="portalModel.history">
+        <MappingFragment StoreEntitySet="history">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="cash" ColumnName="cash" />
+          <ScalarProperty Name="current_cash" ColumnName="current_cash" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="game_id" ColumnName="game_id" />
+          <ScalarProperty Name="trans_type" ColumnName="trans_type" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="isXu" ColumnName="isXu" />
+          <ScalarProperty Name="cardType" ColumnName="cardType" />
+          <ScalarProperty Name="short_code" ColumnName="short_code" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="telco" ColumnName="telco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="history_filter">
+      <EntityTypeMapping TypeName="portalModel.history_filter">
+        <MappingFragment StoreEntitySet="history_filter">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="textview" ColumnName="textview" />
+          <ScalarProperty Name="C_sql" ColumnName="_sql" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="C_order" ColumnName="_order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="log_sms">
+      <EntityTypeMapping TypeName="portalModel.log_sms">
+        <MappingFragment StoreEntitySet="log_sms">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sender" ColumnName="sender" />
+          <ScalarProperty Name="recipient" ColumnName="recipient" />
+          <ScalarProperty Name="moBody" ColumnName="moBody" />
+          <ScalarProperty Name="mtBody" ColumnName="mtBody" />
+          <ScalarProperty Name="cpId" ColumnName="cpId" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="sendnumber" ColumnName="sendnumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="messages">
+      <EntityTypeMapping TypeName="portalModel.message">
+        <MappingFragment StoreEntitySet="message">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+          <ScalarProperty Name="from_user_id" ColumnName="from_user_id" />
+          <ScalarProperty Name="isNewComment" ColumnName="isNewComment" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="datetime" ColumnName="datetime" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="openids">
+      <EntityTypeMapping TypeName="portalModel.openid">
+        <MappingFragment StoreEntitySet="openid">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="openId1" ColumnName="openId" />
+          <ScalarProperty Name="chanel" ColumnName="chanel" />
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="options">
+      <EntityTypeMapping TypeName="portalModel.option">
+        <MappingFragment StoreEntitySet="options">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="viettel" ColumnName="viettel" />
+          <ScalarProperty Name="vina" ColumnName="vina" />
+          <ScalarProperty Name="mobi" ColumnName="mobi" />
+          <ScalarProperty Name="receiver" ColumnName="receiver" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="promotion_rule">
+      <EntityTypeMapping TypeName="portalModel.promotion_rule">
+        <MappingFragment StoreEntitySet="promotion_rule">
+          <ScalarProperty Name="rule_id" ColumnName="rule_id" />
+          <ScalarProperty Name="rule_start" ColumnName="rule_start" />
+          <ScalarProperty Name="rule_end" ColumnName="rule_end" />
+          <ScalarProperty Name="rule_card" ColumnName="rule_card" />
+          <ScalarProperty Name="rule_sms" ColumnName="rule_sms" />
+          <ScalarProperty Name="rule_active" ColumnName="rule_active" />
+          <ScalarProperty Name="rule_title" ColumnName="rule_title" />
+          <ScalarProperty Name="rule_description" ColumnName="rule_description" />
+          <ScalarProperty Name="rule_card_special" ColumnName="rule_card_special" />
+          <ScalarProperty Name="rule_price_tier" ColumnName="rule_price_tier" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+          <ScalarProperty Name="rule_high_card_special" ColumnName="rule_high_card_special" />
+          <ScalarProperty Name="rule_high_price_tier" ColumnName="rule_high_price_tier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="portalModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="identity" ColumnName="identity" />
+          <ScalarProperty Name="cmnd" ColumnName="cmnd" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="birth" ColumnName="birth" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="register_date" ColumnName="register_date" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="cash" ColumnName="cash" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="totalGame" ColumnName="totalGame" />
+          <ScalarProperty Name="clanId" ColumnName="clanId" />
+          <ScalarProperty Name="roleid" ColumnName="roleid" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="refid" ColumnName="refid" />
+          <ScalarProperty Name="hits" ColumnName="hits" />
+          <ScalarProperty Name="activeCode" ColumnName="activeCode" />
+          <ScalarProperty Name="is_partner" ColumnName="is_partner" />
+          <ScalarProperty Name="is_bot" ColumnName="is_bot" />
+          <ScalarProperty Name="register_ip" ColumnName="register_ip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_temp">
+      <EntityTypeMapping TypeName="portalModel.user_temp">
+        <MappingFragment StoreEntitySet="user_temp">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="identity" ColumnName="identity" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="birth" ColumnName="birth" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="register_date" ColumnName="register_date" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="cash" ColumnName="cash" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="totalGame" ColumnName="totalGame" />
+          <ScalarProperty Name="clanId" ColumnName="clanId" />
+          <ScalarProperty Name="roleid" ColumnName="roleid" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="refid" ColumnName="refid" />
+          <ScalarProperty Name="hits" ColumnName="hits" />
+          <ScalarProperty Name="activeCode" ColumnName="activeCode" />
+          <ScalarProperty Name="is_partner" ColumnName="is_partner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="a_game">
+      <EntityTypeMapping TypeName="portalModel.a_game">
+        <MappingFragment StoreEntitySet="a_game">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="gameName" ColumnName="gameName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="a_partner">
+      <EntityTypeMapping TypeName="portalModel.a_partner">
+        <MappingFragment StoreEntitySet="a_partner">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="partnerName" ColumnName="partnerName" />
+          <ScalarProperty Name="smsNumber" ColumnName="smsNumber" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="accessKey1" ColumnName="accessKey1" />
+          <ScalarProperty Name="accessKey2" ColumnName="accessKey2" />
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clan_log">
+      <EntityTypeMapping TypeName="portalModel.clan_log">
+        <MappingFragment StoreEntitySet="clan_log">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="ownerId" ColumnName="ownerId" />
+          <ScalarProperty Name="totalMember" ColumnName="totalMember" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trans_type">
+      <EntityTypeMapping TypeName="portalModel.trans_type">
+        <MappingFragment StoreEntitySet="trans_type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="code" ColumnName="code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

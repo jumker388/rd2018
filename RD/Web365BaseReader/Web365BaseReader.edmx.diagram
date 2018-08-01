@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="449d875c70ff46e2b654f7ed3f8505fe" Name="Diagram1">
+        <EntityTypeShape EntityType="BaseReaderModel.ReportSumMoney" Width="1.5" PointX="7.75" PointY="9.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.ReportSumMoney2" Width="1.5" PointX="9.75" PointY="9.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.ReportSumMoneyInHour" Width="1.5" PointX="2.75" PointY="11.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblAdverties_Picture_Map" Width="1.5" PointX="3" PointY="48.25" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblAdvertise" Width="1.5" PointX="0.75" PointY="41.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblArticle" Width="1.5" PointX="8.25" PointY="50" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblArticleAuto" Width="1.5" PointX="4.75" PointY="11.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblComment" Width="1.5" PointX="10" PointY="1" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblContact" Width="1.5" PointX="11.75" PointY="9.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblCustomer" Width="1.5" PointX="3" PointY="26.875" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblDetail" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblDistributor" Width="1.5" PointX="3" PointY="37.375" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblDomain" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblFile" Width="1.5" PointX="5.25" PointY="63.5" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblGameConfigLogs" Width="1.5" PointX="13.75" PointY="6.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblGameLogsDetail" Width="1.5" PointX="13.75" PointY="11.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblGameLogsMoney" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblGoogleMessage" Width="1.5" PointX="6.75" PointY="14.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblGroup_Article_Map" Width="1.5" PointX="10.5" PointY="64" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblGroup_TypeArticle_Map" Width="1.5" PointX="5.25" PointY="50.25" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblGroupArticle" Width="1.5" PointX="3" PointY="75.25" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblGroupTypeArticle" Width="1.5" PointX="3" PointY="42.625" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblLanguage" Width="1.5" PointX="11.75" PointY="14.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblLayoutContent" Width="1.5" PointX="3" PointY="32.25" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblManufacturer" Width="1.5" PointX="3" PointY="21.625" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblMenu" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblOrder" Width="1.5" PointX="5.25" PointY="26.875" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblOrder_Shipping" Width="1.5" PointX="7.5" PointY="28" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblOrder_Status" Width="1.5" PointX="3" PointY="18.375" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblOrderDetail" Width="1.5" PointX="10.75" PointY="47.5" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblPage" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblPicture" Width="1.5" PointX="0.75" PointY="45.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblProduct" Width="1.5" PointX="5.25" PointY="53.25" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblProduct_Attribute_Map" Width="1.5" PointX="9.75" PointY="72.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblProduct_Status_Map" Width="1.5" PointX="10.5" PointY="56" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblProduct_Variant" Width="1.5" PointX="7.5" PointY="64.625" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblProductAttribute" Width="1.5" PointX="7.5" PointY="90.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblProductFilter" Width="1.5" PointX="7.5" PointY="59.25" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblProductGroupAttribute" Width="1.5" PointX="5.25" PointY="90.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblProductLabel" Width="1.5" PointX="10.5" PointY="51.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblProductStatus" Width="1.5" PointX="8.25" PointY="44" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblProductType_Group_Map" Width="1.5" PointX="5.25" PointY="87.625" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblProductTypeGroup" Width="1.5" PointX="3" PointY="93.625" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblReceiveInfo" Width="1.5" PointX="10" PointY="6" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblReceiveInfoGroup" Width="1.5" PointX="7.75" PointY="6.125" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblSupport" Width="1.5" PointX="5" PointY="7" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblTags" Width="1.5" PointX="11.25" PointY="59.125" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblTags_Mapping_News" Width="1.5" PointX="13.5" PointY="52" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblTypeArticle" Width="1.5" PointX="3" PointY="54.625" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblTypeComment" Width="1.5" PointX="7.75" PointY="2" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblTypeFile" Width="1.5" PointX="3" PointY="80.875" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblTypeLog" Width="1.5" PointX="13.75" PointY="14.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblTypePicture" Width="1.5" PointX="3" PointY="69.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblTypeProduct" Width="1.5" PointX="3" PointY="86.875" />
+        <EntityTypeShape EntityType="BaseReaderModel.tblTypeSupport" Width="1.5" PointX="2.75" PointY="7.25" />
+        <EntityTypeShape EntityType="BaseReaderModel.ThongKePOC" Width="1.5" PointX="15.75" PointY="5.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.UserProfile" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="BaseReaderModel.webpages_Membership" Width="1.5" PointX="15.75" PointY="8.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.webpages_OAuthMembership" Width="1.5" PointX="8.75" PointY="15.75" />
+        <EntityTypeShape EntityType="BaseReaderModel.webpages_Roles" Width="1.5" PointX="3" PointY="1.75" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblAdverties_Picture_tblAdvertise" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblAdverties_Picture_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblArticle_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblGroup_News_Map_tblNews" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblNews_tblTypeNews" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblTags_Mapping_News_tblArticle" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblComment_tblTypeComment" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblCustomer_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblOrder_tblCustomer" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblDistributor_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProduct_tblDistributor" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblFile_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblFile_tblTypeFile" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblGroup_News_Map_tblGroupNews" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblGroup_TypeArticle_Map_tblGroupTypeArticle" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblGroup_TypeArticle_Map_tblTypeArticle" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblGroupNews_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblGroupTypeArticle_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblLayoutContent_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblManufacturer_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProduct_tblManufacturer" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblMenu_tblMenu" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblOrder_Shipping_tblOrder" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblOrder_tblOrder_Status" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblOrderDetail_tblOrder" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblOrderDetail_tblProduct" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblOrderDetail_tblProduct_Variant" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblPage_tblPage" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblImage_tblTypeImage" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProduct_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProductLabel_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblTypeArticle_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblTypeFile_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblTypeImage_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblTypeProduct_tblPicture" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProduct_Attribute_Map_tblProduct" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProduct_Status_Map_tblProduct" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProduct_tblTypeProduct" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProduct_Variant_tblProduct" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProduct_Attribute_Map_tblProductAttribute" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProduct_Status_Map_tblProductStatus" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProductAttribute_tblProductGroupAttribute" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProductFilter_tblProductFilter" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProductGroupAttribute_tblTypeProduct" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProductType_Group_Map_tblProductTypeGroup" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblProductType_Group_Map_tblTypeProduct" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblReceiveInfo_tblReceiveInfoGroup" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblSupport_tblTypeSupport" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblTags_Mapping_News_tblTags" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblTypeArticle_tblTypeArticle" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblTypeFile_tblTypeFile" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblTypeImage_tblTypeImage" />
+        <AssociationConnector Association="BaseReaderModel.FK_tblTypeProduct_tblTypeProduct1" />
+        <AssociationConnector Association="BaseReaderModel.tblPage_Role" />
+        <AssociationConnector Association="BaseReaderModel.tblProduct_Filter_Map" />
+        <AssociationConnector Association="BaseReaderModel.tblProduct_Label_Map" />
+        <AssociationConnector Association="BaseReaderModel.tblProduct_Picture_Map" />
+        <AssociationConnector Association="BaseReaderModel.tblTypeProduct_Picture_Map" />
+        <AssociationConnector Association="BaseReaderModel.webpages_UsersInRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

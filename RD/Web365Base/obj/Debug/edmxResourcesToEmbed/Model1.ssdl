@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="portalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="a_bankcharge">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="buyer_uid" Type="int" />
+    <Property Name="buyer_fullname" Type="varchar" MaxLength="255" />
+    <Property Name="buyer_mobile" Type="varchar" MaxLength="50" />
+    <Property Name="total_amount" Type="int" />
+    <Property Name="order_code" Type="varchar" MaxLength="500" />
+    <Property Name="payment_method" Type="varchar" MaxLength="255" />
+    <Property Name="bank_code" Type="varchar" MaxLength="255" />
+    <Property Name="payment_type" Type="varchar" MaxLength="255" />
+    <Property Name="transaction_status" Type="varchar" MaxLength="255" />
+    <Property Name="transaction_id" Type="varchar" MaxLength="255" />
+    <Property Name="time_request" Type="datetime" Nullable="false" />
+    <Property Name="time_receive" Type="datetime" Nullable="false" />
+    <Property Name="token" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'portal.dbo.a_game' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="a_game">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="gameName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'portal.dbo.a_partner' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="a_partner">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="dateCreated" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="partnerName" Type="varchar" MaxLength="50" />
+    <Property Name="smsNumber" Type="varchar" MaxLength="4" />
+    <Property Name="userName" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="255" />
+    <Property Name="accessKey1" Type="varchar" MaxLength="255" />
+    <Property Name="accessKey2" Type="varchar" MaxLength="255" />
+    <Property Name="dateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="a_paycard">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="cardNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cardSerial" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="userName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="cardProvider" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="cp" Type="varchar" MaxLength="10" />
+    <Property Name="channel" Type="int" />
+    <Property Name="refNo" Type="varchar" MaxLength="50" />
+    <Property Name="cardPrice" Type="int" Nullable="false" />
+    <Property Name="gamePrice" Type="int" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="resMsg" Type="varchar" MaxLength="100" />
+    <Property Name="dateCreated" Type="datetime" Nullable="false" />
+    <Property Name="tranNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="source" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="a_smsplus">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="amount" Type="int" Nullable="false" />
+    <Property Name="command_code" Type="varchar" MaxLength="50" />
+    <Property Name="telco" Type="char" MaxLength="50" />
+    <Property Name="msisdn" Type="varchar" MaxLength="12" />
+    <Property Name="mo_message" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="targetUser" Type="varchar" MaxLength="255" />
+    <Property Name="receivedTime" Type="datetime" Nullable="false" />
+    <Property Name="mtBody" Type="varchar" MaxLength="255" />
+    <Property Name="responeTime" Type="datetime" />
+    <Property Name="request_id" Type="varchar" MaxLength="500" />
+    <Property Name="signature" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="active_email">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="255" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="activeCode" Type="varchar" MaxLength="255" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="expiredDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="255" />
+    <Property Name="password" Type="varchar" MaxLength="255" />
+    <Property Name="name" Type="varchar" MaxLength="1000" />
+    <Property Name="cp" Type="varchar" MaxLength="500" />
+    <Property Name="roleid" Type="int" />
+    <Property Name="is_active" Type="int" />
+  </EntityType>
+  <EntityType Name="admin_permission">
+    <Key>
+      <PropertyRef Name="per_id" />
+    </Key>
+    <Property Name="per_id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="per_class" Type="varchar" MaxLength="20" />
+    <Property Name="per_action" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="admin_role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="status" Type="int" />
+    <Property Name="full" Type="int" />
+    <Property Name="level" Type="int" />
+  </EntityType>
+  <EntityType Name="announcement">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="cp" Type="varchar" MaxLength="10" />
+    <Property Name="subject" Type="varchar" MaxLength="200" />
+    <Property Name="content" Type="varchar" MaxLength="5000" Nullable="false" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+    <Property Name="begin_time" Type="datetime" />
+    <Property Name="end_time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="announcement_readed">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="userId" Type="float" />
+    <Property Name="readedId" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="255" />
+    <Property Name="Menu_Text" Type="varchar" MaxLength="255" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="URL" Type="varchar" MaxLength="255" />
+    <Property Name="Description" Type="varchar" MaxLength="255" />
+    <Property Name="status" Type="int" />
+    <Property Name="createDate" Type="datetime" />
+    <Property Name="modifyDate" Type="datetime" />
+    <Property Name="by" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="chuchaychay">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="2000" />
+    <Property Name="Link" Type="varchar" MaxLength="255" />
+    <Property Name="DataStart" Type="datetime" Nullable="false" />
+    <Property Name="DateEnd" Type="datetime" Nullable="false" />
+    <Property Name="IsDelete" Type="int" />
+    <Property Name="Orders" Type="int" />
+  </EntityType>
+  <EntityType Name="clan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="level" Type="int" Nullable="false" />
+    <Property Name="avatarId" Type="int" Nullable="false" />
+    <Property Name="createTime" Type="datetime" Nullable="false" />
+    <Property Name="tag" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="ownerId" Type="int" Nullable="false" />
+    <Property Name="bio" Type="varchar" MaxLength="1000" />
+    <Property Name="clanMoney" Type="int" Nullable="false" />
+    <Property Name="shortDesc" Type="varchar" MaxLength="11" />
+    <Property Name="totalMember" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'portal.dbo.clan_log' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="clan_log">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="deleteDate" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="level" Type="int" />
+    <Property Name="money" Type="int" />
+    <Property Name="ownerId" Type="int" />
+    <Property Name="totalMember" Type="int" />
+    <Property Name="deleteDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clanMember">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="joinDate" Type="datetime" Nullable="false" />
+    <Property Name="role" Type="int" Nullable="false" />
+    <Property Name="applyStatus" Type="int" Nullable="false" />
+    <Property Name="clanPoint" Type="int" Nullable="false" />
+    <Property Name="clanDonate" Type="int" Nullable="false" />
+    <Property Name="clanId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clanRole">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="approve" Type="int" />
+    <Property Name="kick" Type="int" />
+    <Property Name="changeBio" Type="int" />
+    <Property Name="sendAll" Type="int" />
+  </EntityType>
+  <EntityType Name="clanUpgrade">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="level" Type="int" Nullable="false" />
+    <Property Name="money" Type="int" Nullable="false" />
+    <Property Name="totalSlot" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clanWall">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="clanId" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="message" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="postDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="config_card">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="system" Type="varchar" MaxLength="150" />
+    <Property Name="cp" Type="varchar" MaxLength="10" />
+    <Property Name="system_card" Type="varchar" MaxLength="150" />
+    <Property Name="status" Type="int" />
+  </EntityType>
+  <EntityType Name="emoticon">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="emoticon" Type="varchar" MaxLength="150" />
+    <Property Name="status" Type="int" />
+    <Property Name="type" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="exchangeCardInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="serial" Type="varchar" MaxLength="200" />
+    <Property Name="cardNo" Type="varchar" MaxLength="200" />
+    <Property Name="dateExpired" Type="datetime" />
+    <Property Name="dateInput" Type="datetime" />
+    <Property Name="dateUse" Type="datetime" />
+    <Property Name="used" Type="int" />
+    <Property Name="partner" Type="varchar" MaxLength="200" />
+    <Property Name="value" Type="int" />
+    <Property Name="telcoId" Type="int" />
+  </EntityType>
+  <EntityType Name="exchangeHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="cardId" Type="int" />
+    <Property Name="userId" Type="int" />
+  </EntityType>
+  <EntityType Name="exchangeOption">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="200" />
+    <Property Name="value" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="rate" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="isShow" Type="int" />
+  </EntityType>
+  <EntityType Name="exchangeTelco">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="200" />
+    <Property Name="description" Type="varchar" MaxLength="500" />
+    <Property Name="isShow" Type="int" />
+  </EntityType>
+  <EntityType Name="friend">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="user1_id" Type="int" Nullable="false" />
+    <Property Name="user2_id" Type="int" Nullable="false" />
+    <Property Name="datetime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="gameflash">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="300" />
+    <Property Name="category" Type="varchar" MaxLength="750" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="state" Type="int" />
+    <Property Name="flash" Type="varchar" MaxLength="3000" />
+    <Property Name="screen" Type="varchar" MaxLength="1000" />
+    <Property Name="visit" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="history">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="cash" Type="int" Nullable="false" />
+    <Property Name="current_cash" Type="float" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="6000" Nullable="false" />
+    <Property Name="game_id" Type="int" Nullable="false" />
+    <Property Name="trans_type" Type="int" Nullable="false" />
+    <Property Name="time" Type="datetime" />
+    <Property Name="money" Type="int" />
+    <Property Name="cp" Type="varchar" MaxLength="1000" />
+    <Property Name="title" Type="varchar" MaxLength="1000" />
+    <Property Name="isXu" Type="int" />
+    <Property Name="cardType" Type="int" />
+    <Property Name="short_code" Type="varchar" MaxLength="4" />
+    <Property Name="status" Type="int" />
+    <Property Name="telco" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="history_filter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="textview" Type="varchar" MaxLength="5000" Nullable="false" />
+    <Property Name="_sql" Type="varchar" MaxLength="5000" />
+    <Property Name="role" Type="varchar" MaxLength="5000" />
+    <Property Name="_order" Type="int" />
+  </EntityType>
+  <EntityType Name="log_sms">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="sender" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="recipient" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="moBody" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="mtBody" Type="varchar" MaxLength="255" />
+    <Property Name="cpId" Type="varchar" MaxLength="10" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="dateCreated" Type="datetime" Nullable="false" />
+    <Property Name="sendnumber" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="message">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="parent_id" Type="int" Nullable="false" />
+    <Property Name="from_user_id" Type="int" Nullable="false" />
+    <Property Name="isNewComment" Type="int" Nullable="false" />
+    <Property Name="type_id" Type="int" Nullable="false" />
+    <Property Name="comment" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="datetime" Type="datetime" Nullable="false" />
+    <Property Name="cp" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'portal.dbo.messageType' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="messageType">
+          <Property Name="id" Type="int" />
+          <Property Name="type" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="openid">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="openId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="chanel" Type="int" Nullable="false" />
+    <Property Name="dateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="options">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="200" />
+    <Property Name="value" Type="nvarchar" MaxLength="4000" Nullable="false" />
+    <Property Name="code" Type="nvarchar" MaxLength="50" />
+    <Property Name="viettel" Type="nvarchar" MaxLength="200" />
+    <Property Name="vina" Type="nvarchar" MaxLength="200" />
+    <Property Name="mobi" Type="nvarchar" MaxLength="200" />
+    <Property Name="receiver" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="promotion_rule">
+    <Key>
+      <PropertyRef Name="rule_id" />
+    </Key>
+    <Property Name="rule_id" Type="int" Nullable="false" />
+    <Property Name="rule_start" Type="datetime" Nullable="false" />
+    <Property Name="rule_end" Type="datetime" Nullable="false" />
+    <Property Name="rule_card" Type="int" Nullable="false" />
+    <Property Name="rule_sms" Type="int" />
+    <Property Name="rule_active" Type="int" />
+    <Property Name="rule_title" Type="varchar" MaxLength="255" />
+    <Property Name="rule_description" Type="text" />
+    <Property Name="rule_card_special" Type="int" />
+    <Property Name="rule_price_tier" Type="int" />
+    <Property Name="cp" Type="varchar" MaxLength="25" />
+    <Property Name="rule_high_card_special" Type="int" />
+    <Property Name="rule_high_price_tier" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'portal.dbo.trans_type' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="trans_type">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="type" />
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="identity" Type="varchar" MaxLength="50" />
+    <Property Name="cmnd" Type="varchar" MaxLength="200" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="mobile" Type="varchar" MaxLength="20" />
+    <Property Name="birth" Type="varchar" MaxLength="50" />
+    <Property Name="sex" Type="int" Nullable="false" />
+    <Property Name="register_date" Type="datetime" Nullable="false" />
+    <Property Name="age" Type="int" Nullable="false" />
+    <Property Name="cash" Type="float" Nullable="false" />
+    <Property Name="is_active" Type="int" Nullable="false" />
+    <Property Name="totalGame" Type="int" Nullable="false" />
+    <Property Name="clanId" Type="int" />
+    <Property Name="roleid" Type="int" />
+    <Property Name="avatar" Type="varchar" MaxLength="1000" />
+    <Property Name="refid" Type="int" Nullable="false" />
+    <Property Name="hits" Type="int" />
+    <Property Name="activeCode" Type="varchar" MaxLength="255" />
+    <Property Name="is_partner" Type="int" />
+    <Property Name="is_bot" Type="int" />
+    <Property Name="register_ip" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'portal.dbo.user_ban_chat' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="user_ban_chat">
+          <Property Name="userid" Type="int" />
+          <Property Name="dateCreated" Type="datetime" />
+          <Property Name="detail" Type="text" />
+        </EntityType>-->
+  <EntityType Name="user_temp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="identity" Type="varchar" MaxLength="50" />
+    <Property Name="address" Type="varchar" MaxLength="200" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="mobile" Type="varchar" MaxLength="20" />
+    <Property Name="birth" Type="varchar" MaxLength="50" />
+    <Property Name="sex" Type="int" Nullable="false" />
+    <Property Name="register_date" Type="datetime" Nullable="false" />
+    <Property Name="age" Type="int" Nullable="false" />
+    <Property Name="cash" Type="float" Nullable="false" />
+    <Property Name="is_active" Type="int" Nullable="false" />
+    <Property Name="totalGame" Type="int" Nullable="false" />
+    <Property Name="clanId" Type="int" />
+    <Property Name="roleid" Type="int" />
+    <Property Name="avatar" Type="varchar" MaxLength="1000" />
+    <Property Name="refid" Type="int" Nullable="false" />
+    <Property Name="hits" Type="int" />
+    <Property Name="activeCode" Type="varchar" MaxLength="255" />
+    <Property Name="is_partner" Type="int" />
+  </EntityType>
+  <EntityContainer Name="portalModelStoreContainer">
+    <EntitySet Name="a_bankcharge" EntityType="Self.a_bankcharge" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a_paycard" EntityType="Self.a_paycard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a_smsplus" EntityType="Self.a_smsplus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="active_email" EntityType="Self.active_email" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="admin_permission" EntityType="Self.admin_permission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="admin_role" EntityType="Self.admin_role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="announcement" EntityType="Self.announcement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="announcement_readed" EntityType="Self.announcement_readed" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="category" EntityType="Self.category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="chuchaychay" EntityType="Self.chuchaychay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clan" EntityType="Self.clan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clanMember" EntityType="Self.clanMember" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clanRole" EntityType="Self.clanRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clanUpgrade" EntityType="Self.clanUpgrade" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clanWall" EntityType="Self.clanWall" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="config_card" EntityType="Self.config_card" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="emoticon" EntityType="Self.emoticon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="exchangeCardInfo" EntityType="Self.exchangeCardInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="exchangeHistory" EntityType="Self.exchangeHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="exchangeOption" EntityType="Self.exchangeOption" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="exchangeTelco" EntityType="Self.exchangeTelco" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="friend" EntityType="Self.friend" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gameflash" EntityType="Self.gameflash" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="history" EntityType="Self.history" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="history_filter" EntityType="Self.history_filter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="log_sms" EntityType="Self.log_sms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="message" EntityType="Self.message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="openid" EntityType="Self.openid" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="options" EntityType="Self.options" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="promotion_rule" EntityType="Self.promotion_rule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user_temp" EntityType="Self.user_temp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="a_game" EntityType="Self.a_game" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[a_game].[id] AS [id], 
+[a_game].[gameName] AS [gameName]
+FROM [dbo].[a_game] AS [a_game]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="a_partner" EntityType="Self.a_partner" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[a_partner].[id] AS [id], 
+[a_partner].[partnerName] AS [partnerName], 
+[a_partner].[smsNumber] AS [smsNumber], 
+[a_partner].[userName] AS [userName], 
+[a_partner].[password] AS [password], 
+[a_partner].[accessKey1] AS [accessKey1], 
+[a_partner].[accessKey2] AS [accessKey2], 
+[a_partner].[dateCreated] AS [dateCreated]
+FROM [dbo].[a_partner] AS [a_partner]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="clan_log" EntityType="Self.clan_log" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[clan_log].[id] AS [id], 
+[clan_log].[name] AS [name], 
+[clan_log].[level] AS [level], 
+[clan_log].[money] AS [money], 
+[clan_log].[ownerId] AS [ownerId], 
+[clan_log].[totalMember] AS [totalMember], 
+[clan_log].[deleteDate] AS [deleteDate]
+FROM [dbo].[clan_log] AS [clan_log]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="trans_type" EntityType="Self.trans_type" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[trans_type].[id] AS [id], 
+[trans_type].[type] AS [type], 
+[trans_type].[code] AS [code]
+FROM [dbo].[trans_type] AS [trans_type]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

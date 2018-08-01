@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Web365Domain.UserInfo2>
+
+<div class="m_datatable m-datatable m-datatable--default m-datatable--loaded">
+    <table class="m-datatable__table" id="html_table" width="100%" style="display: block; min-height: 300px; overflow-x: auto;">
+        <thead class="m-datatable__head">
+            <tr class="m-datatable__row" style="left: 0px;">
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">ID</span></th>
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">Username</span></th>
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">NickName</span></th>
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">Số dư</span></th>
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">Két sắt</span></th>
+                @*<th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">Luồng tiền</span></th>
+                    <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">Tổng Giao dịch</span></th>*@
+                <th class="m-datatable__cell m-datatable__cell--sort"><span style="width: 133px;">Last Login</span></th>
+            </tr>
+        </thead>
+        <tbody class="m-datatable__body" style="">
+            @foreach (var item in Model)
+            {
+                <tr data-row="0" class="m-datatable__row" style="left: 0px;">
+                    <td class="m-datatable__cell"><span style="width: 133px;">@item.id</span></td>
+                    <td class="m-datatable__cell"><span style="width: 133px;">@item.username</span></td>
+                    <td class="m-datatable__cell"><span style="width: 133px;">@item.fullname</span></td>
+                    <td class="m-datatable__cell"><span style="width: 133px;">@Web365Utility.Web365Utility.ConvertNumber(item.cash)</span></td>
+                    <td class="m-datatable__cell"><span style="width: 133px;">@Web365Utility.Web365Utility.ConvertNumber(item.Ket)</span></td>
+                    @*<td class="m-datatable__cell"><span style="width: 133px;">@item.gameCash</span></td*@
+                    <td class="m-datatable__cell"><span style="width: 133px;">@item.last_login_string</span></td>
+                    @*<td class="m-datatable__cell"><span style="width: 133px;"><span class="m-badge  m-badge--primary m-badge--wide">Canceled</span></span></td>
+                        <td class="m-datatable__cell"><span style="width: 133px;"><span class="m-badge m-badge--danger m-badge--dot"></span>&nbsp;<span class="m--font-bold m--font-danger">Online</span></span></td>*@
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @Html.Action("Paging", "Home", new { page = string.IsNullOrEmpty(Request.QueryString["page"]) ? 1 : Convert.ToInt32(Request.QueryString["page"]), total = 40 })
+
+</div>
